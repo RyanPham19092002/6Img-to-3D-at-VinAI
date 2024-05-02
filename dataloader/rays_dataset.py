@@ -50,13 +50,17 @@ class RaysDataset(Dataset):
         # append path of this file to config path 
         root_path = os.path.dirname(os.path.dirname(os.path.dirname(__file__)))
         self.config_path = os.path.join(root_path, self.config_path)
+        print("config_path",self.config_path )
 
         if not os.path.exists(self.config_path):
             raise ValueError(f"Config file {self.config_path} does not exist. Full path: {os.path.abspath(self.config_path)}")
         with open(self.config_path, 'r') as f:
             self.meta = json.load(f)
 
-        self.intrinsics = Intrinsics(self.meta["w"], self.meta["h"], self.meta["fl_x"], self.meta["fl_y"], self.meta["cx"], self.meta["cy"])
+        fl_x = meta['img_size'][0] / (2*np.tan(meta['fov'] * np.pi / 360))
+        fl_x = meta['img_size'][1] / (2*np.tan(meta['fov'] * np.pi / 360))
+
+        self.intrinsics = Intrinsics(self.meta['img_size'][0], self.meta['img_size'][1], fl_x, self.meta["fl_y"], self.meta["cx"], self.meta["cy"])
 
         if self.factor != 1.0:
             self.intrinsics.scale(self.factor)

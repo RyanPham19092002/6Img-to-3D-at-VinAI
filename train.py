@@ -11,7 +11,7 @@ import numpy as np
 import torch
 import json
 import imageio
-from mmcv import Config
+from mmengine.config import Config
 from tqdm import tqdm
 
 warnings.filterwarnings("ignore")
@@ -62,19 +62,22 @@ def main(local_rank, args):
         with open(os.path.join(path,"transforms/transforms_ego.json"), "r") as f:
             transforms = json.load(f)
         M_cameras = []
-        M_cameras += [torch.tensor(frame["transform_matrix"]) for frame in transforms["frames"]]
+        frame = transforms["transform"]
+        M_cameras += [torch.tensor(frame[key]) for key in frame.keys()]
         M_cameras = torch.stack(M_cameras)
-
-        imgs = [torch.from_numpy(imageio.imread(os.path.join(path,"images",f"{i}_rgb.png")))[...,:3] for i in range(len(M_cameras))]
-                        #  (f"{i}_rgb.png").convert("RGB")) for i in range(len(M_cameras))]
+        for key in frame.keys():
+            img_path = os.path.join(path,"transforms", "input_images",f"{key}.png")
+            img_path.replace("\\", "/")
+            print(img_path)
+        imgs = [torch.from_numpy(imageio.imread(img_path))[...,:3]]
         imgs = torch.stack(imgs).float().permute(0,3,1,2)
 
-        fl_x = transforms['fl_x']
-        fl_y = transforms['fl_y']
-        cx = transforms['cx']
-        cy = transforms['cy']
-        image_width = transforms['w']
-        image_height = transforms['h']
+        fl_x = transforms['img_size'][0] / (2*np.tan(transforms['fov'] * np.pi / 360))
+        fl_y = transforms['img_size'][1] / (2*np.tan(transforms['fov'] * np.pi / 360))
+        cx = transforms['img_size'][0] / 2
+        cy = transforms['img_size'][1] / 2
+        image_width = transforms['img_size'][0] 
+        image_height = transforms['img_size'][1]
 
         pif = PIF(
             focal_length=torch.tensor([fl_x, fl_y]),

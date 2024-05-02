@@ -82,7 +82,7 @@ class CarlaDataset(data.Dataset):
         }
 
         img_meta = None
-        input_rgb=np.empty((6,3,100,100))
+        input_rgb=np.empty((6,3,640,480))
         sphere_dataloader = None
 
         if "input_images" in self.dataset_config.get("selection", ["input_images"]):
@@ -92,15 +92,22 @@ class CarlaDataset(data.Dataset):
             input_rgb = []
             all_c2w = []
             K = np.zeros((3,4)) # (C,3,4)
-            K[0,0] = input_data['fl_x']
-            K[1,1] = input_data['fl_y']
+           # K[0,0] = input_data['fl_x']             #Focus_length_x = ImageSizeX /(2 * tan(CameraFOV * π / 360))
+            K[0,0] = input_data['img_size'][0] / (2*np.tan(input_data['fov'] * np.pi / 360))
+           # K[1,1] = input_data['fl_y']             #Focus_length_y = ImageSizey /(2 * tan(CameraFOV * π / 360))
+            K[1,1] = input_data['img_size'][1] / (2*np.tan(input_data['fov'] * np.pi / 360))
             K[2,2] = 1
-            K[0,2] = input_data['cx']
-            K[1,2] = input_data['cy']
-
-            for frame in input_data["frames"]:
-                input_rgb.append(imread(os.path.join(data["nuscenes"], "transforms", frame["file_path"]), "unchanged")[:,:,:3].astype(np.float32))
-                all_c2w.append(frame["transform_matrix"])
+            # K[0,2] = input_data['cx']               #ImageSizeX / 2
+            K[0,2] = input_data['img_size'][0] / 2
+            # K[1,2] = input_data['cy']               #ImageSizeY / 2
+            K[0,2] = input_data['img_size'][1] / 2
+            frame = input_data["transform"]
+            for key in frame.keys():
+                file_path = key + '.png'
+                image_path = os.path.join(data["nuscenes"], "transforms", "input_images", file_path)
+                image_path.replace("\\", "/")
+                input_rgb.append(imread(image_path, "unchanged")[:,:,:3].astype(np.float32))
+                all_c2w.append(frame[key])
 
 
             input_rgb = self.transforms(input_rgb)
@@ -157,15 +164,22 @@ class PickledCarlaDataset(CarlaDataset):
             input_rgb = []
             all_c2w = []
             K = np.zeros((3,4)) # (C,3,4)
-            K[0,0] = input_data['fl_x']
-            K[1,1] = input_data['fl_y']
+           # K[0,0] = input_data['fl_x']             #Focus_length_x = ImageSizeX /(2 * tan(CameraFOV * π / 360))
+            K[0,0] = input_data['img_size'][0] / (2*np.tan(input_data['fov'] * np.pi / 360))
+           # K[1,1] = input_data['fl_y']             #Focus_length_y = ImageSizey /(2 * tan(CameraFOV * π / 360))
+            K[1,1] = input_data['img_size'][1] / (2*np.tan(input_data['fov'] * np.pi / 360))
             K[2,2] = 1
-            K[0,2] = input_data['cx']
-            K[1,2] = input_data['cy']
-
-            for frame in input_data["frames"]:
-                input_rgb.append(imread(os.path.join(data["nuscenes"], "transforms", frame["file_path"]), "unchanged")[:,:,:3].astype(np.float32))
-                all_c2w.append(frame["transform_matrix"])
+            # K[0,2] = input_data['cx']               #ImageSizeX / 2
+            K[0,2] = input_data['img_size'][0] / 2
+            # K[1,2] = input_data['cy']               #ImageSizeY / 2
+            K[0,2] = input_data['img_size'][1] / 2
+            frame = input_data["transform"]
+            for key in frame.keys():
+                file_path = key + '.png'
+                image_path = os.path.join(data["nuscenes"], "transforms", "input_images", file_path)
+                image_path.replace("\\", "/")
+                input_rgb.append(imread(image_path, "unchanged")[:,:,:3].astype(np.float32))
+                all_c2w.append(frame[key])
 
 
             input_rgb = self.transforms(input_rgb)

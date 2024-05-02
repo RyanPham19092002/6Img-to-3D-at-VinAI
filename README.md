@@ -140,3 +140,4 @@ python eval.py --py-config ckpts/6Img-to-3D/config.py --resume-from ckpts/6Img-t
 ### License
 Copyright (C) 2024 co-pace GmbH (subsidiary of Continental AG). All rights reserved.
 This repository is licensed under the BSD-3-Clause license. See [LICENSE](./LICENSE) for the full license text.
+"# 6Img-to-3D-at-VinAI" 

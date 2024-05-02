@@ -13,7 +13,17 @@ from mmcv import Config
 
 from multiprocessing import Pool
 
-import triplane_decoder.rays_dataset as rays_dataset
+import os
+import sys
+current_file_path = os.path.abspath(__file__)
+current_directory = os.path.dirname(current_file_path)
+current_directory = os.path.dirname(current_directory)
+rays_dataset_path = os.path.join(current_directory, "dataloader")
+rays_dataset_path = os.path.join(rays_dataset_path, "rays_dataset.py")
+
+sys.path.append(current_directory)
+
+from dataloader.rays_dataset import RaysDataset
 
 
 
@@ -67,7 +77,7 @@ class Triplane_Dataset(torch.utils.data.Dataset):
 
 def process_datapath(datapath):
     try:
-        train_dataset = rays_dataset.RaysDataset(datapath, config, dataset_config=dataset_config.train_data_loader, mode="train", factor=dataset_config.train_data_loader.factor)
+        train_dataset = RaysDataset(datapath, config, dataset_config=dataset_config.train_data_loader, mode="train", factor=dataset_config.train_data_loader.factor)
         if dataset_config.train_data_loader.whole_image:
             W, H = train_dataset.intrinsics.width, train_dataset.intrinsics.height
             train_dataset = train_dataset.dataset.view(80, H*W, -1)
