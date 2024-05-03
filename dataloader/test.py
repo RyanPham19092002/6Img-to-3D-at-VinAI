@@ -9,7 +9,7 @@ import random
 
 
 
-data_path = "C:/Users/ACER/darknet/Downloads/VinAI_6img_to_3d/data/Town01/ClearNoon/vehicle.tesla.invisible/spawn_point_10/step_0"
+data_path = "./data_NEO360/Town01/ClearNoon/vehicle.tesla.invisible/spawn_point_10/step_0"
 
 data = dict(
     town = 'Town1',
