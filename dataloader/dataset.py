@@ -204,7 +204,7 @@ class PickledCarlaDataset(CarlaDataset):
             else:
                 view_ids = np.arange(self.part_num, self.part_num + self.dataset_config.get("num_imgs",1))
             for view_id in view_ids:
-                with open(os.path.join(data["sphere"], f"{filename}{view_id}.npy"), "rb") as f:
+                with open(os.path.join(data["sphere"], "folder_npz", f"{filename}{view_id}.npz"), "rb") as f:
                     sphere_dataloader.append(np.load(f))
             sphere_dataloader = np.concatenate(sphere_dataloader)
 
