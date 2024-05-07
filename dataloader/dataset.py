@@ -192,7 +192,7 @@ class PickledCarlaDataset(CarlaDataset):
                 img_shape=img_shape,
             )
             
-
+'''
         if "sphere_dataset" in self.dataset_config.get("selection", ["sphere_dataset"]):
             if self.dataset_config.get("whole_image", False):
                 filename = "train_dataset_"
@@ -207,7 +207,15 @@ class PickledCarlaDataset(CarlaDataset):
                 with open(os.path.join(data["sphere"], "folder_npz", f"{filename}{view_id}.npz"), "rb") as f:
                     sphere_dataloader.append(np.load(f))
             sphere_dataloader = np.concatenate(sphere_dataloader)
-
+'''
+        if "sphere_dataset" in self.dataset_config.get("selection", ["sphere_dataset"]):
+            sphere_dataloader = []
+            folder_path = os.path.join(data["sphere"], "folder_npz")
+            for filename in os.listdir(folder_path):
+                if filename.endswith(".npz"):
+                    with open(os.path.join(folder_path, filename), "rb") as f:
+                        sphere_dataloader.append(np.load(f))
+            sphere_dataloader = np.concatenate(sphere_dataloader)            
         
         return (input_rgb, img_meta, sphere_dataloader)
     
