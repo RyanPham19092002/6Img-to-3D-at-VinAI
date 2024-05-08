@@ -20,11 +20,12 @@ class RaysDataset(Dataset):
         super().__init__()
         if mode != "full":
             self.config_path = os.path.join(config_path, f"transforms/transforms_ego_{mode}.json")
+            print("In raydataset class")
             print(self.config_path)
-            if os.path.exists(self.config_path):
-                print("Đường dẫn self.config_path tồn tại.")
-            else:
-                print("Đường dẫn self.config_path không tồn tại.")
+            #if os.path.exists(self.config_path):
+            #    print("Đường dẫn self.config_path tồn tại.")
+            #else:
+            #    print("Đường dẫn self.config_path không tồn tại.")
         else:
             self.config_path = os.path.join(config_path, f"transforms/transforms_ego.json")
         self.config_dir = os.path.dirname(self.config_path)
