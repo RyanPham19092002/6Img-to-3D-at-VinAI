@@ -99,6 +99,7 @@ class RaysDataset(Dataset):
                 img = img[:, :3]*img[:, -1:] + (1-img[:, -1:]) # blend A to RGB
 
             if "depth_file_path" in frame and (self.config.decoder.whiteout or self.dataset_config.depth):
+                print("Có depth file path")
                 depth_path = os.path.join(root_path, self.config_dir, f"{frame['depth_file_path']}")
                 depth_map = Image.open(depth_path)
                 depth_map = depth_map.resize((self.intrinsics.width, self.intrinsics.height), Image.LANCZOS)
@@ -120,7 +121,9 @@ class RaysDataset(Dataset):
                     mask = torch.ones(rays_o.size(0)).bool()
                     
             else: 
+                print("Không có depth file path")
                 mask = torch.ones(rays_o.size(0)).bool()
+                print("mask", mask)
                 depth_map = None
 
           
@@ -129,9 +132,11 @@ class RaysDataset(Dataset):
                 self.dataset += [torch.cat([rays_o, rays_d, img, mask.unsqueeze(1), depth_map],-1)] # (h*w, 1)
             else:
                 self.dataset += [torch.cat([rays_o, rays_d, img, mask.unsqueeze(1)],-1)] # (h*w, 10)
+                
 
             
         self.dataset = torch.cat(self.dataset) # (len(self.meta['frames])*h*w, 10)
+        print("self.dataset", self.dataset)
 
 
 
