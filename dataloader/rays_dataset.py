@@ -58,15 +58,25 @@ class RaysDataset(Dataset):
         root_path = os.path.dirname(os.path.dirname(os.path.dirname(__file__)))
         print("root_path: ",root_path)
         self.config_path = os.path.join(root_path, self.config_path)
-        print("config_path",self.config_path )
+       
 
         if not os.path.exists(self.config_path):
             raise ValueError(f"Config file {self.config_path} does not exist. Full path: {os.path.abspath(self.config_path)}")
-        self.config_path = os.path.abspath(self.config_path)
-        print("config_path after",self.config_path)
-        with open(self.config_path, 'r') as f:
-            self.meta = json.load(f)
-            print("self.meta : ", self.meta) 
+        else:
+            print("config_path",self.config_path)
+#        self.config_path = os.path.abspath(self.config_path)
+#        print("config_path after",self.config_path)
+#        with open(self.config_path, 'r') as f:
+#            self.meta = json.load(f)
+#            print("self.meta : ", self.meta) 
+        try:
+            with open(self.config_path, 'r') as f:
+                self.meta = json.load(f)
+                print("self.meta : ", self.meta) 
+        except FileNotFoundError:
+            print("File not found")
+        except Exception as e:
+            print("An error occurred: ", str(e))
 
         fl_x = meta['img_size'][0] / (2*np.tan(meta['fov'] * np.pi / 360))
         fl_x = meta['img_size'][1] / (2*np.tan(meta['fov'] * np.pi / 360))
