@@ -62,6 +62,8 @@ class RaysDataset(Dataset):
 
         if not os.path.exists(self.config_path):
             raise ValueError(f"Config file {self.config_path} does not exist. Full path: {os.path.abspath(self.config_path)}")
+        self.config_path = os.path.abspath(self.config_path)
+        print("config_path after",self.config_path)
         with open(self.config_path, 'r') as f:
             self.meta = json.load(f)
             print("self.meta : ", self.meta) 
