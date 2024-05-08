@@ -63,7 +63,8 @@ class Triplane_Dataset(torch.utils.data.Dataset):
 
     def get_data(self, town, weather, vehicle, spawn_point, step):
         data_path = os.path.join(self.data_path, town, weather, vehicle, spawn_point, step, "sphere")
-
+        print("In pickles generator")
+        print("data_path : ", data_path)
         return data_path
 
     
