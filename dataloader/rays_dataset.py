@@ -53,7 +53,7 @@ class RaysDataset(Dataset):
  
 
     def read_meta(self):
-
+        print("In read meta")
         # append path of this file to config path 
         root_path = os.path.dirname(os.path.dirname(os.path.dirname(__file__)))
         print("root_path: ",root_path)
@@ -64,6 +64,7 @@ class RaysDataset(Dataset):
             raise ValueError(f"Config file {self.config_path} does not exist. Full path: {os.path.abspath(self.config_path)}")
         with open(self.config_path, 'r') as f:
             self.meta = json.load(f)
+            print("self.meta : ", self.meta) 
 
         fl_x = meta['img_size'][0] / (2*np.tan(meta['fov'] * np.pi / 360))
         fl_x = meta['img_size'][1] / (2*np.tan(meta['fov'] * np.pi / 360))
@@ -83,6 +84,7 @@ class RaysDataset(Dataset):
         self.depth_maps = []
 
         pbar = tqdm(self.meta['frames'], desc='Loading Dataset', leave=False, disable=True)
+        print("pbar: ", pbar)
         for i, frame in enumerate(pbar):
             pose = np.array(frame['transform_matrix'])[:3, :4]
             self.poses += [pose]
