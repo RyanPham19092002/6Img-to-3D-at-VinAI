@@ -1,0 +1,2513 @@
+2024-05-09 22:34:34,419 - mmcv - INFO - initialize ResNet with init_cfg [{'type': 'Kaiming', 'layer': 'Conv2d'}, {'type': 'Constant', 'val': 1, 'layer': ['_BatchNorm', 'GroupNorm']}]
+2024-05-09 22:34:34,755 - mmcv - INFO - initialize Bottleneck with init_cfg {'type': 'Constant', 'val': 0, 'override': {'name': 'norm3'}}
+2024-05-09 22:34:34,757 - mmcv - INFO - initialize Bottleneck with init_cfg {'type': 'Constant', 'val': 0, 'override': {'name': 'norm3'}}
+2024-05-09 22:34:34,759 - mmcv - INFO - initialize Bottleneck with init_cfg {'type': 'Constant', 'val': 0, 'override': {'name': 'norm3'}}
+2024-05-09 22:34:34,761 - mmcv - INFO - initialize Bottleneck with init_cfg {'type': 'Constant', 'val': 0, 'override': {'name': 'norm3'}}
+2024-05-09 22:34:34,763 - mmcv - INFO - initialize Bottleneck with init_cfg {'type': 'Constant', 'val': 0, 'override': {'name': 'norm3'}}
+2024-05-09 22:34:34,764 - mmcv - INFO - initialize Bottleneck with init_cfg {'type': 'Constant', 'val': 0, 'override': {'name': 'norm3'}}
+2024-05-09 22:34:34,766 - mmcv - INFO - initialize Bottleneck with init_cfg {'type': 'Constant', 'val': 0, 'override': {'name': 'norm3'}}
+2024-05-09 22:34:34,769 - mmcv - INFO - initialize Bottleneck with init_cfg {'type': 'Constant', 'val': 0, 'override': {'name': 'norm3'}}
+2024-05-09 22:34:34,789 - mmcv - INFO - initialize Bottleneck with init_cfg {'type': 'Constant', 'val': 0, 'override': {'name': 'norm3'}}
+2024-05-09 22:34:34,808 - mmcv - INFO - initialize Bottleneck with init_cfg {'type': 'Constant', 'val': 0, 'override': {'name': 'norm3'}}
+2024-05-09 22:34:34,827 - mmcv - INFO - initialize Bottleneck with init_cfg {'type': 'Constant', 'val': 0, 'override': {'name': 'norm3'}}
+2024-05-09 22:34:34,845 - mmcv - INFO - initialize Bottleneck with init_cfg {'type': 'Constant', 'val': 0, 'override': {'name': 'norm3'}}
+2024-05-09 22:34:34,864 - mmcv - INFO - initialize Bottleneck with init_cfg {'type': 'Constant', 'val': 0, 'override': {'name': 'norm3'}}
+2024-05-09 22:34:34,883 - mmcv - INFO - initialize Bottleneck with init_cfg {'type': 'Constant', 'val': 0, 'override': {'name': 'norm3'}}
+2024-05-09 22:34:34,902 - mmcv - INFO - initialize Bottleneck with init_cfg {'type': 'Constant', 'val': 0, 'override': {'name': 'norm3'}}
+2024-05-09 22:34:34,921 - mmcv - INFO - initialize Bottleneck with init_cfg {'type': 'Constant', 'val': 0, 'override': {'name': 'norm3'}}
+2024-05-09 22:34:34,940 - mmcv - INFO - initialize Bottleneck with init_cfg {'type': 'Constant', 'val': 0, 'override': {'name': 'norm3'}}
+2024-05-09 22:34:34,958 - mmcv - INFO - initialize Bottleneck with init_cfg {'type': 'Constant', 'val': 0, 'override': {'name': 'norm3'}}
+2024-05-09 22:34:34,977 - mmcv - INFO - initialize Bottleneck with init_cfg {'type': 'Constant', 'val': 0, 'override': {'name': 'norm3'}}
+2024-05-09 22:34:34,996 - mmcv - INFO - initialize Bottleneck with init_cfg {'type': 'Constant', 'val': 0, 'override': {'name': 'norm3'}}
+2024-05-09 22:34:35,015 - mmcv - INFO - initialize Bottleneck with init_cfg {'type': 'Constant', 'val': 0, 'override': {'name': 'norm3'}}
+2024-05-09 22:34:35,034 - mmcv - INFO - initialize Bottleneck with init_cfg {'type': 'Constant', 'val': 0, 'override': {'name': 'norm3'}}
+2024-05-09 22:34:35,053 - mmcv - INFO - initialize Bottleneck with init_cfg {'type': 'Constant', 'val': 0, 'override': {'name': 'norm3'}}
+2024-05-09 22:34:35,072 - mmcv - INFO - initialize Bottleneck with init_cfg {'type': 'Constant', 'val': 0, 'override': {'name': 'norm3'}}
+2024-05-09 22:34:35,091 - mmcv - INFO - initialize Bottleneck with init_cfg {'type': 'Constant', 'val': 0, 'override': {'name': 'norm3'}}
+2024-05-09 22:34:35,110 - mmcv - INFO - initialize Bottleneck with init_cfg {'type': 'Constant', 'val': 0, 'override': {'name': 'norm3'}}
+2024-05-09 22:34:35,129 - mmcv - INFO - initialize Bottleneck with init_cfg {'type': 'Constant', 'val': 0, 'override': {'name': 'norm3'}}
+2024-05-09 22:34:35,148 - mmcv - INFO - initialize Bottleneck with init_cfg {'type': 'Constant', 'val': 0, 'override': {'name': 'norm3'}}
+2024-05-09 22:34:35,167 - mmcv - INFO - initialize Bottleneck with init_cfg {'type': 'Constant', 'val': 0, 'override': {'name': 'norm3'}}
+2024-05-09 22:34:35,187 - mmcv - INFO - initialize Bottleneck with init_cfg {'type': 'Constant', 'val': 0, 'override': {'name': 'norm3'}}
+2024-05-09 22:34:35,223 - mmcv - INFO - initialize Bottleneck with init_cfg {'type': 'Constant', 'val': 0, 'override': {'name': 'norm3'}}
+2024-05-09 22:34:35,289 - mmcv - INFO - initialize Bottleneck with init_cfg {'type': 'Constant', 'val': 0, 'override': {'name': 'norm3'}}
+2024-05-09 22:34:35,353 - mmcv - INFO - initialize Bottleneck with init_cfg {'type': 'Constant', 'val': 0, 'override': {'name': 'norm3'}}
+2024-05-09 22:34:35,445 - mmcv - INFO - initialize FPN with init_cfg {'type': 'Xavier', 'layer': 'Conv2d', 'distribution': 'uniform'}
+2024-05-09 22:34:35,461 - mmcv - INFO - 
+tpv_head.level_embeds - torch.Size([4, 128]): 
+Initialized by user-defined `init_weights` in TPVFormerHead  
+ 
+2024-05-09 22:34:35,462 - mmcv - INFO - 
+tpv_head.cams_embeds - torch.Size([6, 128]): 
+Initialized by user-defined `init_weights` in TPVFormerHead  
+ 
+2024-05-09 22:34:35,462 - mmcv - INFO - 
+tpv_head.positional_encoding.h_embed.weight - torch.Size([200, 48]): 
+Initialized by user-defined `init_weights` in TPVFormerHead  
+ 
+2024-05-09 22:34:35,462 - mmcv - INFO - 
+tpv_head.positional_encoding.w_embed.weight - torch.Size([200, 48]): 
+Initialized by user-defined `init_weights` in TPVFormerHead  
+ 
+2024-05-09 22:34:35,462 - mmcv - INFO - 
+tpv_head.positional_encoding.z_embed.weight - torch.Size([16, 32]): 
+Initialized by user-defined `init_weights` in TPVFormerHead  
+ 
+2024-05-09 22:34:35,462 - mmcv - INFO - 
+tpv_head.encoder.layers.0.attentions.0.deformable_attention.sampling_offsets.0.weight - torch.Size([512, 128]): 
+The value is the same before and after calling `init_weights` of TPVFormer  
+ 
+2024-05-09 22:34:35,462 - mmcv - INFO - 
+tpv_head.encoder.layers.0.attentions.0.deformable_attention.sampling_offsets.0.bias - torch.Size([512]): 
+The value is the same before and after calling `init_weights` of TPVFormer  
+ 
+2024-05-09 22:34:35,462 - mmcv - INFO - 
+tpv_head.encoder.layers.0.attentions.0.deformable_attention.sampling_offsets.1.weight - torch.Size([4096, 128]): 
+The value is the same before and after calling `init_weights` of TPVFormer  
+ 
+2024-05-09 22:34:35,462 - mmcv - INFO - 
+tpv_head.encoder.layers.0.attentions.0.deformable_attention.sampling_offsets.1.bias - torch.Size([4096]): 
+The value is the same before and after calling `init_weights` of TPVFormer  
+ 
+2024-05-09 22:34:35,462 - mmcv - INFO - 
+tpv_head.encoder.layers.0.attentions.0.deformable_attention.sampling_offsets.2.weight - torch.Size([4096, 128]): 
+The value is the same before and after calling `init_weights` of TPVFormer  
+ 
+2024-05-09 22:34:35,462 - mmcv - INFO - 
+tpv_head.encoder.layers.0.attentions.0.deformable_attention.sampling_offsets.2.bias - torch.Size([4096]): 
+The value is the same before and after calling `init_weights` of TPVFormer  
+ 
+2024-05-09 22:34:35,462 - mmcv - INFO - 
+tpv_head.encoder.layers.0.attentions.0.deformable_attention.attention_weights.0.weight - torch.Size([256, 128]): 
+The value is the same before and after calling `init_weights` of TPVFormer  
+ 
+2024-05-09 22:34:35,462 - mmcv - INFO - 
+tpv_head.encoder.layers.0.attentions.0.deformable_attention.attention_weights.0.bias - torch.Size([256]): 
+The value is the same before and after calling `init_weights` of TPVFormer  
+ 
+2024-05-09 22:34:35,463 - mmcv - INFO - 
+tpv_head.encoder.layers.0.attentions.0.deformable_attention.attention_weights.1.weight - torch.Size([2048, 128]): 
+The value is the same before and after calling `init_weights` of TPVFormer  
+ 
+2024-05-09 22:34:35,463 - mmcv - INFO - 
+tpv_head.encoder.layers.0.attentions.0.deformable_attention.attention_weights.1.bias - torch.Size([2048]): 
+The value is the same before and after calling `init_weights` of TPVFormer  
+ 
+2024-05-09 22:34:35,463 - mmcv - INFO - 
+tpv_head.encoder.layers.0.attentions.0.deformable_attention.attention_weights.2.weight - torch.Size([2048, 128]): 
+The value is the same before and after calling `init_weights` of TPVFormer  
+ 
+2024-05-09 22:34:35,463 - mmcv - INFO - 
+tpv_head.encoder.layers.0.attentions.0.deformable_attention.attention_weights.2.bias - torch.Size([2048]): 
+The value is the same before and after calling `init_weights` of TPVFormer  
+ 
+2024-05-09 22:34:35,463 - mmcv - INFO - 
+tpv_head.encoder.layers.0.attentions.0.deformable_attention.value_proj.weight - torch.Size([128, 128]): 
+Initialized by user-defined `init_weights` in TPVFormerHead  
+ 
+2024-05-09 22:34:35,463 - mmcv - INFO - 
+tpv_head.encoder.layers.0.attentions.0.deformable_attention.value_proj.bias - torch.Size([128]): 
+The value is the same before and after calling `init_weights` of TPVFormer  
+ 
+2024-05-09 22:34:35,463 - mmcv - INFO - 
+tpv_head.encoder.layers.0.attentions.0.output_proj.weight - torch.Size([128, 128]): 
+Initialized by user-defined `init_weights` in TPVFormerHead  
+ 
+2024-05-09 22:34:35,463 - mmcv - INFO - 
+tpv_head.encoder.layers.0.attentions.0.output_proj.bias - torch.Size([128]): 
+The value is the same before and after calling `init_weights` of TPVFormer  
+ 
+2024-05-09 22:34:35,463 - mmcv - INFO - 
+tpv_head.encoder.layers.0.attentions.1.output_proj.0.weight - torch.Size([128, 128]): 
+Initialized by user-defined `init_weights` in TPVFormerHead  
+ 
+2024-05-09 22:34:35,463 - mmcv - INFO - 
+tpv_head.encoder.layers.0.attentions.1.output_proj.0.bias - torch.Size([128]): 
+The value is the same before and after calling `init_weights` of TPVFormer  
+ 
+2024-05-09 22:34:35,463 - mmcv - INFO - 
+tpv_head.encoder.layers.0.attentions.1.output_proj.1.weight - torch.Size([128, 128]): 
+Initialized by user-defined `init_weights` in TPVFormerHead  
+ 
+2024-05-09 22:34:35,464 - mmcv - INFO - 
+tpv_head.encoder.layers.0.attentions.1.output_proj.1.bias - torch.Size([128]): 
+The value is the same before and after calling `init_weights` of TPVFormer  
+ 
+2024-05-09 22:34:35,464 - mmcv - INFO - 
+tpv_head.encoder.layers.0.attentions.1.output_proj.2.weight - torch.Size([128, 128]): 
+Initialized by user-defined `init_weights` in TPVFormerHead  
+ 
+2024-05-09 22:34:35,464 - mmcv - INFO - 
+tpv_head.encoder.layers.0.attentions.1.output_proj.2.bias - torch.Size([128]): 
+The value is the same before and after calling `init_weights` of TPVFormer  
+ 
+2024-05-09 22:34:35,464 - mmcv - INFO - 
+tpv_head.encoder.layers.0.attentions.1.sampling_offsets.0.weight - torch.Size([1536, 128]): 
+The value is the same before and after calling `init_weights` of TPVFormer  
+ 
+2024-05-09 22:34:35,464 - mmcv - INFO - 
+tpv_head.encoder.layers.0.attentions.1.sampling_offsets.0.bias - torch.Size([1536]): 
+The value is the same before and after calling `init_weights` of TPVFormer  
+ 
+2024-05-09 22:34:35,464 - mmcv - INFO - 
+tpv_head.encoder.layers.0.attentions.1.sampling_offsets.1.weight - torch.Size([1536, 128]): 
+The value is the same before and after calling `init_weights` of TPVFormer  
+ 
+2024-05-09 22:34:35,464 - mmcv - INFO - 
+tpv_head.encoder.layers.0.attentions.1.sampling_offsets.1.bias - torch.Size([1536]): 
+The value is the same before and after calling `init_weights` of TPVFormer  
+ 
+2024-05-09 22:34:35,464 - mmcv - INFO - 
+tpv_head.encoder.layers.0.attentions.1.sampling_offsets.2.weight - torch.Size([1536, 128]): 
+The value is the same before and after calling `init_weights` of TPVFormer  
+ 
+2024-05-09 22:34:35,464 - mmcv - INFO - 
+tpv_head.encoder.layers.0.attentions.1.sampling_offsets.2.bias - torch.Size([1536]): 
+The value is the same before and after calling `init_weights` of TPVFormer  
+ 
+2024-05-09 22:34:35,464 - mmcv - INFO - 
+tpv_head.encoder.layers.0.attentions.1.attention_weights.0.weight - torch.Size([792, 128]): 
+The value is the same before and after calling `init_weights` of TPVFormer  
+ 
+2024-05-09 22:34:35,464 - mmcv - INFO - 
+tpv_head.encoder.layers.0.attentions.1.attention_weights.0.bias - torch.Size([792]): 
+The value is the same before and after calling `init_weights` of TPVFormer  
+ 
+2024-05-09 22:34:35,464 - mmcv - INFO - 
+tpv_head.encoder.layers.0.attentions.1.attention_weights.1.weight - torch.Size([792, 128]): 
+The value is the same before and after calling `init_weights` of TPVFormer  
+ 
+2024-05-09 22:34:35,464 - mmcv - INFO - 
+tpv_head.encoder.layers.0.attentions.1.attention_weights.1.bias - torch.Size([792]): 
+The value is the same before and after calling `init_weights` of TPVFormer  
+ 
+2024-05-09 22:34:35,465 - mmcv - INFO - 
+tpv_head.encoder.layers.0.attentions.1.attention_weights.2.weight - torch.Size([792, 128]): 
+The value is the same before and after calling `init_weights` of TPVFormer  
+ 
+2024-05-09 22:34:35,465 - mmcv - INFO - 
+tpv_head.encoder.layers.0.attentions.1.attention_weights.2.bias - torch.Size([792]): 
+The value is the same before and after calling `init_weights` of TPVFormer  
+ 
+2024-05-09 22:34:35,465 - mmcv - INFO - 
+tpv_head.encoder.layers.0.attentions.1.value_proj.0.weight - torch.Size([128, 128]): 
+Initialized by user-defined `init_weights` in TPVFormerHead  
+ 
+2024-05-09 22:34:35,465 - mmcv - INFO - 
+tpv_head.encoder.layers.0.attentions.1.value_proj.0.bias - torch.Size([128]): 
+The value is the same before and after calling `init_weights` of TPVFormer  
+ 
+2024-05-09 22:34:35,465 - mmcv - INFO - 
+tpv_head.encoder.layers.0.attentions.1.value_proj.1.weight - torch.Size([128, 128]): 
+Initialized by user-defined `init_weights` in TPVFormerHead  
+ 
+2024-05-09 22:34:35,465 - mmcv - INFO - 
+tpv_head.encoder.layers.0.attentions.1.value_proj.1.bias - torch.Size([128]): 
+The value is the same before and after calling `init_weights` of TPVFormer  
+ 
+2024-05-09 22:34:35,465 - mmcv - INFO - 
+tpv_head.encoder.layers.0.attentions.1.value_proj.2.weight - torch.Size([128, 128]): 
+Initialized by user-defined `init_weights` in TPVFormerHead  
+ 
+2024-05-09 22:34:35,465 - mmcv - INFO - 
+tpv_head.encoder.layers.0.attentions.1.value_proj.2.bias - torch.Size([128]): 
+The value is the same before and after calling `init_weights` of TPVFormer  
+ 
+2024-05-09 22:34:35,465 - mmcv - INFO - 
+tpv_head.encoder.layers.0.ffns.0.layers.0.0.weight - torch.Size([256, 128]): 
+Initialized by user-defined `init_weights` in TPVFormerHead  
+ 
+2024-05-09 22:34:35,465 - mmcv - INFO - 
+tpv_head.encoder.layers.0.ffns.0.layers.0.0.bias - torch.Size([256]): 
+The value is the same before and after calling `init_weights` of TPVFormer  
+ 
+2024-05-09 22:34:35,465 - mmcv - INFO - 
+tpv_head.encoder.layers.0.ffns.0.layers.1.weight - torch.Size([128, 256]): 
+Initialized by user-defined `init_weights` in TPVFormerHead  
+ 
+2024-05-09 22:34:35,465 - mmcv - INFO - 
+tpv_head.encoder.layers.0.ffns.0.layers.1.bias - torch.Size([128]): 
+The value is the same before and after calling `init_weights` of TPVFormer  
+ 
+2024-05-09 22:34:35,465 - mmcv - INFO - 
+tpv_head.encoder.layers.0.norms.0.weight - torch.Size([128]): 
+The value is the same before and after calling `init_weights` of TPVFormer  
+ 
+2024-05-09 22:34:35,465 - mmcv - INFO - 
+tpv_head.encoder.layers.0.norms.0.bias - torch.Size([128]): 
+The value is the same before and after calling `init_weights` of TPVFormer  
+ 
+2024-05-09 22:34:35,466 - mmcv - INFO - 
+tpv_head.encoder.layers.0.norms.1.weight - torch.Size([128]): 
+The value is the same before and after calling `init_weights` of TPVFormer  
+ 
+2024-05-09 22:34:35,466 - mmcv - INFO - 
+tpv_head.encoder.layers.0.norms.1.bias - torch.Size([128]): 
+The value is the same before and after calling `init_weights` of TPVFormer  
+ 
+2024-05-09 22:34:35,466 - mmcv - INFO - 
+tpv_head.encoder.layers.0.norms.2.weight - torch.Size([128]): 
+The value is the same before and after calling `init_weights` of TPVFormer  
+ 
+2024-05-09 22:34:35,466 - mmcv - INFO - 
+tpv_head.encoder.layers.0.norms.2.bias - torch.Size([128]): 
+The value is the same before and after calling `init_weights` of TPVFormer  
+ 
+2024-05-09 22:34:35,466 - mmcv - INFO - 
+tpv_head.encoder.layers.1.attentions.0.deformable_attention.sampling_offsets.0.weight - torch.Size([512, 128]): 
+The value is the same before and after calling `init_weights` of TPVFormer  
+ 
+2024-05-09 22:34:35,466 - mmcv - INFO - 
+tpv_head.encoder.layers.1.attentions.0.deformable_attention.sampling_offsets.0.bias - torch.Size([512]): 
+The value is the same before and after calling `init_weights` of TPVFormer  
+ 
+2024-05-09 22:34:35,466 - mmcv - INFO - 
+tpv_head.encoder.layers.1.attentions.0.deformable_attention.sampling_offsets.1.weight - torch.Size([4096, 128]): 
+The value is the same before and after calling `init_weights` of TPVFormer  
+ 
+2024-05-09 22:34:35,466 - mmcv - INFO - 
+tpv_head.encoder.layers.1.attentions.0.deformable_attention.sampling_offsets.1.bias - torch.Size([4096]): 
+The value is the same before and after calling `init_weights` of TPVFormer  
+ 
+2024-05-09 22:34:35,466 - mmcv - INFO - 
+tpv_head.encoder.layers.1.attentions.0.deformable_attention.sampling_offsets.2.weight - torch.Size([4096, 128]): 
+The value is the same before and after calling `init_weights` of TPVFormer  
+ 
+2024-05-09 22:34:35,466 - mmcv - INFO - 
+tpv_head.encoder.layers.1.attentions.0.deformable_attention.sampling_offsets.2.bias - torch.Size([4096]): 
+The value is the same before and after calling `init_weights` of TPVFormer  
+ 
+2024-05-09 22:34:35,466 - mmcv - INFO - 
+tpv_head.encoder.layers.1.attentions.0.deformable_attention.attention_weights.0.weight - torch.Size([256, 128]): 
+The value is the same before and after calling `init_weights` of TPVFormer  
+ 
+2024-05-09 22:34:35,466 - mmcv - INFO - 
+tpv_head.encoder.layers.1.attentions.0.deformable_attention.attention_weights.0.bias - torch.Size([256]): 
+The value is the same before and after calling `init_weights` of TPVFormer  
+ 
+2024-05-09 22:34:35,466 - mmcv - INFO - 
+tpv_head.encoder.layers.1.attentions.0.deformable_attention.attention_weights.1.weight - torch.Size([2048, 128]): 
+The value is the same before and after calling `init_weights` of TPVFormer  
+ 
+2024-05-09 22:34:35,467 - mmcv - INFO - 
+tpv_head.encoder.layers.1.attentions.0.deformable_attention.attention_weights.1.bias - torch.Size([2048]): 
+The value is the same before and after calling `init_weights` of TPVFormer  
+ 
+2024-05-09 22:34:35,467 - mmcv - INFO - 
+tpv_head.encoder.layers.1.attentions.0.deformable_attention.attention_weights.2.weight - torch.Size([2048, 128]): 
+The value is the same before and after calling `init_weights` of TPVFormer  
+ 
+2024-05-09 22:34:35,467 - mmcv - INFO - 
+tpv_head.encoder.layers.1.attentions.0.deformable_attention.attention_weights.2.bias - torch.Size([2048]): 
+The value is the same before and after calling `init_weights` of TPVFormer  
+ 
+2024-05-09 22:34:35,467 - mmcv - INFO - 
+tpv_head.encoder.layers.1.attentions.0.deformable_attention.value_proj.weight - torch.Size([128, 128]): 
+Initialized by user-defined `init_weights` in TPVFormerHead  
+ 
+2024-05-09 22:34:35,467 - mmcv - INFO - 
+tpv_head.encoder.layers.1.attentions.0.deformable_attention.value_proj.bias - torch.Size([128]): 
+The value is the same before and after calling `init_weights` of TPVFormer  
+ 
+2024-05-09 22:34:35,467 - mmcv - INFO - 
+tpv_head.encoder.layers.1.attentions.0.output_proj.weight - torch.Size([128, 128]): 
+Initialized by user-defined `init_weights` in TPVFormerHead  
+ 
+2024-05-09 22:34:35,467 - mmcv - INFO - 
+tpv_head.encoder.layers.1.attentions.0.output_proj.bias - torch.Size([128]): 
+The value is the same before and after calling `init_weights` of TPVFormer  
+ 
+2024-05-09 22:34:35,467 - mmcv - INFO - 
+tpv_head.encoder.layers.1.attentions.1.output_proj.0.weight - torch.Size([128, 128]): 
+Initialized by user-defined `init_weights` in TPVFormerHead  
+ 
+2024-05-09 22:34:35,467 - mmcv - INFO - 
+tpv_head.encoder.layers.1.attentions.1.output_proj.0.bias - torch.Size([128]): 
+The value is the same before and after calling `init_weights` of TPVFormer  
+ 
+2024-05-09 22:34:35,467 - mmcv - INFO - 
+tpv_head.encoder.layers.1.attentions.1.output_proj.1.weight - torch.Size([128, 128]): 
+Initialized by user-defined `init_weights` in TPVFormerHead  
+ 
+2024-05-09 22:34:35,467 - mmcv - INFO - 
+tpv_head.encoder.layers.1.attentions.1.output_proj.1.bias - torch.Size([128]): 
+The value is the same before and after calling `init_weights` of TPVFormer  
+ 
+2024-05-09 22:34:35,467 - mmcv - INFO - 
+tpv_head.encoder.layers.1.attentions.1.output_proj.2.weight - torch.Size([128, 128]): 
+Initialized by user-defined `init_weights` in TPVFormerHead  
+ 
+2024-05-09 22:34:35,467 - mmcv - INFO - 
+tpv_head.encoder.layers.1.attentions.1.output_proj.2.bias - torch.Size([128]): 
+The value is the same before and after calling `init_weights` of TPVFormer  
+ 
+2024-05-09 22:34:35,468 - mmcv - INFO - 
+tpv_head.encoder.layers.1.attentions.1.sampling_offsets.0.weight - torch.Size([1536, 128]): 
+The value is the same before and after calling `init_weights` of TPVFormer  
+ 
+2024-05-09 22:34:35,468 - mmcv - INFO - 
+tpv_head.encoder.layers.1.attentions.1.sampling_offsets.0.bias - torch.Size([1536]): 
+The value is the same before and after calling `init_weights` of TPVFormer  
+ 
+2024-05-09 22:34:35,468 - mmcv - INFO - 
+tpv_head.encoder.layers.1.attentions.1.sampling_offsets.1.weight - torch.Size([1536, 128]): 
+The value is the same before and after calling `init_weights` of TPVFormer  
+ 
+2024-05-09 22:34:35,468 - mmcv - INFO - 
+tpv_head.encoder.layers.1.attentions.1.sampling_offsets.1.bias - torch.Size([1536]): 
+The value is the same before and after calling `init_weights` of TPVFormer  
+ 
+2024-05-09 22:34:35,468 - mmcv - INFO - 
+tpv_head.encoder.layers.1.attentions.1.sampling_offsets.2.weight - torch.Size([1536, 128]): 
+The value is the same before and after calling `init_weights` of TPVFormer  
+ 
+2024-05-09 22:34:35,468 - mmcv - INFO - 
+tpv_head.encoder.layers.1.attentions.1.sampling_offsets.2.bias - torch.Size([1536]): 
+The value is the same before and after calling `init_weights` of TPVFormer  
+ 
+2024-05-09 22:34:35,468 - mmcv - INFO - 
+tpv_head.encoder.layers.1.attentions.1.attention_weights.0.weight - torch.Size([792, 128]): 
+The value is the same before and after calling `init_weights` of TPVFormer  
+ 
+2024-05-09 22:34:35,468 - mmcv - INFO - 
+tpv_head.encoder.layers.1.attentions.1.attention_weights.0.bias - torch.Size([792]): 
+The value is the same before and after calling `init_weights` of TPVFormer  
+ 
+2024-05-09 22:34:35,468 - mmcv - INFO - 
+tpv_head.encoder.layers.1.attentions.1.attention_weights.1.weight - torch.Size([792, 128]): 
+The value is the same before and after calling `init_weights` of TPVFormer  
+ 
+2024-05-09 22:34:35,468 - mmcv - INFO - 
+tpv_head.encoder.layers.1.attentions.1.attention_weights.1.bias - torch.Size([792]): 
+The value is the same before and after calling `init_weights` of TPVFormer  
+ 
+2024-05-09 22:34:35,468 - mmcv - INFO - 
+tpv_head.encoder.layers.1.attentions.1.attention_weights.2.weight - torch.Size([792, 128]): 
+The value is the same before and after calling `init_weights` of TPVFormer  
+ 
+2024-05-09 22:34:35,468 - mmcv - INFO - 
+tpv_head.encoder.layers.1.attentions.1.attention_weights.2.bias - torch.Size([792]): 
+The value is the same before and after calling `init_weights` of TPVFormer  
+ 
+2024-05-09 22:34:35,468 - mmcv - INFO - 
+tpv_head.encoder.layers.1.attentions.1.value_proj.0.weight - torch.Size([128, 128]): 
+Initialized by user-defined `init_weights` in TPVFormerHead  
+ 
+2024-05-09 22:34:35,468 - mmcv - INFO - 
+tpv_head.encoder.layers.1.attentions.1.value_proj.0.bias - torch.Size([128]): 
+The value is the same before and after calling `init_weights` of TPVFormer  
+ 
+2024-05-09 22:34:35,469 - mmcv - INFO - 
+tpv_head.encoder.layers.1.attentions.1.value_proj.1.weight - torch.Size([128, 128]): 
+Initialized by user-defined `init_weights` in TPVFormerHead  
+ 
+2024-05-09 22:34:35,469 - mmcv - INFO - 
+tpv_head.encoder.layers.1.attentions.1.value_proj.1.bias - torch.Size([128]): 
+The value is the same before and after calling `init_weights` of TPVFormer  
+ 
+2024-05-09 22:34:35,469 - mmcv - INFO - 
+tpv_head.encoder.layers.1.attentions.1.value_proj.2.weight - torch.Size([128, 128]): 
+Initialized by user-defined `init_weights` in TPVFormerHead  
+ 
+2024-05-09 22:34:35,469 - mmcv - INFO - 
+tpv_head.encoder.layers.1.attentions.1.value_proj.2.bias - torch.Size([128]): 
+The value is the same before and after calling `init_weights` of TPVFormer  
+ 
+2024-05-09 22:34:35,469 - mmcv - INFO - 
+tpv_head.encoder.layers.1.ffns.0.layers.0.0.weight - torch.Size([256, 128]): 
+Initialized by user-defined `init_weights` in TPVFormerHead  
+ 
+2024-05-09 22:34:35,469 - mmcv - INFO - 
+tpv_head.encoder.layers.1.ffns.0.layers.0.0.bias - torch.Size([256]): 
+The value is the same before and after calling `init_weights` of TPVFormer  
+ 
+2024-05-09 22:34:35,469 - mmcv - INFO - 
+tpv_head.encoder.layers.1.ffns.0.layers.1.weight - torch.Size([128, 256]): 
+Initialized by user-defined `init_weights` in TPVFormerHead  
+ 
+2024-05-09 22:34:35,469 - mmcv - INFO - 
+tpv_head.encoder.layers.1.ffns.0.layers.1.bias - torch.Size([128]): 
+The value is the same before and after calling `init_weights` of TPVFormer  
+ 
+2024-05-09 22:34:35,469 - mmcv - INFO - 
+tpv_head.encoder.layers.1.norms.0.weight - torch.Size([128]): 
+The value is the same before and after calling `init_weights` of TPVFormer  
+ 
+2024-05-09 22:34:35,469 - mmcv - INFO - 
+tpv_head.encoder.layers.1.norms.0.bias - torch.Size([128]): 
+The value is the same before and after calling `init_weights` of TPVFormer  
+ 
+2024-05-09 22:34:35,469 - mmcv - INFO - 
+tpv_head.encoder.layers.1.norms.1.weight - torch.Size([128]): 
+The value is the same before and after calling `init_weights` of TPVFormer  
+ 
+2024-05-09 22:34:35,469 - mmcv - INFO - 
+tpv_head.encoder.layers.1.norms.1.bias - torch.Size([128]): 
+The value is the same before and after calling `init_weights` of TPVFormer  
+ 
+2024-05-09 22:34:35,469 - mmcv - INFO - 
+tpv_head.encoder.layers.1.norms.2.weight - torch.Size([128]): 
+The value is the same before and after calling `init_weights` of TPVFormer  
+ 
+2024-05-09 22:34:35,470 - mmcv - INFO - 
+tpv_head.encoder.layers.1.norms.2.bias - torch.Size([128]): 
+The value is the same before and after calling `init_weights` of TPVFormer  
+ 
+2024-05-09 22:34:35,470 - mmcv - INFO - 
+tpv_head.encoder.layers.2.attentions.0.deformable_attention.sampling_offsets.0.weight - torch.Size([512, 128]): 
+The value is the same before and after calling `init_weights` of TPVFormer  
+ 
+2024-05-09 22:34:35,470 - mmcv - INFO - 
+tpv_head.encoder.layers.2.attentions.0.deformable_attention.sampling_offsets.0.bias - torch.Size([512]): 
+The value is the same before and after calling `init_weights` of TPVFormer  
+ 
+2024-05-09 22:34:35,470 - mmcv - INFO - 
+tpv_head.encoder.layers.2.attentions.0.deformable_attention.sampling_offsets.1.weight - torch.Size([4096, 128]): 
+The value is the same before and after calling `init_weights` of TPVFormer  
+ 
+2024-05-09 22:34:35,470 - mmcv - INFO - 
+tpv_head.encoder.layers.2.attentions.0.deformable_attention.sampling_offsets.1.bias - torch.Size([4096]): 
+The value is the same before and after calling `init_weights` of TPVFormer  
+ 
+2024-05-09 22:34:35,470 - mmcv - INFO - 
+tpv_head.encoder.layers.2.attentions.0.deformable_attention.sampling_offsets.2.weight - torch.Size([4096, 128]): 
+The value is the same before and after calling `init_weights` of TPVFormer  
+ 
+2024-05-09 22:34:35,470 - mmcv - INFO - 
+tpv_head.encoder.layers.2.attentions.0.deformable_attention.sampling_offsets.2.bias - torch.Size([4096]): 
+The value is the same before and after calling `init_weights` of TPVFormer  
+ 
+2024-05-09 22:34:35,470 - mmcv - INFO - 
+tpv_head.encoder.layers.2.attentions.0.deformable_attention.attention_weights.0.weight - torch.Size([256, 128]): 
+The value is the same before and after calling `init_weights` of TPVFormer  
+ 
+2024-05-09 22:34:35,470 - mmcv - INFO - 
+tpv_head.encoder.layers.2.attentions.0.deformable_attention.attention_weights.0.bias - torch.Size([256]): 
+The value is the same before and after calling `init_weights` of TPVFormer  
+ 
+2024-05-09 22:34:35,470 - mmcv - INFO - 
+tpv_head.encoder.layers.2.attentions.0.deformable_attention.attention_weights.1.weight - torch.Size([2048, 128]): 
+The value is the same before and after calling `init_weights` of TPVFormer  
+ 
+2024-05-09 22:34:35,470 - mmcv - INFO - 
+tpv_head.encoder.layers.2.attentions.0.deformable_attention.attention_weights.1.bias - torch.Size([2048]): 
+The value is the same before and after calling `init_weights` of TPVFormer  
+ 
+2024-05-09 22:34:35,470 - mmcv - INFO - 
+tpv_head.encoder.layers.2.attentions.0.deformable_attention.attention_weights.2.weight - torch.Size([2048, 128]): 
+The value is the same before and after calling `init_weights` of TPVFormer  
+ 
+2024-05-09 22:34:35,470 - mmcv - INFO - 
+tpv_head.encoder.layers.2.attentions.0.deformable_attention.attention_weights.2.bias - torch.Size([2048]): 
+The value is the same before and after calling `init_weights` of TPVFormer  
+ 
+2024-05-09 22:34:35,471 - mmcv - INFO - 
+tpv_head.encoder.layers.2.attentions.0.deformable_attention.value_proj.weight - torch.Size([128, 128]): 
+Initialized by user-defined `init_weights` in TPVFormerHead  
+ 
+2024-05-09 22:34:35,471 - mmcv - INFO - 
+tpv_head.encoder.layers.2.attentions.0.deformable_attention.value_proj.bias - torch.Size([128]): 
+The value is the same before and after calling `init_weights` of TPVFormer  
+ 
+2024-05-09 22:34:35,471 - mmcv - INFO - 
+tpv_head.encoder.layers.2.attentions.0.output_proj.weight - torch.Size([128, 128]): 
+Initialized by user-defined `init_weights` in TPVFormerHead  
+ 
+2024-05-09 22:34:35,471 - mmcv - INFO - 
+tpv_head.encoder.layers.2.attentions.0.output_proj.bias - torch.Size([128]): 
+The value is the same before and after calling `init_weights` of TPVFormer  
+ 
+2024-05-09 22:34:35,471 - mmcv - INFO - 
+tpv_head.encoder.layers.2.attentions.1.output_proj.0.weight - torch.Size([128, 128]): 
+Initialized by user-defined `init_weights` in TPVFormerHead  
+ 
+2024-05-09 22:34:35,471 - mmcv - INFO - 
+tpv_head.encoder.layers.2.attentions.1.output_proj.0.bias - torch.Size([128]): 
+The value is the same before and after calling `init_weights` of TPVFormer  
+ 
+2024-05-09 22:34:35,471 - mmcv - INFO - 
+tpv_head.encoder.layers.2.attentions.1.output_proj.1.weight - torch.Size([128, 128]): 
+Initialized by user-defined `init_weights` in TPVFormerHead  
+ 
+2024-05-09 22:34:35,471 - mmcv - INFO - 
+tpv_head.encoder.layers.2.attentions.1.output_proj.1.bias - torch.Size([128]): 
+The value is the same before and after calling `init_weights` of TPVFormer  
+ 
+2024-05-09 22:34:35,471 - mmcv - INFO - 
+tpv_head.encoder.layers.2.attentions.1.output_proj.2.weight - torch.Size([128, 128]): 
+Initialized by user-defined `init_weights` in TPVFormerHead  
+ 
+2024-05-09 22:34:35,471 - mmcv - INFO - 
+tpv_head.encoder.layers.2.attentions.1.output_proj.2.bias - torch.Size([128]): 
+The value is the same before and after calling `init_weights` of TPVFormer  
+ 
+2024-05-09 22:34:35,471 - mmcv - INFO - 
+tpv_head.encoder.layers.2.attentions.1.sampling_offsets.0.weight - torch.Size([1536, 128]): 
+The value is the same before and after calling `init_weights` of TPVFormer  
+ 
+2024-05-09 22:34:35,471 - mmcv - INFO - 
+tpv_head.encoder.layers.2.attentions.1.sampling_offsets.0.bias - torch.Size([1536]): 
+The value is the same before and after calling `init_weights` of TPVFormer  
+ 
+2024-05-09 22:34:35,471 - mmcv - INFO - 
+tpv_head.encoder.layers.2.attentions.1.sampling_offsets.1.weight - torch.Size([1536, 128]): 
+The value is the same before and after calling `init_weights` of TPVFormer  
+ 
+2024-05-09 22:34:35,472 - mmcv - INFO - 
+tpv_head.encoder.layers.2.attentions.1.sampling_offsets.1.bias - torch.Size([1536]): 
+The value is the same before and after calling `init_weights` of TPVFormer  
+ 
+2024-05-09 22:34:35,472 - mmcv - INFO - 
+tpv_head.encoder.layers.2.attentions.1.sampling_offsets.2.weight - torch.Size([1536, 128]): 
+The value is the same before and after calling `init_weights` of TPVFormer  
+ 
+2024-05-09 22:34:35,472 - mmcv - INFO - 
+tpv_head.encoder.layers.2.attentions.1.sampling_offsets.2.bias - torch.Size([1536]): 
+The value is the same before and after calling `init_weights` of TPVFormer  
+ 
+2024-05-09 22:34:35,472 - mmcv - INFO - 
+tpv_head.encoder.layers.2.attentions.1.attention_weights.0.weight - torch.Size([792, 128]): 
+The value is the same before and after calling `init_weights` of TPVFormer  
+ 
+2024-05-09 22:34:35,472 - mmcv - INFO - 
+tpv_head.encoder.layers.2.attentions.1.attention_weights.0.bias - torch.Size([792]): 
+The value is the same before and after calling `init_weights` of TPVFormer  
+ 
+2024-05-09 22:34:35,472 - mmcv - INFO - 
+tpv_head.encoder.layers.2.attentions.1.attention_weights.1.weight - torch.Size([792, 128]): 
+The value is the same before and after calling `init_weights` of TPVFormer  
+ 
+2024-05-09 22:34:35,472 - mmcv - INFO - 
+tpv_head.encoder.layers.2.attentions.1.attention_weights.1.bias - torch.Size([792]): 
+The value is the same before and after calling `init_weights` of TPVFormer  
+ 
+2024-05-09 22:34:35,472 - mmcv - INFO - 
+tpv_head.encoder.layers.2.attentions.1.attention_weights.2.weight - torch.Size([792, 128]): 
+The value is the same before and after calling `init_weights` of TPVFormer  
+ 
+2024-05-09 22:34:35,472 - mmcv - INFO - 
+tpv_head.encoder.layers.2.attentions.1.attention_weights.2.bias - torch.Size([792]): 
+The value is the same before and after calling `init_weights` of TPVFormer  
+ 
+2024-05-09 22:34:35,472 - mmcv - INFO - 
+tpv_head.encoder.layers.2.attentions.1.value_proj.0.weight - torch.Size([128, 128]): 
+Initialized by user-defined `init_weights` in TPVFormerHead  
+ 
+2024-05-09 22:34:35,472 - mmcv - INFO - 
+tpv_head.encoder.layers.2.attentions.1.value_proj.0.bias - torch.Size([128]): 
+The value is the same before and after calling `init_weights` of TPVFormer  
+ 
+2024-05-09 22:34:35,472 - mmcv - INFO - 
+tpv_head.encoder.layers.2.attentions.1.value_proj.1.weight - torch.Size([128, 128]): 
+Initialized by user-defined `init_weights` in TPVFormerHead  
+ 
+2024-05-09 22:34:35,472 - mmcv - INFO - 
+tpv_head.encoder.layers.2.attentions.1.value_proj.1.bias - torch.Size([128]): 
+The value is the same before and after calling `init_weights` of TPVFormer  
+ 
+2024-05-09 22:34:35,472 - mmcv - INFO - 
+tpv_head.encoder.layers.2.attentions.1.value_proj.2.weight - torch.Size([128, 128]): 
+Initialized by user-defined `init_weights` in TPVFormerHead  
+ 
+2024-05-09 22:34:35,473 - mmcv - INFO - 
+tpv_head.encoder.layers.2.attentions.1.value_proj.2.bias - torch.Size([128]): 
+The value is the same before and after calling `init_weights` of TPVFormer  
+ 
+2024-05-09 22:34:35,473 - mmcv - INFO - 
+tpv_head.encoder.layers.2.ffns.0.layers.0.0.weight - torch.Size([256, 128]): 
+Initialized by user-defined `init_weights` in TPVFormerHead  
+ 
+2024-05-09 22:34:35,473 - mmcv - INFO - 
+tpv_head.encoder.layers.2.ffns.0.layers.0.0.bias - torch.Size([256]): 
+The value is the same before and after calling `init_weights` of TPVFormer  
+ 
+2024-05-09 22:34:35,473 - mmcv - INFO - 
+tpv_head.encoder.layers.2.ffns.0.layers.1.weight - torch.Size([128, 256]): 
+Initialized by user-defined `init_weights` in TPVFormerHead  
+ 
+2024-05-09 22:34:35,473 - mmcv - INFO - 
+tpv_head.encoder.layers.2.ffns.0.layers.1.bias - torch.Size([128]): 
+The value is the same before and after calling `init_weights` of TPVFormer  
+ 
+2024-05-09 22:34:35,473 - mmcv - INFO - 
+tpv_head.encoder.layers.2.norms.0.weight - torch.Size([128]): 
+The value is the same before and after calling `init_weights` of TPVFormer  
+ 
+2024-05-09 22:34:35,473 - mmcv - INFO - 
+tpv_head.encoder.layers.2.norms.0.bias - torch.Size([128]): 
+The value is the same before and after calling `init_weights` of TPVFormer  
+ 
+2024-05-09 22:34:35,473 - mmcv - INFO - 
+tpv_head.encoder.layers.2.norms.1.weight - torch.Size([128]): 
+The value is the same before and after calling `init_weights` of TPVFormer  
+ 
+2024-05-09 22:34:35,473 - mmcv - INFO - 
+tpv_head.encoder.layers.2.norms.1.bias - torch.Size([128]): 
+The value is the same before and after calling `init_weights` of TPVFormer  
+ 
+2024-05-09 22:34:35,473 - mmcv - INFO - 
+tpv_head.encoder.layers.2.norms.2.weight - torch.Size([128]): 
+The value is the same before and after calling `init_weights` of TPVFormer  
+ 
+2024-05-09 22:34:35,473 - mmcv - INFO - 
+tpv_head.encoder.layers.2.norms.2.bias - torch.Size([128]): 
+The value is the same before and after calling `init_weights` of TPVFormer  
+ 
+2024-05-09 22:34:35,473 - mmcv - INFO - 
+tpv_head.encoder.layers.3.attentions.0.output_proj.0.weight - torch.Size([128, 128]): 
+Initialized by user-defined `init_weights` in TPVFormerHead  
+ 
+2024-05-09 22:34:35,473 - mmcv - INFO - 
+tpv_head.encoder.layers.3.attentions.0.output_proj.0.bias - torch.Size([128]): 
+The value is the same before and after calling `init_weights` of TPVFormer  
+ 
+2024-05-09 22:34:35,474 - mmcv - INFO - 
+tpv_head.encoder.layers.3.attentions.0.output_proj.1.weight - torch.Size([128, 128]): 
+Initialized by user-defined `init_weights` in TPVFormerHead  
+ 
+2024-05-09 22:34:35,474 - mmcv - INFO - 
+tpv_head.encoder.layers.3.attentions.0.output_proj.1.bias - torch.Size([128]): 
+The value is the same before and after calling `init_weights` of TPVFormer  
+ 
+2024-05-09 22:34:35,474 - mmcv - INFO - 
+tpv_head.encoder.layers.3.attentions.0.output_proj.2.weight - torch.Size([128, 128]): 
+Initialized by user-defined `init_weights` in TPVFormerHead  
+ 
+2024-05-09 22:34:35,474 - mmcv - INFO - 
+tpv_head.encoder.layers.3.attentions.0.output_proj.2.bias - torch.Size([128]): 
+The value is the same before and after calling `init_weights` of TPVFormer  
+ 
+2024-05-09 22:34:35,474 - mmcv - INFO - 
+tpv_head.encoder.layers.3.attentions.0.sampling_offsets.0.weight - torch.Size([1536, 128]): 
+The value is the same before and after calling `init_weights` of TPVFormer  
+ 
+2024-05-09 22:34:35,474 - mmcv - INFO - 
+tpv_head.encoder.layers.3.attentions.0.sampling_offsets.0.bias - torch.Size([1536]): 
+The value is the same before and after calling `init_weights` of TPVFormer  
+ 
+2024-05-09 22:34:35,474 - mmcv - INFO - 
+tpv_head.encoder.layers.3.attentions.0.sampling_offsets.1.weight - torch.Size([1536, 128]): 
+The value is the same before and after calling `init_weights` of TPVFormer  
+ 
+2024-05-09 22:34:35,474 - mmcv - INFO - 
+tpv_head.encoder.layers.3.attentions.0.sampling_offsets.1.bias - torch.Size([1536]): 
+The value is the same before and after calling `init_weights` of TPVFormer  
+ 
+2024-05-09 22:34:35,474 - mmcv - INFO - 
+tpv_head.encoder.layers.3.attentions.0.sampling_offsets.2.weight - torch.Size([1536, 128]): 
+The value is the same before and after calling `init_weights` of TPVFormer  
+ 
+2024-05-09 22:34:35,474 - mmcv - INFO - 
+tpv_head.encoder.layers.3.attentions.0.sampling_offsets.2.bias - torch.Size([1536]): 
+The value is the same before and after calling `init_weights` of TPVFormer  
+ 
+2024-05-09 22:34:35,474 - mmcv - INFO - 
+tpv_head.encoder.layers.3.attentions.0.attention_weights.0.weight - torch.Size([792, 128]): 
+The value is the same before and after calling `init_weights` of TPVFormer  
+ 
+2024-05-09 22:34:35,474 - mmcv - INFO - 
+tpv_head.encoder.layers.3.attentions.0.attention_weights.0.bias - torch.Size([792]): 
+The value is the same before and after calling `init_weights` of TPVFormer  
+ 
+2024-05-09 22:34:35,474 - mmcv - INFO - 
+tpv_head.encoder.layers.3.attentions.0.attention_weights.1.weight - torch.Size([792, 128]): 
+The value is the same before and after calling `init_weights` of TPVFormer  
+ 
+2024-05-09 22:34:35,475 - mmcv - INFO - 
+tpv_head.encoder.layers.3.attentions.0.attention_weights.1.bias - torch.Size([792]): 
+The value is the same before and after calling `init_weights` of TPVFormer  
+ 
+2024-05-09 22:34:35,475 - mmcv - INFO - 
+tpv_head.encoder.layers.3.attentions.0.attention_weights.2.weight - torch.Size([792, 128]): 
+The value is the same before and after calling `init_weights` of TPVFormer  
+ 
+2024-05-09 22:34:35,475 - mmcv - INFO - 
+tpv_head.encoder.layers.3.attentions.0.attention_weights.2.bias - torch.Size([792]): 
+The value is the same before and after calling `init_weights` of TPVFormer  
+ 
+2024-05-09 22:34:35,475 - mmcv - INFO - 
+tpv_head.encoder.layers.3.attentions.0.value_proj.0.weight - torch.Size([128, 128]): 
+Initialized by user-defined `init_weights` in TPVFormerHead  
+ 
+2024-05-09 22:34:35,475 - mmcv - INFO - 
+tpv_head.encoder.layers.3.attentions.0.value_proj.0.bias - torch.Size([128]): 
+The value is the same before and after calling `init_weights` of TPVFormer  
+ 
+2024-05-09 22:34:35,475 - mmcv - INFO - 
+tpv_head.encoder.layers.3.attentions.0.value_proj.1.weight - torch.Size([128, 128]): 
+Initialized by user-defined `init_weights` in TPVFormerHead  
+ 
+2024-05-09 22:34:35,475 - mmcv - INFO - 
+tpv_head.encoder.layers.3.attentions.0.value_proj.1.bias - torch.Size([128]): 
+The value is the same before and after calling `init_weights` of TPVFormer  
+ 
+2024-05-09 22:34:35,475 - mmcv - INFO - 
+tpv_head.encoder.layers.3.attentions.0.value_proj.2.weight - torch.Size([128, 128]): 
+Initialized by user-defined `init_weights` in TPVFormerHead  
+ 
+2024-05-09 22:34:35,475 - mmcv - INFO - 
+tpv_head.encoder.layers.3.attentions.0.value_proj.2.bias - torch.Size([128]): 
+The value is the same before and after calling `init_weights` of TPVFormer  
+ 
+2024-05-09 22:34:35,475 - mmcv - INFO - 
+tpv_head.encoder.layers.3.ffns.0.layers.0.0.weight - torch.Size([256, 128]): 
+Initialized by user-defined `init_weights` in TPVFormerHead  
+ 
+2024-05-09 22:34:35,475 - mmcv - INFO - 
+tpv_head.encoder.layers.3.ffns.0.layers.0.0.bias - torch.Size([256]): 
+The value is the same before and after calling `init_weights` of TPVFormer  
+ 
+2024-05-09 22:34:35,475 - mmcv - INFO - 
+tpv_head.encoder.layers.3.ffns.0.layers.1.weight - torch.Size([128, 256]): 
+Initialized by user-defined `init_weights` in TPVFormerHead  
+ 
+2024-05-09 22:34:35,475 - mmcv - INFO - 
+tpv_head.encoder.layers.3.ffns.0.layers.1.bias - torch.Size([128]): 
+The value is the same before and after calling `init_weights` of TPVFormer  
+ 
+2024-05-09 22:34:35,475 - mmcv - INFO - 
+tpv_head.encoder.layers.3.norms.0.weight - torch.Size([128]): 
+The value is the same before and after calling `init_weights` of TPVFormer  
+ 
+2024-05-09 22:34:35,476 - mmcv - INFO - 
+tpv_head.encoder.layers.3.norms.0.bias - torch.Size([128]): 
+The value is the same before and after calling `init_weights` of TPVFormer  
+ 
+2024-05-09 22:34:35,476 - mmcv - INFO - 
+tpv_head.encoder.layers.3.norms.1.weight - torch.Size([128]): 
+The value is the same before and after calling `init_weights` of TPVFormer  
+ 
+2024-05-09 22:34:35,476 - mmcv - INFO - 
+tpv_head.encoder.layers.3.norms.1.bias - torch.Size([128]): 
+The value is the same before and after calling `init_weights` of TPVFormer  
+ 
+2024-05-09 22:34:35,476 - mmcv - INFO - 
+tpv_head.encoder.layers.4.attentions.0.output_proj.0.weight - torch.Size([128, 128]): 
+Initialized by user-defined `init_weights` in TPVFormerHead  
+ 
+2024-05-09 22:34:35,476 - mmcv - INFO - 
+tpv_head.encoder.layers.4.attentions.0.output_proj.0.bias - torch.Size([128]): 
+The value is the same before and after calling `init_weights` of TPVFormer  
+ 
+2024-05-09 22:34:35,476 - mmcv - INFO - 
+tpv_head.encoder.layers.4.attentions.0.output_proj.1.weight - torch.Size([128, 128]): 
+Initialized by user-defined `init_weights` in TPVFormerHead  
+ 
+2024-05-09 22:34:35,476 - mmcv - INFO - 
+tpv_head.encoder.layers.4.attentions.0.output_proj.1.bias - torch.Size([128]): 
+The value is the same before and after calling `init_weights` of TPVFormer  
+ 
+2024-05-09 22:34:35,476 - mmcv - INFO - 
+tpv_head.encoder.layers.4.attentions.0.output_proj.2.weight - torch.Size([128, 128]): 
+Initialized by user-defined `init_weights` in TPVFormerHead  
+ 
+2024-05-09 22:34:35,476 - mmcv - INFO - 
+tpv_head.encoder.layers.4.attentions.0.output_proj.2.bias - torch.Size([128]): 
+The value is the same before and after calling `init_weights` of TPVFormer  
+ 
+2024-05-09 22:34:35,476 - mmcv - INFO - 
+tpv_head.encoder.layers.4.attentions.0.sampling_offsets.0.weight - torch.Size([1536, 128]): 
+The value is the same before and after calling `init_weights` of TPVFormer  
+ 
+2024-05-09 22:34:35,476 - mmcv - INFO - 
+tpv_head.encoder.layers.4.attentions.0.sampling_offsets.0.bias - torch.Size([1536]): 
+The value is the same before and after calling `init_weights` of TPVFormer  
+ 
+2024-05-09 22:34:35,476 - mmcv - INFO - 
+tpv_head.encoder.layers.4.attentions.0.sampling_offsets.1.weight - torch.Size([1536, 128]): 
+The value is the same before and after calling `init_weights` of TPVFormer  
+ 
+2024-05-09 22:34:35,476 - mmcv - INFO - 
+tpv_head.encoder.layers.4.attentions.0.sampling_offsets.1.bias - torch.Size([1536]): 
+The value is the same before and after calling `init_weights` of TPVFormer  
+ 
+2024-05-09 22:34:35,476 - mmcv - INFO - 
+tpv_head.encoder.layers.4.attentions.0.sampling_offsets.2.weight - torch.Size([1536, 128]): 
+The value is the same before and after calling `init_weights` of TPVFormer  
+ 
+2024-05-09 22:34:35,476 - mmcv - INFO - 
+tpv_head.encoder.layers.4.attentions.0.sampling_offsets.2.bias - torch.Size([1536]): 
+The value is the same before and after calling `init_weights` of TPVFormer  
+ 
+2024-05-09 22:34:35,477 - mmcv - INFO - 
+tpv_head.encoder.layers.4.attentions.0.attention_weights.0.weight - torch.Size([792, 128]): 
+The value is the same before and after calling `init_weights` of TPVFormer  
+ 
+2024-05-09 22:34:35,477 - mmcv - INFO - 
+tpv_head.encoder.layers.4.attentions.0.attention_weights.0.bias - torch.Size([792]): 
+The value is the same before and after calling `init_weights` of TPVFormer  
+ 
+2024-05-09 22:34:35,477 - mmcv - INFO - 
+tpv_head.encoder.layers.4.attentions.0.attention_weights.1.weight - torch.Size([792, 128]): 
+The value is the same before and after calling `init_weights` of TPVFormer  
+ 
+2024-05-09 22:34:35,477 - mmcv - INFO - 
+tpv_head.encoder.layers.4.attentions.0.attention_weights.1.bias - torch.Size([792]): 
+The value is the same before and after calling `init_weights` of TPVFormer  
+ 
+2024-05-09 22:34:35,477 - mmcv - INFO - 
+tpv_head.encoder.layers.4.attentions.0.attention_weights.2.weight - torch.Size([792, 128]): 
+The value is the same before and after calling `init_weights` of TPVFormer  
+ 
+2024-05-09 22:34:35,477 - mmcv - INFO - 
+tpv_head.encoder.layers.4.attentions.0.attention_weights.2.bias - torch.Size([792]): 
+The value is the same before and after calling `init_weights` of TPVFormer  
+ 
+2024-05-09 22:34:35,477 - mmcv - INFO - 
+tpv_head.encoder.layers.4.attentions.0.value_proj.0.weight - torch.Size([128, 128]): 
+Initialized by user-defined `init_weights` in TPVFormerHead  
+ 
+2024-05-09 22:34:35,477 - mmcv - INFO - 
+tpv_head.encoder.layers.4.attentions.0.value_proj.0.bias - torch.Size([128]): 
+The value is the same before and after calling `init_weights` of TPVFormer  
+ 
+2024-05-09 22:34:35,477 - mmcv - INFO - 
+tpv_head.encoder.layers.4.attentions.0.value_proj.1.weight - torch.Size([128, 128]): 
+Initialized by user-defined `init_weights` in TPVFormerHead  
+ 
+2024-05-09 22:34:35,477 - mmcv - INFO - 
+tpv_head.encoder.layers.4.attentions.0.value_proj.1.bias - torch.Size([128]): 
+The value is the same before and after calling `init_weights` of TPVFormer  
+ 
+2024-05-09 22:34:35,477 - mmcv - INFO - 
+tpv_head.encoder.layers.4.attentions.0.value_proj.2.weight - torch.Size([128, 128]): 
+Initialized by user-defined `init_weights` in TPVFormerHead  
+ 
+2024-05-09 22:34:35,477 - mmcv - INFO - 
+tpv_head.encoder.layers.4.attentions.0.value_proj.2.bias - torch.Size([128]): 
+The value is the same before and after calling `init_weights` of TPVFormer  
+ 
+2024-05-09 22:34:35,477 - mmcv - INFO - 
+tpv_head.encoder.layers.4.ffns.0.layers.0.0.weight - torch.Size([256, 128]): 
+Initialized by user-defined `init_weights` in TPVFormerHead  
+ 
+2024-05-09 22:34:35,477 - mmcv - INFO - 
+tpv_head.encoder.layers.4.ffns.0.layers.0.0.bias - torch.Size([256]): 
+The value is the same before and after calling `init_weights` of TPVFormer  
+ 
+2024-05-09 22:34:35,477 - mmcv - INFO - 
+tpv_head.encoder.layers.4.ffns.0.layers.1.weight - torch.Size([128, 256]): 
+Initialized by user-defined `init_weights` in TPVFormerHead  
+ 
+2024-05-09 22:34:35,477 - mmcv - INFO - 
+tpv_head.encoder.layers.4.ffns.0.layers.1.bias - torch.Size([128]): 
+The value is the same before and after calling `init_weights` of TPVFormer  
+ 
+2024-05-09 22:34:35,478 - mmcv - INFO - 
+tpv_head.encoder.layers.4.norms.0.weight - torch.Size([128]): 
+The value is the same before and after calling `init_weights` of TPVFormer  
+ 
+2024-05-09 22:34:35,478 - mmcv - INFO - 
+tpv_head.encoder.layers.4.norms.0.bias - torch.Size([128]): 
+The value is the same before and after calling `init_weights` of TPVFormer  
+ 
+2024-05-09 22:34:35,478 - mmcv - INFO - 
+tpv_head.encoder.layers.4.norms.1.weight - torch.Size([128]): 
+The value is the same before and after calling `init_weights` of TPVFormer  
+ 
+2024-05-09 22:34:35,478 - mmcv - INFO - 
+tpv_head.encoder.layers.4.norms.1.bias - torch.Size([128]): 
+The value is the same before and after calling `init_weights` of TPVFormer  
+ 
+2024-05-09 22:34:35,478 - mmcv - INFO - 
+tpv_head.tpv_embedding_hw.weight - torch.Size([40000, 128]): 
+Initialized by user-defined `init_weights` in TPVFormerHead  
+ 
+2024-05-09 22:34:35,478 - mmcv - INFO - 
+tpv_head.tpv_embedding_zh.weight - torch.Size([3200, 128]): 
+Initialized by user-defined `init_weights` in TPVFormerHead  
+ 
+2024-05-09 22:34:35,478 - mmcv - INFO - 
+tpv_head.tpv_embedding_wz.weight - torch.Size([3200, 128]): 
+Initialized by user-defined `init_weights` in TPVFormerHead  
+ 
+2024-05-09 22:34:35,478 - mmcv - INFO - 
+img_backbone.conv1.weight - torch.Size([64, 3, 7, 7]): 
+KaimingInit: a=0, mode=fan_out, nonlinearity=relu, distribution =normal, bias=0 
+ 
+2024-05-09 22:34:35,478 - mmcv - INFO - 
+img_backbone.bn1.weight - torch.Size([64]): 
+The value is the same before and after calling `init_weights` of TPVFormer  
+ 
+2024-05-09 22:34:35,478 - mmcv - INFO - 
+img_backbone.bn1.bias - torch.Size([64]): 
+The value is the same before and after calling `init_weights` of TPVFormer  
+ 
+2024-05-09 22:34:35,478 - mmcv - INFO - 
+img_backbone.layer1.0.conv1.weight - torch.Size([64, 64, 1, 1]): 
+KaimingInit: a=0, mode=fan_out, nonlinearity=relu, distribution =normal, bias=0 
+ 
+2024-05-09 22:34:35,478 - mmcv - INFO - 
+img_backbone.layer1.0.bn1.weight - torch.Size([64]): 
+The value is the same before and after calling `init_weights` of TPVFormer  
+ 
+2024-05-09 22:34:35,478 - mmcv - INFO - 
+img_backbone.layer1.0.bn1.bias - torch.Size([64]): 
+The value is the same before and after calling `init_weights` of TPVFormer  
+ 
+2024-05-09 22:34:35,478 - mmcv - INFO - 
+img_backbone.layer1.0.conv2.weight - torch.Size([64, 64, 3, 3]): 
+KaimingInit: a=0, mode=fan_out, nonlinearity=relu, distribution =normal, bias=0 
+ 
+2024-05-09 22:34:35,479 - mmcv - INFO - 
+img_backbone.layer1.0.bn2.weight - torch.Size([64]): 
+The value is the same before and after calling `init_weights` of TPVFormer  
+ 
+2024-05-09 22:34:35,479 - mmcv - INFO - 
+img_backbone.layer1.0.bn2.bias - torch.Size([64]): 
+The value is the same before and after calling `init_weights` of TPVFormer  
+ 
+2024-05-09 22:34:35,479 - mmcv - INFO - 
+img_backbone.layer1.0.conv3.weight - torch.Size([256, 64, 1, 1]): 
+KaimingInit: a=0, mode=fan_out, nonlinearity=relu, distribution =normal, bias=0 
+ 
+2024-05-09 22:34:35,479 - mmcv - INFO - 
+img_backbone.layer1.0.bn3.weight - torch.Size([256]): 
+ConstantInit: val=0, bias=0 
+ 
+2024-05-09 22:34:35,479 - mmcv - INFO - 
+img_backbone.layer1.0.bn3.bias - torch.Size([256]): 
+The value is the same before and after calling `init_weights` of TPVFormer  
+ 
+2024-05-09 22:34:35,479 - mmcv - INFO - 
+img_backbone.layer1.0.downsample.0.weight - torch.Size([256, 64, 1, 1]): 
+KaimingInit: a=0, mode=fan_out, nonlinearity=relu, distribution =normal, bias=0 
+ 
+2024-05-09 22:34:35,479 - mmcv - INFO - 
+img_backbone.layer1.0.downsample.1.weight - torch.Size([256]): 
+The value is the same before and after calling `init_weights` of TPVFormer  
+ 
+2024-05-09 22:34:35,479 - mmcv - INFO - 
+img_backbone.layer1.0.downsample.1.bias - torch.Size([256]): 
+The value is the same before and after calling `init_weights` of TPVFormer  
+ 
+2024-05-09 22:34:35,479 - mmcv - INFO - 
+img_backbone.layer1.1.conv1.weight - torch.Size([64, 256, 1, 1]): 
+KaimingInit: a=0, mode=fan_out, nonlinearity=relu, distribution =normal, bias=0 
+ 
+2024-05-09 22:34:35,479 - mmcv - INFO - 
+img_backbone.layer1.1.bn1.weight - torch.Size([64]): 
+The value is the same before and after calling `init_weights` of TPVFormer  
+ 
+2024-05-09 22:34:35,479 - mmcv - INFO - 
+img_backbone.layer1.1.bn1.bias - torch.Size([64]): 
+The value is the same before and after calling `init_weights` of TPVFormer  
+ 
+2024-05-09 22:34:35,479 - mmcv - INFO - 
+img_backbone.layer1.1.conv2.weight - torch.Size([64, 64, 3, 3]): 
+KaimingInit: a=0, mode=fan_out, nonlinearity=relu, distribution =normal, bias=0 
+ 
+2024-05-09 22:34:35,479 - mmcv - INFO - 
+img_backbone.layer1.1.bn2.weight - torch.Size([64]): 
+The value is the same before and after calling `init_weights` of TPVFormer  
+ 
+2024-05-09 22:34:35,479 - mmcv - INFO - 
+img_backbone.layer1.1.bn2.bias - torch.Size([64]): 
+The value is the same before and after calling `init_weights` of TPVFormer  
+ 
+2024-05-09 22:34:35,480 - mmcv - INFO - 
+img_backbone.layer1.1.conv3.weight - torch.Size([256, 64, 1, 1]): 
+KaimingInit: a=0, mode=fan_out, nonlinearity=relu, distribution =normal, bias=0 
+ 
+2024-05-09 22:34:35,480 - mmcv - INFO - 
+img_backbone.layer1.1.bn3.weight - torch.Size([256]): 
+ConstantInit: val=0, bias=0 
+ 
+2024-05-09 22:34:35,480 - mmcv - INFO - 
+img_backbone.layer1.1.bn3.bias - torch.Size([256]): 
+The value is the same before and after calling `init_weights` of TPVFormer  
+ 
+2024-05-09 22:34:35,480 - mmcv - INFO - 
+img_backbone.layer1.2.conv1.weight - torch.Size([64, 256, 1, 1]): 
+KaimingInit: a=0, mode=fan_out, nonlinearity=relu, distribution =normal, bias=0 
+ 
+2024-05-09 22:34:35,480 - mmcv - INFO - 
+img_backbone.layer1.2.bn1.weight - torch.Size([64]): 
+The value is the same before and after calling `init_weights` of TPVFormer  
+ 
+2024-05-09 22:34:35,480 - mmcv - INFO - 
+img_backbone.layer1.2.bn1.bias - torch.Size([64]): 
+The value is the same before and after calling `init_weights` of TPVFormer  
+ 
+2024-05-09 22:34:35,480 - mmcv - INFO - 
+img_backbone.layer1.2.conv2.weight - torch.Size([64, 64, 3, 3]): 
+KaimingInit: a=0, mode=fan_out, nonlinearity=relu, distribution =normal, bias=0 
+ 
+2024-05-09 22:34:35,480 - mmcv - INFO - 
+img_backbone.layer1.2.bn2.weight - torch.Size([64]): 
+The value is the same before and after calling `init_weights` of TPVFormer  
+ 
+2024-05-09 22:34:35,480 - mmcv - INFO - 
+img_backbone.layer1.2.bn2.bias - torch.Size([64]): 
+The value is the same before and after calling `init_weights` of TPVFormer  
+ 
+2024-05-09 22:34:35,480 - mmcv - INFO - 
+img_backbone.layer1.2.conv3.weight - torch.Size([256, 64, 1, 1]): 
+KaimingInit: a=0, mode=fan_out, nonlinearity=relu, distribution =normal, bias=0 
+ 
+2024-05-09 22:34:35,480 - mmcv - INFO - 
+img_backbone.layer1.2.bn3.weight - torch.Size([256]): 
+ConstantInit: val=0, bias=0 
+ 
+2024-05-09 22:34:35,480 - mmcv - INFO - 
+img_backbone.layer1.2.bn3.bias - torch.Size([256]): 
+The value is the same before and after calling `init_weights` of TPVFormer  
+ 
+2024-05-09 22:34:35,480 - mmcv - INFO - 
+img_backbone.layer2.0.conv1.weight - torch.Size([128, 256, 1, 1]): 
+KaimingInit: a=0, mode=fan_out, nonlinearity=relu, distribution =normal, bias=0 
+ 
+2024-05-09 22:34:35,480 - mmcv - INFO - 
+img_backbone.layer2.0.bn1.weight - torch.Size([128]): 
+The value is the same before and after calling `init_weights` of TPVFormer  
+ 
+2024-05-09 22:34:35,480 - mmcv - INFO - 
+img_backbone.layer2.0.bn1.bias - torch.Size([128]): 
+The value is the same before and after calling `init_weights` of TPVFormer  
+ 
+2024-05-09 22:34:35,480 - mmcv - INFO - 
+img_backbone.layer2.0.conv2.weight - torch.Size([128, 128, 3, 3]): 
+KaimingInit: a=0, mode=fan_out, nonlinearity=relu, distribution =normal, bias=0 
+ 
+2024-05-09 22:34:35,481 - mmcv - INFO - 
+img_backbone.layer2.0.bn2.weight - torch.Size([128]): 
+The value is the same before and after calling `init_weights` of TPVFormer  
+ 
+2024-05-09 22:34:35,481 - mmcv - INFO - 
+img_backbone.layer2.0.bn2.bias - torch.Size([128]): 
+The value is the same before and after calling `init_weights` of TPVFormer  
+ 
+2024-05-09 22:34:35,481 - mmcv - INFO - 
+img_backbone.layer2.0.conv3.weight - torch.Size([512, 128, 1, 1]): 
+KaimingInit: a=0, mode=fan_out, nonlinearity=relu, distribution =normal, bias=0 
+ 
+2024-05-09 22:34:35,481 - mmcv - INFO - 
+img_backbone.layer2.0.bn3.weight - torch.Size([512]): 
+ConstantInit: val=0, bias=0 
+ 
+2024-05-09 22:34:35,481 - mmcv - INFO - 
+img_backbone.layer2.0.bn3.bias - torch.Size([512]): 
+The value is the same before and after calling `init_weights` of TPVFormer  
+ 
+2024-05-09 22:34:35,481 - mmcv - INFO - 
+img_backbone.layer2.0.downsample.0.weight - torch.Size([512, 256, 1, 1]): 
+KaimingInit: a=0, mode=fan_out, nonlinearity=relu, distribution =normal, bias=0 
+ 
+2024-05-09 22:34:35,481 - mmcv - INFO - 
+img_backbone.layer2.0.downsample.1.weight - torch.Size([512]): 
+The value is the same before and after calling `init_weights` of TPVFormer  
+ 
+2024-05-09 22:34:35,481 - mmcv - INFO - 
+img_backbone.layer2.0.downsample.1.bias - torch.Size([512]): 
+The value is the same before and after calling `init_weights` of TPVFormer  
+ 
+2024-05-09 22:34:35,481 - mmcv - INFO - 
+img_backbone.layer2.1.conv1.weight - torch.Size([128, 512, 1, 1]): 
+KaimingInit: a=0, mode=fan_out, nonlinearity=relu, distribution =normal, bias=0 
+ 
+2024-05-09 22:34:35,481 - mmcv - INFO - 
+img_backbone.layer2.1.bn1.weight - torch.Size([128]): 
+The value is the same before and after calling `init_weights` of TPVFormer  
+ 
+2024-05-09 22:34:35,481 - mmcv - INFO - 
+img_backbone.layer2.1.bn1.bias - torch.Size([128]): 
+The value is the same before and after calling `init_weights` of TPVFormer  
+ 
+2024-05-09 22:34:35,481 - mmcv - INFO - 
+img_backbone.layer2.1.conv2.weight - torch.Size([128, 128, 3, 3]): 
+KaimingInit: a=0, mode=fan_out, nonlinearity=relu, distribution =normal, bias=0 
+ 
+2024-05-09 22:34:35,481 - mmcv - INFO - 
+img_backbone.layer2.1.bn2.weight - torch.Size([128]): 
+The value is the same before and after calling `init_weights` of TPVFormer  
+ 
+2024-05-09 22:34:35,481 - mmcv - INFO - 
+img_backbone.layer2.1.bn2.bias - torch.Size([128]): 
+The value is the same before and after calling `init_weights` of TPVFormer  
+ 
+2024-05-09 22:34:35,481 - mmcv - INFO - 
+img_backbone.layer2.1.conv3.weight - torch.Size([512, 128, 1, 1]): 
+KaimingInit: a=0, mode=fan_out, nonlinearity=relu, distribution =normal, bias=0 
+ 
+2024-05-09 22:34:35,482 - mmcv - INFO - 
+img_backbone.layer2.1.bn3.weight - torch.Size([512]): 
+ConstantInit: val=0, bias=0 
+ 
+2024-05-09 22:34:35,482 - mmcv - INFO - 
+img_backbone.layer2.1.bn3.bias - torch.Size([512]): 
+The value is the same before and after calling `init_weights` of TPVFormer  
+ 
+2024-05-09 22:34:35,482 - mmcv - INFO - 
+img_backbone.layer2.2.conv1.weight - torch.Size([128, 512, 1, 1]): 
+KaimingInit: a=0, mode=fan_out, nonlinearity=relu, distribution =normal, bias=0 
+ 
+2024-05-09 22:34:35,482 - mmcv - INFO - 
+img_backbone.layer2.2.bn1.weight - torch.Size([128]): 
+The value is the same before and after calling `init_weights` of TPVFormer  
+ 
+2024-05-09 22:34:35,482 - mmcv - INFO - 
+img_backbone.layer2.2.bn1.bias - torch.Size([128]): 
+The value is the same before and after calling `init_weights` of TPVFormer  
+ 
+2024-05-09 22:34:35,482 - mmcv - INFO - 
+img_backbone.layer2.2.conv2.weight - torch.Size([128, 128, 3, 3]): 
+KaimingInit: a=0, mode=fan_out, nonlinearity=relu, distribution =normal, bias=0 
+ 
+2024-05-09 22:34:35,482 - mmcv - INFO - 
+img_backbone.layer2.2.bn2.weight - torch.Size([128]): 
+The value is the same before and after calling `init_weights` of TPVFormer  
+ 
+2024-05-09 22:34:35,482 - mmcv - INFO - 
+img_backbone.layer2.2.bn2.bias - torch.Size([128]): 
+The value is the same before and after calling `init_weights` of TPVFormer  
+ 
+2024-05-09 22:34:35,482 - mmcv - INFO - 
+img_backbone.layer2.2.conv3.weight - torch.Size([512, 128, 1, 1]): 
+KaimingInit: a=0, mode=fan_out, nonlinearity=relu, distribution =normal, bias=0 
+ 
+2024-05-09 22:34:35,482 - mmcv - INFO - 
+img_backbone.layer2.2.bn3.weight - torch.Size([512]): 
+ConstantInit: val=0, bias=0 
+ 
+2024-05-09 22:34:35,482 - mmcv - INFO - 
+img_backbone.layer2.2.bn3.bias - torch.Size([512]): 
+The value is the same before and after calling `init_weights` of TPVFormer  
+ 
+2024-05-09 22:34:35,482 - mmcv - INFO - 
+img_backbone.layer2.3.conv1.weight - torch.Size([128, 512, 1, 1]): 
+KaimingInit: a=0, mode=fan_out, nonlinearity=relu, distribution =normal, bias=0 
+ 
+2024-05-09 22:34:35,482 - mmcv - INFO - 
+img_backbone.layer2.3.bn1.weight - torch.Size([128]): 
+The value is the same before and after calling `init_weights` of TPVFormer  
+ 
+2024-05-09 22:34:35,482 - mmcv - INFO - 
+img_backbone.layer2.3.bn1.bias - torch.Size([128]): 
+The value is the same before and after calling `init_weights` of TPVFormer  
+ 
+2024-05-09 22:34:35,482 - mmcv - INFO - 
+img_backbone.layer2.3.conv2.weight - torch.Size([128, 128, 3, 3]): 
+KaimingInit: a=0, mode=fan_out, nonlinearity=relu, distribution =normal, bias=0 
+ 
+2024-05-09 22:34:35,483 - mmcv - INFO - 
+img_backbone.layer2.3.bn2.weight - torch.Size([128]): 
+The value is the same before and after calling `init_weights` of TPVFormer  
+ 
+2024-05-09 22:34:35,483 - mmcv - INFO - 
+img_backbone.layer2.3.bn2.bias - torch.Size([128]): 
+The value is the same before and after calling `init_weights` of TPVFormer  
+ 
+2024-05-09 22:34:35,483 - mmcv - INFO - 
+img_backbone.layer2.3.conv3.weight - torch.Size([512, 128, 1, 1]): 
+KaimingInit: a=0, mode=fan_out, nonlinearity=relu, distribution =normal, bias=0 
+ 
+2024-05-09 22:34:35,483 - mmcv - INFO - 
+img_backbone.layer2.3.bn3.weight - torch.Size([512]): 
+ConstantInit: val=0, bias=0 
+ 
+2024-05-09 22:34:35,483 - mmcv - INFO - 
+img_backbone.layer2.3.bn3.bias - torch.Size([512]): 
+The value is the same before and after calling `init_weights` of TPVFormer  
+ 
+2024-05-09 22:34:35,483 - mmcv - INFO - 
+img_backbone.layer3.0.conv1.weight - torch.Size([256, 512, 1, 1]): 
+KaimingInit: a=0, mode=fan_out, nonlinearity=relu, distribution =normal, bias=0 
+ 
+2024-05-09 22:34:35,483 - mmcv - INFO - 
+img_backbone.layer3.0.bn1.weight - torch.Size([256]): 
+The value is the same before and after calling `init_weights` of TPVFormer  
+ 
+2024-05-09 22:34:35,483 - mmcv - INFO - 
+img_backbone.layer3.0.bn1.bias - torch.Size([256]): 
+The value is the same before and after calling `init_weights` of TPVFormer  
+ 
+2024-05-09 22:34:35,483 - mmcv - INFO - 
+img_backbone.layer3.0.conv2.weight - torch.Size([256, 256, 3, 3]): 
+Initialized by user-defined `init_weights` in ModulatedDeformConv2dPack  
+ 
+2024-05-09 22:34:35,483 - mmcv - INFO - 
+img_backbone.layer3.0.conv2.conv_offset.weight - torch.Size([27, 256, 3, 3]): 
+Initialized by user-defined `init_weights` in ModulatedDeformConv2dPack  
+ 
+2024-05-09 22:34:35,483 - mmcv - INFO - 
+img_backbone.layer3.0.conv2.conv_offset.bias - torch.Size([27]): 
+The value is the same before and after calling `init_weights` of TPVFormer  
+ 
+2024-05-09 22:34:35,483 - mmcv - INFO - 
+img_backbone.layer3.0.bn2.weight - torch.Size([256]): 
+The value is the same before and after calling `init_weights` of TPVFormer  
+ 
+2024-05-09 22:34:35,483 - mmcv - INFO - 
+img_backbone.layer3.0.bn2.bias - torch.Size([256]): 
+The value is the same before and after calling `init_weights` of TPVFormer  
+ 
+2024-05-09 22:34:35,483 - mmcv - INFO - 
+img_backbone.layer3.0.conv3.weight - torch.Size([1024, 256, 1, 1]): 
+KaimingInit: a=0, mode=fan_out, nonlinearity=relu, distribution =normal, bias=0 
+ 
+2024-05-09 22:34:35,483 - mmcv - INFO - 
+img_backbone.layer3.0.bn3.weight - torch.Size([1024]): 
+ConstantInit: val=0, bias=0 
+ 
+2024-05-09 22:34:35,484 - mmcv - INFO - 
+img_backbone.layer3.0.bn3.bias - torch.Size([1024]): 
+The value is the same before and after calling `init_weights` of TPVFormer  
+ 
+2024-05-09 22:34:35,484 - mmcv - INFO - 
+img_backbone.layer3.0.downsample.0.weight - torch.Size([1024, 512, 1, 1]): 
+KaimingInit: a=0, mode=fan_out, nonlinearity=relu, distribution =normal, bias=0 
+ 
+2024-05-09 22:34:35,484 - mmcv - INFO - 
+img_backbone.layer3.0.downsample.1.weight - torch.Size([1024]): 
+The value is the same before and after calling `init_weights` of TPVFormer  
+ 
+2024-05-09 22:34:35,484 - mmcv - INFO - 
+img_backbone.layer3.0.downsample.1.bias - torch.Size([1024]): 
+The value is the same before and after calling `init_weights` of TPVFormer  
+ 
+2024-05-09 22:34:35,484 - mmcv - INFO - 
+img_backbone.layer3.1.conv1.weight - torch.Size([256, 1024, 1, 1]): 
+KaimingInit: a=0, mode=fan_out, nonlinearity=relu, distribution =normal, bias=0 
+ 
+2024-05-09 22:34:35,484 - mmcv - INFO - 
+img_backbone.layer3.1.bn1.weight - torch.Size([256]): 
+The value is the same before and after calling `init_weights` of TPVFormer  
+ 
+2024-05-09 22:34:35,484 - mmcv - INFO - 
+img_backbone.layer3.1.bn1.bias - torch.Size([256]): 
+The value is the same before and after calling `init_weights` of TPVFormer  
+ 
+2024-05-09 22:34:35,484 - mmcv - INFO - 
+img_backbone.layer3.1.conv2.weight - torch.Size([256, 256, 3, 3]): 
+Initialized by user-defined `init_weights` in ModulatedDeformConv2dPack  
+ 
+2024-05-09 22:34:35,484 - mmcv - INFO - 
+img_backbone.layer3.1.conv2.conv_offset.weight - torch.Size([27, 256, 3, 3]): 
+Initialized by user-defined `init_weights` in ModulatedDeformConv2dPack  
+ 
+2024-05-09 22:34:35,484 - mmcv - INFO - 
+img_backbone.layer3.1.conv2.conv_offset.bias - torch.Size([27]): 
+The value is the same before and after calling `init_weights` of TPVFormer  
+ 
+2024-05-09 22:34:35,484 - mmcv - INFO - 
+img_backbone.layer3.1.bn2.weight - torch.Size([256]): 
+The value is the same before and after calling `init_weights` of TPVFormer  
+ 
+2024-05-09 22:34:35,484 - mmcv - INFO - 
+img_backbone.layer3.1.bn2.bias - torch.Size([256]): 
+The value is the same before and after calling `init_weights` of TPVFormer  
+ 
+2024-05-09 22:34:35,484 - mmcv - INFO - 
+img_backbone.layer3.1.conv3.weight - torch.Size([1024, 256, 1, 1]): 
+KaimingInit: a=0, mode=fan_out, nonlinearity=relu, distribution =normal, bias=0 
+ 
+2024-05-09 22:34:35,484 - mmcv - INFO - 
+img_backbone.layer3.1.bn3.weight - torch.Size([1024]): 
+ConstantInit: val=0, bias=0 
+ 
+2024-05-09 22:34:35,484 - mmcv - INFO - 
+img_backbone.layer3.1.bn3.bias - torch.Size([1024]): 
+The value is the same before and after calling `init_weights` of TPVFormer  
+ 
+2024-05-09 22:34:35,485 - mmcv - INFO - 
+img_backbone.layer3.2.conv1.weight - torch.Size([256, 1024, 1, 1]): 
+KaimingInit: a=0, mode=fan_out, nonlinearity=relu, distribution =normal, bias=0 
+ 
+2024-05-09 22:34:35,485 - mmcv - INFO - 
+img_backbone.layer3.2.bn1.weight - torch.Size([256]): 
+The value is the same before and after calling `init_weights` of TPVFormer  
+ 
+2024-05-09 22:34:35,485 - mmcv - INFO - 
+img_backbone.layer3.2.bn1.bias - torch.Size([256]): 
+The value is the same before and after calling `init_weights` of TPVFormer  
+ 
+2024-05-09 22:34:35,485 - mmcv - INFO - 
+img_backbone.layer3.2.conv2.weight - torch.Size([256, 256, 3, 3]): 
+Initialized by user-defined `init_weights` in ModulatedDeformConv2dPack  
+ 
+2024-05-09 22:34:35,485 - mmcv - INFO - 
+img_backbone.layer3.2.conv2.conv_offset.weight - torch.Size([27, 256, 3, 3]): 
+Initialized by user-defined `init_weights` in ModulatedDeformConv2dPack  
+ 
+2024-05-09 22:34:35,485 - mmcv - INFO - 
+img_backbone.layer3.2.conv2.conv_offset.bias - torch.Size([27]): 
+The value is the same before and after calling `init_weights` of TPVFormer  
+ 
+2024-05-09 22:34:35,485 - mmcv - INFO - 
+img_backbone.layer3.2.bn2.weight - torch.Size([256]): 
+The value is the same before and after calling `init_weights` of TPVFormer  
+ 
+2024-05-09 22:34:35,485 - mmcv - INFO - 
+img_backbone.layer3.2.bn2.bias - torch.Size([256]): 
+The value is the same before and after calling `init_weights` of TPVFormer  
+ 
+2024-05-09 22:34:35,485 - mmcv - INFO - 
+img_backbone.layer3.2.conv3.weight - torch.Size([1024, 256, 1, 1]): 
+KaimingInit: a=0, mode=fan_out, nonlinearity=relu, distribution =normal, bias=0 
+ 
+2024-05-09 22:34:35,485 - mmcv - INFO - 
+img_backbone.layer3.2.bn3.weight - torch.Size([1024]): 
+ConstantInit: val=0, bias=0 
+ 
+2024-05-09 22:34:35,485 - mmcv - INFO - 
+img_backbone.layer3.2.bn3.bias - torch.Size([1024]): 
+The value is the same before and after calling `init_weights` of TPVFormer  
+ 
+2024-05-09 22:34:35,485 - mmcv - INFO - 
+img_backbone.layer3.3.conv1.weight - torch.Size([256, 1024, 1, 1]): 
+KaimingInit: a=0, mode=fan_out, nonlinearity=relu, distribution =normal, bias=0 
+ 
+2024-05-09 22:34:35,485 - mmcv - INFO - 
+img_backbone.layer3.3.bn1.weight - torch.Size([256]): 
+The value is the same before and after calling `init_weights` of TPVFormer  
+ 
+2024-05-09 22:34:35,485 - mmcv - INFO - 
+img_backbone.layer3.3.bn1.bias - torch.Size([256]): 
+The value is the same before and after calling `init_weights` of TPVFormer  
+ 
+2024-05-09 22:34:35,485 - mmcv - INFO - 
+img_backbone.layer3.3.conv2.weight - torch.Size([256, 256, 3, 3]): 
+Initialized by user-defined `init_weights` in ModulatedDeformConv2dPack  
+ 
+2024-05-09 22:34:35,486 - mmcv - INFO - 
+img_backbone.layer3.3.conv2.conv_offset.weight - torch.Size([27, 256, 3, 3]): 
+Initialized by user-defined `init_weights` in ModulatedDeformConv2dPack  
+ 
+2024-05-09 22:34:35,486 - mmcv - INFO - 
+img_backbone.layer3.3.conv2.conv_offset.bias - torch.Size([27]): 
+The value is the same before and after calling `init_weights` of TPVFormer  
+ 
+2024-05-09 22:34:35,486 - mmcv - INFO - 
+img_backbone.layer3.3.bn2.weight - torch.Size([256]): 
+The value is the same before and after calling `init_weights` of TPVFormer  
+ 
+2024-05-09 22:34:35,486 - mmcv - INFO - 
+img_backbone.layer3.3.bn2.bias - torch.Size([256]): 
+The value is the same before and after calling `init_weights` of TPVFormer  
+ 
+2024-05-09 22:34:35,486 - mmcv - INFO - 
+img_backbone.layer3.3.conv3.weight - torch.Size([1024, 256, 1, 1]): 
+KaimingInit: a=0, mode=fan_out, nonlinearity=relu, distribution =normal, bias=0 
+ 
+2024-05-09 22:34:35,486 - mmcv - INFO - 
+img_backbone.layer3.3.bn3.weight - torch.Size([1024]): 
+ConstantInit: val=0, bias=0 
+ 
+2024-05-09 22:34:35,486 - mmcv - INFO - 
+img_backbone.layer3.3.bn3.bias - torch.Size([1024]): 
+The value is the same before and after calling `init_weights` of TPVFormer  
+ 
+2024-05-09 22:34:35,486 - mmcv - INFO - 
+img_backbone.layer3.4.conv1.weight - torch.Size([256, 1024, 1, 1]): 
+KaimingInit: a=0, mode=fan_out, nonlinearity=relu, distribution =normal, bias=0 
+ 
+2024-05-09 22:34:35,486 - mmcv - INFO - 
+img_backbone.layer3.4.bn1.weight - torch.Size([256]): 
+The value is the same before and after calling `init_weights` of TPVFormer  
+ 
+2024-05-09 22:34:35,486 - mmcv - INFO - 
+img_backbone.layer3.4.bn1.bias - torch.Size([256]): 
+The value is the same before and after calling `init_weights` of TPVFormer  
+ 
+2024-05-09 22:34:35,486 - mmcv - INFO - 
+img_backbone.layer3.4.conv2.weight - torch.Size([256, 256, 3, 3]): 
+Initialized by user-defined `init_weights` in ModulatedDeformConv2dPack  
+ 
+2024-05-09 22:34:35,486 - mmcv - INFO - 
+img_backbone.layer3.4.conv2.conv_offset.weight - torch.Size([27, 256, 3, 3]): 
+Initialized by user-defined `init_weights` in ModulatedDeformConv2dPack  
+ 
+2024-05-09 22:34:35,486 - mmcv - INFO - 
+img_backbone.layer3.4.conv2.conv_offset.bias - torch.Size([27]): 
+The value is the same before and after calling `init_weights` of TPVFormer  
+ 
+2024-05-09 22:34:35,486 - mmcv - INFO - 
+img_backbone.layer3.4.bn2.weight - torch.Size([256]): 
+The value is the same before and after calling `init_weights` of TPVFormer  
+ 
+2024-05-09 22:34:35,486 - mmcv - INFO - 
+img_backbone.layer3.4.bn2.bias - torch.Size([256]): 
+The value is the same before and after calling `init_weights` of TPVFormer  
+ 
+2024-05-09 22:34:35,487 - mmcv - INFO - 
+img_backbone.layer3.4.conv3.weight - torch.Size([1024, 256, 1, 1]): 
+KaimingInit: a=0, mode=fan_out, nonlinearity=relu, distribution =normal, bias=0 
+ 
+2024-05-09 22:34:35,487 - mmcv - INFO - 
+img_backbone.layer3.4.bn3.weight - torch.Size([1024]): 
+ConstantInit: val=0, bias=0 
+ 
+2024-05-09 22:34:35,487 - mmcv - INFO - 
+img_backbone.layer3.4.bn3.bias - torch.Size([1024]): 
+The value is the same before and after calling `init_weights` of TPVFormer  
+ 
+2024-05-09 22:34:35,487 - mmcv - INFO - 
+img_backbone.layer3.5.conv1.weight - torch.Size([256, 1024, 1, 1]): 
+KaimingInit: a=0, mode=fan_out, nonlinearity=relu, distribution =normal, bias=0 
+ 
+2024-05-09 22:34:35,487 - mmcv - INFO - 
+img_backbone.layer3.5.bn1.weight - torch.Size([256]): 
+The value is the same before and after calling `init_weights` of TPVFormer  
+ 
+2024-05-09 22:34:35,487 - mmcv - INFO - 
+img_backbone.layer3.5.bn1.bias - torch.Size([256]): 
+The value is the same before and after calling `init_weights` of TPVFormer  
+ 
+2024-05-09 22:34:35,487 - mmcv - INFO - 
+img_backbone.layer3.5.conv2.weight - torch.Size([256, 256, 3, 3]): 
+Initialized by user-defined `init_weights` in ModulatedDeformConv2dPack  
+ 
+2024-05-09 22:34:35,487 - mmcv - INFO - 
+img_backbone.layer3.5.conv2.conv_offset.weight - torch.Size([27, 256, 3, 3]): 
+Initialized by user-defined `init_weights` in ModulatedDeformConv2dPack  
+ 
+2024-05-09 22:34:35,487 - mmcv - INFO - 
+img_backbone.layer3.5.conv2.conv_offset.bias - torch.Size([27]): 
+The value is the same before and after calling `init_weights` of TPVFormer  
+ 
+2024-05-09 22:34:35,487 - mmcv - INFO - 
+img_backbone.layer3.5.bn2.weight - torch.Size([256]): 
+The value is the same before and after calling `init_weights` of TPVFormer  
+ 
+2024-05-09 22:34:35,487 - mmcv - INFO - 
+img_backbone.layer3.5.bn2.bias - torch.Size([256]): 
+The value is the same before and after calling `init_weights` of TPVFormer  
+ 
+2024-05-09 22:34:35,487 - mmcv - INFO - 
+img_backbone.layer3.5.conv3.weight - torch.Size([1024, 256, 1, 1]): 
+KaimingInit: a=0, mode=fan_out, nonlinearity=relu, distribution =normal, bias=0 
+ 
+2024-05-09 22:34:35,487 - mmcv - INFO - 
+img_backbone.layer3.5.bn3.weight - torch.Size([1024]): 
+ConstantInit: val=0, bias=0 
+ 
+2024-05-09 22:34:35,487 - mmcv - INFO - 
+img_backbone.layer3.5.bn3.bias - torch.Size([1024]): 
+The value is the same before and after calling `init_weights` of TPVFormer  
+ 
+2024-05-09 22:34:35,487 - mmcv - INFO - 
+img_backbone.layer3.6.conv1.weight - torch.Size([256, 1024, 1, 1]): 
+KaimingInit: a=0, mode=fan_out, nonlinearity=relu, distribution =normal, bias=0 
+ 
+2024-05-09 22:34:35,488 - mmcv - INFO - 
+img_backbone.layer3.6.bn1.weight - torch.Size([256]): 
+The value is the same before and after calling `init_weights` of TPVFormer  
+ 
+2024-05-09 22:34:35,488 - mmcv - INFO - 
+img_backbone.layer3.6.bn1.bias - torch.Size([256]): 
+The value is the same before and after calling `init_weights` of TPVFormer  
+ 
+2024-05-09 22:34:35,488 - mmcv - INFO - 
+img_backbone.layer3.6.conv2.weight - torch.Size([256, 256, 3, 3]): 
+Initialized by user-defined `init_weights` in ModulatedDeformConv2dPack  
+ 
+2024-05-09 22:34:35,488 - mmcv - INFO - 
+img_backbone.layer3.6.conv2.conv_offset.weight - torch.Size([27, 256, 3, 3]): 
+Initialized by user-defined `init_weights` in ModulatedDeformConv2dPack  
+ 
+2024-05-09 22:34:35,488 - mmcv - INFO - 
+img_backbone.layer3.6.conv2.conv_offset.bias - torch.Size([27]): 
+The value is the same before and after calling `init_weights` of TPVFormer  
+ 
+2024-05-09 22:34:35,488 - mmcv - INFO - 
+img_backbone.layer3.6.bn2.weight - torch.Size([256]): 
+The value is the same before and after calling `init_weights` of TPVFormer  
+ 
+2024-05-09 22:34:35,488 - mmcv - INFO - 
+img_backbone.layer3.6.bn2.bias - torch.Size([256]): 
+The value is the same before and after calling `init_weights` of TPVFormer  
+ 
+2024-05-09 22:34:35,488 - mmcv - INFO - 
+img_backbone.layer3.6.conv3.weight - torch.Size([1024, 256, 1, 1]): 
+KaimingInit: a=0, mode=fan_out, nonlinearity=relu, distribution =normal, bias=0 
+ 
+2024-05-09 22:34:35,488 - mmcv - INFO - 
+img_backbone.layer3.6.bn3.weight - torch.Size([1024]): 
+ConstantInit: val=0, bias=0 
+ 
+2024-05-09 22:34:35,488 - mmcv - INFO - 
+img_backbone.layer3.6.bn3.bias - torch.Size([1024]): 
+The value is the same before and after calling `init_weights` of TPVFormer  
+ 
+2024-05-09 22:34:35,488 - mmcv - INFO - 
+img_backbone.layer3.7.conv1.weight - torch.Size([256, 1024, 1, 1]): 
+KaimingInit: a=0, mode=fan_out, nonlinearity=relu, distribution =normal, bias=0 
+ 
+2024-05-09 22:34:35,488 - mmcv - INFO - 
+img_backbone.layer3.7.bn1.weight - torch.Size([256]): 
+The value is the same before and after calling `init_weights` of TPVFormer  
+ 
+2024-05-09 22:34:35,488 - mmcv - INFO - 
+img_backbone.layer3.7.bn1.bias - torch.Size([256]): 
+The value is the same before and after calling `init_weights` of TPVFormer  
+ 
+2024-05-09 22:34:35,488 - mmcv - INFO - 
+img_backbone.layer3.7.conv2.weight - torch.Size([256, 256, 3, 3]): 
+Initialized by user-defined `init_weights` in ModulatedDeformConv2dPack  
+ 
+2024-05-09 22:34:35,488 - mmcv - INFO - 
+img_backbone.layer3.7.conv2.conv_offset.weight - torch.Size([27, 256, 3, 3]): 
+Initialized by user-defined `init_weights` in ModulatedDeformConv2dPack  
+ 
+2024-05-09 22:34:35,488 - mmcv - INFO - 
+img_backbone.layer3.7.conv2.conv_offset.bias - torch.Size([27]): 
+The value is the same before and after calling `init_weights` of TPVFormer  
+ 
+2024-05-09 22:34:35,489 - mmcv - INFO - 
+img_backbone.layer3.7.bn2.weight - torch.Size([256]): 
+The value is the same before and after calling `init_weights` of TPVFormer  
+ 
+2024-05-09 22:34:35,489 - mmcv - INFO - 
+img_backbone.layer3.7.bn2.bias - torch.Size([256]): 
+The value is the same before and after calling `init_weights` of TPVFormer  
+ 
+2024-05-09 22:34:35,489 - mmcv - INFO - 
+img_backbone.layer3.7.conv3.weight - torch.Size([1024, 256, 1, 1]): 
+KaimingInit: a=0, mode=fan_out, nonlinearity=relu, distribution =normal, bias=0 
+ 
+2024-05-09 22:34:35,489 - mmcv - INFO - 
+img_backbone.layer3.7.bn3.weight - torch.Size([1024]): 
+ConstantInit: val=0, bias=0 
+ 
+2024-05-09 22:34:35,489 - mmcv - INFO - 
+img_backbone.layer3.7.bn3.bias - torch.Size([1024]): 
+The value is the same before and after calling `init_weights` of TPVFormer  
+ 
+2024-05-09 22:34:35,489 - mmcv - INFO - 
+img_backbone.layer3.8.conv1.weight - torch.Size([256, 1024, 1, 1]): 
+KaimingInit: a=0, mode=fan_out, nonlinearity=relu, distribution =normal, bias=0 
+ 
+2024-05-09 22:34:35,489 - mmcv - INFO - 
+img_backbone.layer3.8.bn1.weight - torch.Size([256]): 
+The value is the same before and after calling `init_weights` of TPVFormer  
+ 
+2024-05-09 22:34:35,489 - mmcv - INFO - 
+img_backbone.layer3.8.bn1.bias - torch.Size([256]): 
+The value is the same before and after calling `init_weights` of TPVFormer  
+ 
+2024-05-09 22:34:35,489 - mmcv - INFO - 
+img_backbone.layer3.8.conv2.weight - torch.Size([256, 256, 3, 3]): 
+Initialized by user-defined `init_weights` in ModulatedDeformConv2dPack  
+ 
+2024-05-09 22:34:35,489 - mmcv - INFO - 
+img_backbone.layer3.8.conv2.conv_offset.weight - torch.Size([27, 256, 3, 3]): 
+Initialized by user-defined `init_weights` in ModulatedDeformConv2dPack  
+ 
+2024-05-09 22:34:35,489 - mmcv - INFO - 
+img_backbone.layer3.8.conv2.conv_offset.bias - torch.Size([27]): 
+The value is the same before and after calling `init_weights` of TPVFormer  
+ 
+2024-05-09 22:34:35,489 - mmcv - INFO - 
+img_backbone.layer3.8.bn2.weight - torch.Size([256]): 
+The value is the same before and after calling `init_weights` of TPVFormer  
+ 
+2024-05-09 22:34:35,489 - mmcv - INFO - 
+img_backbone.layer3.8.bn2.bias - torch.Size([256]): 
+The value is the same before and after calling `init_weights` of TPVFormer  
+ 
+2024-05-09 22:34:35,489 - mmcv - INFO - 
+img_backbone.layer3.8.conv3.weight - torch.Size([1024, 256, 1, 1]): 
+KaimingInit: a=0, mode=fan_out, nonlinearity=relu, distribution =normal, bias=0 
+ 
+2024-05-09 22:34:35,489 - mmcv - INFO - 
+img_backbone.layer3.8.bn3.weight - torch.Size([1024]): 
+ConstantInit: val=0, bias=0 
+ 
+2024-05-09 22:34:35,490 - mmcv - INFO - 
+img_backbone.layer3.8.bn3.bias - torch.Size([1024]): 
+The value is the same before and after calling `init_weights` of TPVFormer  
+ 
+2024-05-09 22:34:35,490 - mmcv - INFO - 
+img_backbone.layer3.9.conv1.weight - torch.Size([256, 1024, 1, 1]): 
+KaimingInit: a=0, mode=fan_out, nonlinearity=relu, distribution =normal, bias=0 
+ 
+2024-05-09 22:34:35,490 - mmcv - INFO - 
+img_backbone.layer3.9.bn1.weight - torch.Size([256]): 
+The value is the same before and after calling `init_weights` of TPVFormer  
+ 
+2024-05-09 22:34:35,490 - mmcv - INFO - 
+img_backbone.layer3.9.bn1.bias - torch.Size([256]): 
+The value is the same before and after calling `init_weights` of TPVFormer  
+ 
+2024-05-09 22:34:35,490 - mmcv - INFO - 
+img_backbone.layer3.9.conv2.weight - torch.Size([256, 256, 3, 3]): 
+Initialized by user-defined `init_weights` in ModulatedDeformConv2dPack  
+ 
+2024-05-09 22:34:35,490 - mmcv - INFO - 
+img_backbone.layer3.9.conv2.conv_offset.weight - torch.Size([27, 256, 3, 3]): 
+Initialized by user-defined `init_weights` in ModulatedDeformConv2dPack  
+ 
+2024-05-09 22:34:35,490 - mmcv - INFO - 
+img_backbone.layer3.9.conv2.conv_offset.bias - torch.Size([27]): 
+The value is the same before and after calling `init_weights` of TPVFormer  
+ 
+2024-05-09 22:34:35,490 - mmcv - INFO - 
+img_backbone.layer3.9.bn2.weight - torch.Size([256]): 
+The value is the same before and after calling `init_weights` of TPVFormer  
+ 
+2024-05-09 22:34:35,490 - mmcv - INFO - 
+img_backbone.layer3.9.bn2.bias - torch.Size([256]): 
+The value is the same before and after calling `init_weights` of TPVFormer  
+ 
+2024-05-09 22:34:35,490 - mmcv - INFO - 
+img_backbone.layer3.9.conv3.weight - torch.Size([1024, 256, 1, 1]): 
+KaimingInit: a=0, mode=fan_out, nonlinearity=relu, distribution =normal, bias=0 
+ 
+2024-05-09 22:34:35,490 - mmcv - INFO - 
+img_backbone.layer3.9.bn3.weight - torch.Size([1024]): 
+ConstantInit: val=0, bias=0 
+ 
+2024-05-09 22:34:35,490 - mmcv - INFO - 
+img_backbone.layer3.9.bn3.bias - torch.Size([1024]): 
+The value is the same before and after calling `init_weights` of TPVFormer  
+ 
+2024-05-09 22:34:35,490 - mmcv - INFO - 
+img_backbone.layer3.10.conv1.weight - torch.Size([256, 1024, 1, 1]): 
+KaimingInit: a=0, mode=fan_out, nonlinearity=relu, distribution =normal, bias=0 
+ 
+2024-05-09 22:34:35,490 - mmcv - INFO - 
+img_backbone.layer3.10.bn1.weight - torch.Size([256]): 
+The value is the same before and after calling `init_weights` of TPVFormer  
+ 
+2024-05-09 22:34:35,490 - mmcv - INFO - 
+img_backbone.layer3.10.bn1.bias - torch.Size([256]): 
+The value is the same before and after calling `init_weights` of TPVFormer  
+ 
+2024-05-09 22:34:35,491 - mmcv - INFO - 
+img_backbone.layer3.10.conv2.weight - torch.Size([256, 256, 3, 3]): 
+Initialized by user-defined `init_weights` in ModulatedDeformConv2dPack  
+ 
+2024-05-09 22:34:35,491 - mmcv - INFO - 
+img_backbone.layer3.10.conv2.conv_offset.weight - torch.Size([27, 256, 3, 3]): 
+Initialized by user-defined `init_weights` in ModulatedDeformConv2dPack  
+ 
+2024-05-09 22:34:35,491 - mmcv - INFO - 
+img_backbone.layer3.10.conv2.conv_offset.bias - torch.Size([27]): 
+The value is the same before and after calling `init_weights` of TPVFormer  
+ 
+2024-05-09 22:34:35,491 - mmcv - INFO - 
+img_backbone.layer3.10.bn2.weight - torch.Size([256]): 
+The value is the same before and after calling `init_weights` of TPVFormer  
+ 
+2024-05-09 22:34:35,491 - mmcv - INFO - 
+img_backbone.layer3.10.bn2.bias - torch.Size([256]): 
+The value is the same before and after calling `init_weights` of TPVFormer  
+ 
+2024-05-09 22:34:35,491 - mmcv - INFO - 
+img_backbone.layer3.10.conv3.weight - torch.Size([1024, 256, 1, 1]): 
+KaimingInit: a=0, mode=fan_out, nonlinearity=relu, distribution =normal, bias=0 
+ 
+2024-05-09 22:34:35,491 - mmcv - INFO - 
+img_backbone.layer3.10.bn3.weight - torch.Size([1024]): 
+ConstantInit: val=0, bias=0 
+ 
+2024-05-09 22:34:35,491 - mmcv - INFO - 
+img_backbone.layer3.10.bn3.bias - torch.Size([1024]): 
+The value is the same before and after calling `init_weights` of TPVFormer  
+ 
+2024-05-09 22:34:35,491 - mmcv - INFO - 
+img_backbone.layer3.11.conv1.weight - torch.Size([256, 1024, 1, 1]): 
+KaimingInit: a=0, mode=fan_out, nonlinearity=relu, distribution =normal, bias=0 
+ 
+2024-05-09 22:34:35,491 - mmcv - INFO - 
+img_backbone.layer3.11.bn1.weight - torch.Size([256]): 
+The value is the same before and after calling `init_weights` of TPVFormer  
+ 
+2024-05-09 22:34:35,491 - mmcv - INFO - 
+img_backbone.layer3.11.bn1.bias - torch.Size([256]): 
+The value is the same before and after calling `init_weights` of TPVFormer  
+ 
+2024-05-09 22:34:35,491 - mmcv - INFO - 
+img_backbone.layer3.11.conv2.weight - torch.Size([256, 256, 3, 3]): 
+Initialized by user-defined `init_weights` in ModulatedDeformConv2dPack  
+ 
+2024-05-09 22:34:35,491 - mmcv - INFO - 
+img_backbone.layer3.11.conv2.conv_offset.weight - torch.Size([27, 256, 3, 3]): 
+Initialized by user-defined `init_weights` in ModulatedDeformConv2dPack  
+ 
+2024-05-09 22:34:35,491 - mmcv - INFO - 
+img_backbone.layer3.11.conv2.conv_offset.bias - torch.Size([27]): 
+The value is the same before and after calling `init_weights` of TPVFormer  
+ 
+2024-05-09 22:34:35,491 - mmcv - INFO - 
+img_backbone.layer3.11.bn2.weight - torch.Size([256]): 
+The value is the same before and after calling `init_weights` of TPVFormer  
+ 
+2024-05-09 22:34:35,491 - mmcv - INFO - 
+img_backbone.layer3.11.bn2.bias - torch.Size([256]): 
+The value is the same before and after calling `init_weights` of TPVFormer  
+ 
+2024-05-09 22:34:35,492 - mmcv - INFO - 
+img_backbone.layer3.11.conv3.weight - torch.Size([1024, 256, 1, 1]): 
+KaimingInit: a=0, mode=fan_out, nonlinearity=relu, distribution =normal, bias=0 
+ 
+2024-05-09 22:34:35,492 - mmcv - INFO - 
+img_backbone.layer3.11.bn3.weight - torch.Size([1024]): 
+ConstantInit: val=0, bias=0 
+ 
+2024-05-09 22:34:35,492 - mmcv - INFO - 
+img_backbone.layer3.11.bn3.bias - torch.Size([1024]): 
+The value is the same before and after calling `init_weights` of TPVFormer  
+ 
+2024-05-09 22:34:35,492 - mmcv - INFO - 
+img_backbone.layer3.12.conv1.weight - torch.Size([256, 1024, 1, 1]): 
+KaimingInit: a=0, mode=fan_out, nonlinearity=relu, distribution =normal, bias=0 
+ 
+2024-05-09 22:34:35,492 - mmcv - INFO - 
+img_backbone.layer3.12.bn1.weight - torch.Size([256]): 
+The value is the same before and after calling `init_weights` of TPVFormer  
+ 
+2024-05-09 22:34:35,492 - mmcv - INFO - 
+img_backbone.layer3.12.bn1.bias - torch.Size([256]): 
+The value is the same before and after calling `init_weights` of TPVFormer  
+ 
+2024-05-09 22:34:35,492 - mmcv - INFO - 
+img_backbone.layer3.12.conv2.weight - torch.Size([256, 256, 3, 3]): 
+Initialized by user-defined `init_weights` in ModulatedDeformConv2dPack  
+ 
+2024-05-09 22:34:35,492 - mmcv - INFO - 
+img_backbone.layer3.12.conv2.conv_offset.weight - torch.Size([27, 256, 3, 3]): 
+Initialized by user-defined `init_weights` in ModulatedDeformConv2dPack  
+ 
+2024-05-09 22:34:35,492 - mmcv - INFO - 
+img_backbone.layer3.12.conv2.conv_offset.bias - torch.Size([27]): 
+The value is the same before and after calling `init_weights` of TPVFormer  
+ 
+2024-05-09 22:34:35,492 - mmcv - INFO - 
+img_backbone.layer3.12.bn2.weight - torch.Size([256]): 
+The value is the same before and after calling `init_weights` of TPVFormer  
+ 
+2024-05-09 22:34:35,492 - mmcv - INFO - 
+img_backbone.layer3.12.bn2.bias - torch.Size([256]): 
+The value is the same before and after calling `init_weights` of TPVFormer  
+ 
+2024-05-09 22:34:35,492 - mmcv - INFO - 
+img_backbone.layer3.12.conv3.weight - torch.Size([1024, 256, 1, 1]): 
+KaimingInit: a=0, mode=fan_out, nonlinearity=relu, distribution =normal, bias=0 
+ 
+2024-05-09 22:34:35,492 - mmcv - INFO - 
+img_backbone.layer3.12.bn3.weight - torch.Size([1024]): 
+ConstantInit: val=0, bias=0 
+ 
+2024-05-09 22:34:35,492 - mmcv - INFO - 
+img_backbone.layer3.12.bn3.bias - torch.Size([1024]): 
+The value is the same before and after calling `init_weights` of TPVFormer  
+ 
+2024-05-09 22:34:35,492 - mmcv - INFO - 
+img_backbone.layer3.13.conv1.weight - torch.Size([256, 1024, 1, 1]): 
+KaimingInit: a=0, mode=fan_out, nonlinearity=relu, distribution =normal, bias=0 
+ 
+2024-05-09 22:34:35,493 - mmcv - INFO - 
+img_backbone.layer3.13.bn1.weight - torch.Size([256]): 
+The value is the same before and after calling `init_weights` of TPVFormer  
+ 
+2024-05-09 22:34:35,493 - mmcv - INFO - 
+img_backbone.layer3.13.bn1.bias - torch.Size([256]): 
+The value is the same before and after calling `init_weights` of TPVFormer  
+ 
+2024-05-09 22:34:35,493 - mmcv - INFO - 
+img_backbone.layer3.13.conv2.weight - torch.Size([256, 256, 3, 3]): 
+Initialized by user-defined `init_weights` in ModulatedDeformConv2dPack  
+ 
+2024-05-09 22:34:35,493 - mmcv - INFO - 
+img_backbone.layer3.13.conv2.conv_offset.weight - torch.Size([27, 256, 3, 3]): 
+Initialized by user-defined `init_weights` in ModulatedDeformConv2dPack  
+ 
+2024-05-09 22:34:35,493 - mmcv - INFO - 
+img_backbone.layer3.13.conv2.conv_offset.bias - torch.Size([27]): 
+The value is the same before and after calling `init_weights` of TPVFormer  
+ 
+2024-05-09 22:34:35,493 - mmcv - INFO - 
+img_backbone.layer3.13.bn2.weight - torch.Size([256]): 
+The value is the same before and after calling `init_weights` of TPVFormer  
+ 
+2024-05-09 22:34:35,493 - mmcv - INFO - 
+img_backbone.layer3.13.bn2.bias - torch.Size([256]): 
+The value is the same before and after calling `init_weights` of TPVFormer  
+ 
+2024-05-09 22:34:35,493 - mmcv - INFO - 
+img_backbone.layer3.13.conv3.weight - torch.Size([1024, 256, 1, 1]): 
+KaimingInit: a=0, mode=fan_out, nonlinearity=relu, distribution =normal, bias=0 
+ 
+2024-05-09 22:34:35,493 - mmcv - INFO - 
+img_backbone.layer3.13.bn3.weight - torch.Size([1024]): 
+ConstantInit: val=0, bias=0 
+ 
+2024-05-09 22:34:35,493 - mmcv - INFO - 
+img_backbone.layer3.13.bn3.bias - torch.Size([1024]): 
+The value is the same before and after calling `init_weights` of TPVFormer  
+ 
+2024-05-09 22:34:35,493 - mmcv - INFO - 
+img_backbone.layer3.14.conv1.weight - torch.Size([256, 1024, 1, 1]): 
+KaimingInit: a=0, mode=fan_out, nonlinearity=relu, distribution =normal, bias=0 
+ 
+2024-05-09 22:34:35,493 - mmcv - INFO - 
+img_backbone.layer3.14.bn1.weight - torch.Size([256]): 
+The value is the same before and after calling `init_weights` of TPVFormer  
+ 
+2024-05-09 22:34:35,493 - mmcv - INFO - 
+img_backbone.layer3.14.bn1.bias - torch.Size([256]): 
+The value is the same before and after calling `init_weights` of TPVFormer  
+ 
+2024-05-09 22:34:35,493 - mmcv - INFO - 
+img_backbone.layer3.14.conv2.weight - torch.Size([256, 256, 3, 3]): 
+Initialized by user-defined `init_weights` in ModulatedDeformConv2dPack  
+ 
+2024-05-09 22:34:35,493 - mmcv - INFO - 
+img_backbone.layer3.14.conv2.conv_offset.weight - torch.Size([27, 256, 3, 3]): 
+Initialized by user-defined `init_weights` in ModulatedDeformConv2dPack  
+ 
+2024-05-09 22:34:35,494 - mmcv - INFO - 
+img_backbone.layer3.14.conv2.conv_offset.bias - torch.Size([27]): 
+The value is the same before and after calling `init_weights` of TPVFormer  
+ 
+2024-05-09 22:34:35,494 - mmcv - INFO - 
+img_backbone.layer3.14.bn2.weight - torch.Size([256]): 
+The value is the same before and after calling `init_weights` of TPVFormer  
+ 
+2024-05-09 22:34:35,494 - mmcv - INFO - 
+img_backbone.layer3.14.bn2.bias - torch.Size([256]): 
+The value is the same before and after calling `init_weights` of TPVFormer  
+ 
+2024-05-09 22:34:35,494 - mmcv - INFO - 
+img_backbone.layer3.14.conv3.weight - torch.Size([1024, 256, 1, 1]): 
+KaimingInit: a=0, mode=fan_out, nonlinearity=relu, distribution =normal, bias=0 
+ 
+2024-05-09 22:34:35,494 - mmcv - INFO - 
+img_backbone.layer3.14.bn3.weight - torch.Size([1024]): 
+ConstantInit: val=0, bias=0 
+ 
+2024-05-09 22:34:35,494 - mmcv - INFO - 
+img_backbone.layer3.14.bn3.bias - torch.Size([1024]): 
+The value is the same before and after calling `init_weights` of TPVFormer  
+ 
+2024-05-09 22:34:35,494 - mmcv - INFO - 
+img_backbone.layer3.15.conv1.weight - torch.Size([256, 1024, 1, 1]): 
+KaimingInit: a=0, mode=fan_out, nonlinearity=relu, distribution =normal, bias=0 
+ 
+2024-05-09 22:34:35,494 - mmcv - INFO - 
+img_backbone.layer3.15.bn1.weight - torch.Size([256]): 
+The value is the same before and after calling `init_weights` of TPVFormer  
+ 
+2024-05-09 22:34:35,494 - mmcv - INFO - 
+img_backbone.layer3.15.bn1.bias - torch.Size([256]): 
+The value is the same before and after calling `init_weights` of TPVFormer  
+ 
+2024-05-09 22:34:35,494 - mmcv - INFO - 
+img_backbone.layer3.15.conv2.weight - torch.Size([256, 256, 3, 3]): 
+Initialized by user-defined `init_weights` in ModulatedDeformConv2dPack  
+ 
+2024-05-09 22:34:35,494 - mmcv - INFO - 
+img_backbone.layer3.15.conv2.conv_offset.weight - torch.Size([27, 256, 3, 3]): 
+Initialized by user-defined `init_weights` in ModulatedDeformConv2dPack  
+ 
+2024-05-09 22:34:35,494 - mmcv - INFO - 
+img_backbone.layer3.15.conv2.conv_offset.bias - torch.Size([27]): 
+The value is the same before and after calling `init_weights` of TPVFormer  
+ 
+2024-05-09 22:34:35,494 - mmcv - INFO - 
+img_backbone.layer3.15.bn2.weight - torch.Size([256]): 
+The value is the same before and after calling `init_weights` of TPVFormer  
+ 
+2024-05-09 22:34:35,494 - mmcv - INFO - 
+img_backbone.layer3.15.bn2.bias - torch.Size([256]): 
+The value is the same before and after calling `init_weights` of TPVFormer  
+ 
+2024-05-09 22:34:35,494 - mmcv - INFO - 
+img_backbone.layer3.15.conv3.weight - torch.Size([1024, 256, 1, 1]): 
+KaimingInit: a=0, mode=fan_out, nonlinearity=relu, distribution =normal, bias=0 
+ 
+2024-05-09 22:34:35,495 - mmcv - INFO - 
+img_backbone.layer3.15.bn3.weight - torch.Size([1024]): 
+ConstantInit: val=0, bias=0 
+ 
+2024-05-09 22:34:35,495 - mmcv - INFO - 
+img_backbone.layer3.15.bn3.bias - torch.Size([1024]): 
+The value is the same before and after calling `init_weights` of TPVFormer  
+ 
+2024-05-09 22:34:35,495 - mmcv - INFO - 
+img_backbone.layer3.16.conv1.weight - torch.Size([256, 1024, 1, 1]): 
+KaimingInit: a=0, mode=fan_out, nonlinearity=relu, distribution =normal, bias=0 
+ 
+2024-05-09 22:34:35,495 - mmcv - INFO - 
+img_backbone.layer3.16.bn1.weight - torch.Size([256]): 
+The value is the same before and after calling `init_weights` of TPVFormer  
+ 
+2024-05-09 22:34:35,495 - mmcv - INFO - 
+img_backbone.layer3.16.bn1.bias - torch.Size([256]): 
+The value is the same before and after calling `init_weights` of TPVFormer  
+ 
+2024-05-09 22:34:35,495 - mmcv - INFO - 
+img_backbone.layer3.16.conv2.weight - torch.Size([256, 256, 3, 3]): 
+Initialized by user-defined `init_weights` in ModulatedDeformConv2dPack  
+ 
+2024-05-09 22:34:35,495 - mmcv - INFO - 
+img_backbone.layer3.16.conv2.conv_offset.weight - torch.Size([27, 256, 3, 3]): 
+Initialized by user-defined `init_weights` in ModulatedDeformConv2dPack  
+ 
+2024-05-09 22:34:35,495 - mmcv - INFO - 
+img_backbone.layer3.16.conv2.conv_offset.bias - torch.Size([27]): 
+The value is the same before and after calling `init_weights` of TPVFormer  
+ 
+2024-05-09 22:34:35,495 - mmcv - INFO - 
+img_backbone.layer3.16.bn2.weight - torch.Size([256]): 
+The value is the same before and after calling `init_weights` of TPVFormer  
+ 
+2024-05-09 22:34:35,495 - mmcv - INFO - 
+img_backbone.layer3.16.bn2.bias - torch.Size([256]): 
+The value is the same before and after calling `init_weights` of TPVFormer  
+ 
+2024-05-09 22:34:35,495 - mmcv - INFO - 
+img_backbone.layer3.16.conv3.weight - torch.Size([1024, 256, 1, 1]): 
+KaimingInit: a=0, mode=fan_out, nonlinearity=relu, distribution =normal, bias=0 
+ 
+2024-05-09 22:34:35,495 - mmcv - INFO - 
+img_backbone.layer3.16.bn3.weight - torch.Size([1024]): 
+ConstantInit: val=0, bias=0 
+ 
+2024-05-09 22:34:35,495 - mmcv - INFO - 
+img_backbone.layer3.16.bn3.bias - torch.Size([1024]): 
+The value is the same before and after calling `init_weights` of TPVFormer  
+ 
+2024-05-09 22:34:35,495 - mmcv - INFO - 
+img_backbone.layer3.17.conv1.weight - torch.Size([256, 1024, 1, 1]): 
+KaimingInit: a=0, mode=fan_out, nonlinearity=relu, distribution =normal, bias=0 
+ 
+2024-05-09 22:34:35,495 - mmcv - INFO - 
+img_backbone.layer3.17.bn1.weight - torch.Size([256]): 
+The value is the same before and after calling `init_weights` of TPVFormer  
+ 
+2024-05-09 22:34:35,496 - mmcv - INFO - 
+img_backbone.layer3.17.bn1.bias - torch.Size([256]): 
+The value is the same before and after calling `init_weights` of TPVFormer  
+ 
+2024-05-09 22:34:35,496 - mmcv - INFO - 
+img_backbone.layer3.17.conv2.weight - torch.Size([256, 256, 3, 3]): 
+Initialized by user-defined `init_weights` in ModulatedDeformConv2dPack  
+ 
+2024-05-09 22:34:35,496 - mmcv - INFO - 
+img_backbone.layer3.17.conv2.conv_offset.weight - torch.Size([27, 256, 3, 3]): 
+Initialized by user-defined `init_weights` in ModulatedDeformConv2dPack  
+ 
+2024-05-09 22:34:35,496 - mmcv - INFO - 
+img_backbone.layer3.17.conv2.conv_offset.bias - torch.Size([27]): 
+The value is the same before and after calling `init_weights` of TPVFormer  
+ 
+2024-05-09 22:34:35,496 - mmcv - INFO - 
+img_backbone.layer3.17.bn2.weight - torch.Size([256]): 
+The value is the same before and after calling `init_weights` of TPVFormer  
+ 
+2024-05-09 22:34:35,496 - mmcv - INFO - 
+img_backbone.layer3.17.bn2.bias - torch.Size([256]): 
+The value is the same before and after calling `init_weights` of TPVFormer  
+ 
+2024-05-09 22:34:35,496 - mmcv - INFO - 
+img_backbone.layer3.17.conv3.weight - torch.Size([1024, 256, 1, 1]): 
+KaimingInit: a=0, mode=fan_out, nonlinearity=relu, distribution =normal, bias=0 
+ 
+2024-05-09 22:34:35,496 - mmcv - INFO - 
+img_backbone.layer3.17.bn3.weight - torch.Size([1024]): 
+ConstantInit: val=0, bias=0 
+ 
+2024-05-09 22:34:35,496 - mmcv - INFO - 
+img_backbone.layer3.17.bn3.bias - torch.Size([1024]): 
+The value is the same before and after calling `init_weights` of TPVFormer  
+ 
+2024-05-09 22:34:35,496 - mmcv - INFO - 
+img_backbone.layer3.18.conv1.weight - torch.Size([256, 1024, 1, 1]): 
+KaimingInit: a=0, mode=fan_out, nonlinearity=relu, distribution =normal, bias=0 
+ 
+2024-05-09 22:34:35,496 - mmcv - INFO - 
+img_backbone.layer3.18.bn1.weight - torch.Size([256]): 
+The value is the same before and after calling `init_weights` of TPVFormer  
+ 
+2024-05-09 22:34:35,496 - mmcv - INFO - 
+img_backbone.layer3.18.bn1.bias - torch.Size([256]): 
+The value is the same before and after calling `init_weights` of TPVFormer  
+ 
+2024-05-09 22:34:35,496 - mmcv - INFO - 
+img_backbone.layer3.18.conv2.weight - torch.Size([256, 256, 3, 3]): 
+Initialized by user-defined `init_weights` in ModulatedDeformConv2dPack  
+ 
+2024-05-09 22:34:35,496 - mmcv - INFO - 
+img_backbone.layer3.18.conv2.conv_offset.weight - torch.Size([27, 256, 3, 3]): 
+Initialized by user-defined `init_weights` in ModulatedDeformConv2dPack  
+ 
+2024-05-09 22:34:35,496 - mmcv - INFO - 
+img_backbone.layer3.18.conv2.conv_offset.bias - torch.Size([27]): 
+The value is the same before and after calling `init_weights` of TPVFormer  
+ 
+2024-05-09 22:34:35,497 - mmcv - INFO - 
+img_backbone.layer3.18.bn2.weight - torch.Size([256]): 
+The value is the same before and after calling `init_weights` of TPVFormer  
+ 
+2024-05-09 22:34:35,497 - mmcv - INFO - 
+img_backbone.layer3.18.bn2.bias - torch.Size([256]): 
+The value is the same before and after calling `init_weights` of TPVFormer  
+ 
+2024-05-09 22:34:35,497 - mmcv - INFO - 
+img_backbone.layer3.18.conv3.weight - torch.Size([1024, 256, 1, 1]): 
+KaimingInit: a=0, mode=fan_out, nonlinearity=relu, distribution =normal, bias=0 
+ 
+2024-05-09 22:34:35,497 - mmcv - INFO - 
+img_backbone.layer3.18.bn3.weight - torch.Size([1024]): 
+ConstantInit: val=0, bias=0 
+ 
+2024-05-09 22:34:35,497 - mmcv - INFO - 
+img_backbone.layer3.18.bn3.bias - torch.Size([1024]): 
+The value is the same before and after calling `init_weights` of TPVFormer  
+ 
+2024-05-09 22:34:35,497 - mmcv - INFO - 
+img_backbone.layer3.19.conv1.weight - torch.Size([256, 1024, 1, 1]): 
+KaimingInit: a=0, mode=fan_out, nonlinearity=relu, distribution =normal, bias=0 
+ 
+2024-05-09 22:34:35,497 - mmcv - INFO - 
+img_backbone.layer3.19.bn1.weight - torch.Size([256]): 
+The value is the same before and after calling `init_weights` of TPVFormer  
+ 
+2024-05-09 22:34:35,497 - mmcv - INFO - 
+img_backbone.layer3.19.bn1.bias - torch.Size([256]): 
+The value is the same before and after calling `init_weights` of TPVFormer  
+ 
+2024-05-09 22:34:35,497 - mmcv - INFO - 
+img_backbone.layer3.19.conv2.weight - torch.Size([256, 256, 3, 3]): 
+Initialized by user-defined `init_weights` in ModulatedDeformConv2dPack  
+ 
+2024-05-09 22:34:35,497 - mmcv - INFO - 
+img_backbone.layer3.19.conv2.conv_offset.weight - torch.Size([27, 256, 3, 3]): 
+Initialized by user-defined `init_weights` in ModulatedDeformConv2dPack  
+ 
+2024-05-09 22:34:35,497 - mmcv - INFO - 
+img_backbone.layer3.19.conv2.conv_offset.bias - torch.Size([27]): 
+The value is the same before and after calling `init_weights` of TPVFormer  
+ 
+2024-05-09 22:34:35,497 - mmcv - INFO - 
+img_backbone.layer3.19.bn2.weight - torch.Size([256]): 
+The value is the same before and after calling `init_weights` of TPVFormer  
+ 
+2024-05-09 22:34:35,497 - mmcv - INFO - 
+img_backbone.layer3.19.bn2.bias - torch.Size([256]): 
+The value is the same before and after calling `init_weights` of TPVFormer  
+ 
+2024-05-09 22:34:35,497 - mmcv - INFO - 
+img_backbone.layer3.19.conv3.weight - torch.Size([1024, 256, 1, 1]): 
+KaimingInit: a=0, mode=fan_out, nonlinearity=relu, distribution =normal, bias=0 
+ 
+2024-05-09 22:34:35,497 - mmcv - INFO - 
+img_backbone.layer3.19.bn3.weight - torch.Size([1024]): 
+ConstantInit: val=0, bias=0 
+ 
+2024-05-09 22:34:35,497 - mmcv - INFO - 
+img_backbone.layer3.19.bn3.bias - torch.Size([1024]): 
+The value is the same before and after calling `init_weights` of TPVFormer  
+ 
+2024-05-09 22:34:35,498 - mmcv - INFO - 
+img_backbone.layer3.20.conv1.weight - torch.Size([256, 1024, 1, 1]): 
+KaimingInit: a=0, mode=fan_out, nonlinearity=relu, distribution =normal, bias=0 
+ 
+2024-05-09 22:34:35,498 - mmcv - INFO - 
+img_backbone.layer3.20.bn1.weight - torch.Size([256]): 
+The value is the same before and after calling `init_weights` of TPVFormer  
+ 
+2024-05-09 22:34:35,498 - mmcv - INFO - 
+img_backbone.layer3.20.bn1.bias - torch.Size([256]): 
+The value is the same before and after calling `init_weights` of TPVFormer  
+ 
+2024-05-09 22:34:35,498 - mmcv - INFO - 
+img_backbone.layer3.20.conv2.weight - torch.Size([256, 256, 3, 3]): 
+Initialized by user-defined `init_weights` in ModulatedDeformConv2dPack  
+ 
+2024-05-09 22:34:35,498 - mmcv - INFO - 
+img_backbone.layer3.20.conv2.conv_offset.weight - torch.Size([27, 256, 3, 3]): 
+Initialized by user-defined `init_weights` in ModulatedDeformConv2dPack  
+ 
+2024-05-09 22:34:35,498 - mmcv - INFO - 
+img_backbone.layer3.20.conv2.conv_offset.bias - torch.Size([27]): 
+The value is the same before and after calling `init_weights` of TPVFormer  
+ 
+2024-05-09 22:34:35,498 - mmcv - INFO - 
+img_backbone.layer3.20.bn2.weight - torch.Size([256]): 
+The value is the same before and after calling `init_weights` of TPVFormer  
+ 
+2024-05-09 22:34:35,498 - mmcv - INFO - 
+img_backbone.layer3.20.bn2.bias - torch.Size([256]): 
+The value is the same before and after calling `init_weights` of TPVFormer  
+ 
+2024-05-09 22:34:35,498 - mmcv - INFO - 
+img_backbone.layer3.20.conv3.weight - torch.Size([1024, 256, 1, 1]): 
+KaimingInit: a=0, mode=fan_out, nonlinearity=relu, distribution =normal, bias=0 
+ 
+2024-05-09 22:34:35,498 - mmcv - INFO - 
+img_backbone.layer3.20.bn3.weight - torch.Size([1024]): 
+ConstantInit: val=0, bias=0 
+ 
+2024-05-09 22:34:35,498 - mmcv - INFO - 
+img_backbone.layer3.20.bn3.bias - torch.Size([1024]): 
+The value is the same before and after calling `init_weights` of TPVFormer  
+ 
+2024-05-09 22:34:35,499 - mmcv - INFO - 
+img_backbone.layer3.21.conv1.weight - torch.Size([256, 1024, 1, 1]): 
+KaimingInit: a=0, mode=fan_out, nonlinearity=relu, distribution =normal, bias=0 
+ 
+2024-05-09 22:34:35,499 - mmcv - INFO - 
+img_backbone.layer3.21.bn1.weight - torch.Size([256]): 
+The value is the same before and after calling `init_weights` of TPVFormer  
+ 
+2024-05-09 22:34:35,499 - mmcv - INFO - 
+img_backbone.layer3.21.bn1.bias - torch.Size([256]): 
+The value is the same before and after calling `init_weights` of TPVFormer  
+ 
+2024-05-09 22:34:35,499 - mmcv - INFO - 
+img_backbone.layer3.21.conv2.weight - torch.Size([256, 256, 3, 3]): 
+Initialized by user-defined `init_weights` in ModulatedDeformConv2dPack  
+ 
+2024-05-09 22:34:35,499 - mmcv - INFO - 
+img_backbone.layer3.21.conv2.conv_offset.weight - torch.Size([27, 256, 3, 3]): 
+Initialized by user-defined `init_weights` in ModulatedDeformConv2dPack  
+ 
+2024-05-09 22:34:35,499 - mmcv - INFO - 
+img_backbone.layer3.21.conv2.conv_offset.bias - torch.Size([27]): 
+The value is the same before and after calling `init_weights` of TPVFormer  
+ 
+2024-05-09 22:34:35,499 - mmcv - INFO - 
+img_backbone.layer3.21.bn2.weight - torch.Size([256]): 
+The value is the same before and after calling `init_weights` of TPVFormer  
+ 
+2024-05-09 22:34:35,499 - mmcv - INFO - 
+img_backbone.layer3.21.bn2.bias - torch.Size([256]): 
+The value is the same before and after calling `init_weights` of TPVFormer  
+ 
+2024-05-09 22:34:35,499 - mmcv - INFO - 
+img_backbone.layer3.21.conv3.weight - torch.Size([1024, 256, 1, 1]): 
+KaimingInit: a=0, mode=fan_out, nonlinearity=relu, distribution =normal, bias=0 
+ 
+2024-05-09 22:34:35,499 - mmcv - INFO - 
+img_backbone.layer3.21.bn3.weight - torch.Size([1024]): 
+ConstantInit: val=0, bias=0 
+ 
+2024-05-09 22:34:35,499 - mmcv - INFO - 
+img_backbone.layer3.21.bn3.bias - torch.Size([1024]): 
+The value is the same before and after calling `init_weights` of TPVFormer  
+ 
+2024-05-09 22:34:35,499 - mmcv - INFO - 
+img_backbone.layer3.22.conv1.weight - torch.Size([256, 1024, 1, 1]): 
+KaimingInit: a=0, mode=fan_out, nonlinearity=relu, distribution =normal, bias=0 
+ 
+2024-05-09 22:34:35,499 - mmcv - INFO - 
+img_backbone.layer3.22.bn1.weight - torch.Size([256]): 
+The value is the same before and after calling `init_weights` of TPVFormer  
+ 
+2024-05-09 22:34:35,499 - mmcv - INFO - 
+img_backbone.layer3.22.bn1.bias - torch.Size([256]): 
+The value is the same before and after calling `init_weights` of TPVFormer  
+ 
+2024-05-09 22:34:35,499 - mmcv - INFO - 
+img_backbone.layer3.22.conv2.weight - torch.Size([256, 256, 3, 3]): 
+Initialized by user-defined `init_weights` in ModulatedDeformConv2dPack  
+ 
+2024-05-09 22:34:35,500 - mmcv - INFO - 
+img_backbone.layer3.22.conv2.conv_offset.weight - torch.Size([27, 256, 3, 3]): 
+Initialized by user-defined `init_weights` in ModulatedDeformConv2dPack  
+ 
+2024-05-09 22:34:35,500 - mmcv - INFO - 
+img_backbone.layer3.22.conv2.conv_offset.bias - torch.Size([27]): 
+The value is the same before and after calling `init_weights` of TPVFormer  
+ 
+2024-05-09 22:34:35,500 - mmcv - INFO - 
+img_backbone.layer3.22.bn2.weight - torch.Size([256]): 
+The value is the same before and after calling `init_weights` of TPVFormer  
+ 
+2024-05-09 22:34:35,500 - mmcv - INFO - 
+img_backbone.layer3.22.bn2.bias - torch.Size([256]): 
+The value is the same before and after calling `init_weights` of TPVFormer  
+ 
+2024-05-09 22:34:35,500 - mmcv - INFO - 
+img_backbone.layer3.22.conv3.weight - torch.Size([1024, 256, 1, 1]): 
+KaimingInit: a=0, mode=fan_out, nonlinearity=relu, distribution =normal, bias=0 
+ 
+2024-05-09 22:34:35,500 - mmcv - INFO - 
+img_backbone.layer3.22.bn3.weight - torch.Size([1024]): 
+ConstantInit: val=0, bias=0 
+ 
+2024-05-09 22:34:35,500 - mmcv - INFO - 
+img_backbone.layer3.22.bn3.bias - torch.Size([1024]): 
+The value is the same before and after calling `init_weights` of TPVFormer  
+ 
+2024-05-09 22:34:35,500 - mmcv - INFO - 
+img_backbone.layer4.0.conv1.weight - torch.Size([512, 1024, 1, 1]): 
+KaimingInit: a=0, mode=fan_out, nonlinearity=relu, distribution =normal, bias=0 
+ 
+2024-05-09 22:34:35,500 - mmcv - INFO - 
+img_backbone.layer4.0.bn1.weight - torch.Size([512]): 
+The value is the same before and after calling `init_weights` of TPVFormer  
+ 
+2024-05-09 22:34:35,500 - mmcv - INFO - 
+img_backbone.layer4.0.bn1.bias - torch.Size([512]): 
+The value is the same before and after calling `init_weights` of TPVFormer  
+ 
+2024-05-09 22:34:35,500 - mmcv - INFO - 
+img_backbone.layer4.0.conv2.weight - torch.Size([512, 512, 3, 3]): 
+Initialized by user-defined `init_weights` in ModulatedDeformConv2dPack  
+ 
+2024-05-09 22:34:35,500 - mmcv - INFO - 
+img_backbone.layer4.0.conv2.conv_offset.weight - torch.Size([27, 512, 3, 3]): 
+Initialized by user-defined `init_weights` in ModulatedDeformConv2dPack  
+ 
+2024-05-09 22:34:35,500 - mmcv - INFO - 
+img_backbone.layer4.0.conv2.conv_offset.bias - torch.Size([27]): 
+The value is the same before and after calling `init_weights` of TPVFormer  
+ 
+2024-05-09 22:34:35,500 - mmcv - INFO - 
+img_backbone.layer4.0.bn2.weight - torch.Size([512]): 
+The value is the same before and after calling `init_weights` of TPVFormer  
+ 
+2024-05-09 22:34:35,500 - mmcv - INFO - 
+img_backbone.layer4.0.bn2.bias - torch.Size([512]): 
+The value is the same before and after calling `init_weights` of TPVFormer  
+ 
+2024-05-09 22:34:35,500 - mmcv - INFO - 
+img_backbone.layer4.0.conv3.weight - torch.Size([2048, 512, 1, 1]): 
+KaimingInit: a=0, mode=fan_out, nonlinearity=relu, distribution =normal, bias=0 
+ 
+2024-05-09 22:34:35,501 - mmcv - INFO - 
+img_backbone.layer4.0.bn3.weight - torch.Size([2048]): 
+ConstantInit: val=0, bias=0 
+ 
+2024-05-09 22:34:35,501 - mmcv - INFO - 
+img_backbone.layer4.0.bn3.bias - torch.Size([2048]): 
+The value is the same before and after calling `init_weights` of TPVFormer  
+ 
+2024-05-09 22:34:35,501 - mmcv - INFO - 
+img_backbone.layer4.0.downsample.0.weight - torch.Size([2048, 1024, 1, 1]): 
+KaimingInit: a=0, mode=fan_out, nonlinearity=relu, distribution =normal, bias=0 
+ 
+2024-05-09 22:34:35,501 - mmcv - INFO - 
+img_backbone.layer4.0.downsample.1.weight - torch.Size([2048]): 
+The value is the same before and after calling `init_weights` of TPVFormer  
+ 
+2024-05-09 22:34:35,501 - mmcv - INFO - 
+img_backbone.layer4.0.downsample.1.bias - torch.Size([2048]): 
+The value is the same before and after calling `init_weights` of TPVFormer  
+ 
+2024-05-09 22:34:35,501 - mmcv - INFO - 
+img_backbone.layer4.1.conv1.weight - torch.Size([512, 2048, 1, 1]): 
+KaimingInit: a=0, mode=fan_out, nonlinearity=relu, distribution =normal, bias=0 
+ 
+2024-05-09 22:34:35,501 - mmcv - INFO - 
+img_backbone.layer4.1.bn1.weight - torch.Size([512]): 
+The value is the same before and after calling `init_weights` of TPVFormer  
+ 
+2024-05-09 22:34:35,501 - mmcv - INFO - 
+img_backbone.layer4.1.bn1.bias - torch.Size([512]): 
+The value is the same before and after calling `init_weights` of TPVFormer  
+ 
+2024-05-09 22:34:35,501 - mmcv - INFO - 
+img_backbone.layer4.1.conv2.weight - torch.Size([512, 512, 3, 3]): 
+Initialized by user-defined `init_weights` in ModulatedDeformConv2dPack  
+ 
+2024-05-09 22:34:35,501 - mmcv - INFO - 
+img_backbone.layer4.1.conv2.conv_offset.weight - torch.Size([27, 512, 3, 3]): 
+Initialized by user-defined `init_weights` in ModulatedDeformConv2dPack  
+ 
+2024-05-09 22:34:35,501 - mmcv - INFO - 
+img_backbone.layer4.1.conv2.conv_offset.bias - torch.Size([27]): 
+The value is the same before and after calling `init_weights` of TPVFormer  
+ 
+2024-05-09 22:34:35,501 - mmcv - INFO - 
+img_backbone.layer4.1.bn2.weight - torch.Size([512]): 
+The value is the same before and after calling `init_weights` of TPVFormer  
+ 
+2024-05-09 22:34:35,501 - mmcv - INFO - 
+img_backbone.layer4.1.bn2.bias - torch.Size([512]): 
+The value is the same before and after calling `init_weights` of TPVFormer  
+ 
+2024-05-09 22:34:35,502 - mmcv - INFO - 
+img_backbone.layer4.1.conv3.weight - torch.Size([2048, 512, 1, 1]): 
+KaimingInit: a=0, mode=fan_out, nonlinearity=relu, distribution =normal, bias=0 
+ 
+2024-05-09 22:34:35,502 - mmcv - INFO - 
+img_backbone.layer4.1.bn3.weight - torch.Size([2048]): 
+ConstantInit: val=0, bias=0 
+ 
+2024-05-09 22:34:35,502 - mmcv - INFO - 
+img_backbone.layer4.1.bn3.bias - torch.Size([2048]): 
+The value is the same before and after calling `init_weights` of TPVFormer  
+ 
+2024-05-09 22:34:35,502 - mmcv - INFO - 
+img_backbone.layer4.2.conv1.weight - torch.Size([512, 2048, 1, 1]): 
+KaimingInit: a=0, mode=fan_out, nonlinearity=relu, distribution =normal, bias=0 
+ 
+2024-05-09 22:34:35,502 - mmcv - INFO - 
+img_backbone.layer4.2.bn1.weight - torch.Size([512]): 
+The value is the same before and after calling `init_weights` of TPVFormer  
+ 
+2024-05-09 22:34:35,502 - mmcv - INFO - 
+img_backbone.layer4.2.bn1.bias - torch.Size([512]): 
+The value is the same before and after calling `init_weights` of TPVFormer  
+ 
+2024-05-09 22:34:35,502 - mmcv - INFO - 
+img_backbone.layer4.2.conv2.weight - torch.Size([512, 512, 3, 3]): 
+Initialized by user-defined `init_weights` in ModulatedDeformConv2dPack  
+ 
+2024-05-09 22:34:35,502 - mmcv - INFO - 
+img_backbone.layer4.2.conv2.conv_offset.weight - torch.Size([27, 512, 3, 3]): 
+Initialized by user-defined `init_weights` in ModulatedDeformConv2dPack  
+ 
+2024-05-09 22:34:35,502 - mmcv - INFO - 
+img_backbone.layer4.2.conv2.conv_offset.bias - torch.Size([27]): 
+The value is the same before and after calling `init_weights` of TPVFormer  
+ 
+2024-05-09 22:34:35,502 - mmcv - INFO - 
+img_backbone.layer4.2.bn2.weight - torch.Size([512]): 
+The value is the same before and after calling `init_weights` of TPVFormer  
+ 
+2024-05-09 22:34:35,502 - mmcv - INFO - 
+img_backbone.layer4.2.bn2.bias - torch.Size([512]): 
+The value is the same before and after calling `init_weights` of TPVFormer  
+ 
+2024-05-09 22:34:35,502 - mmcv - INFO - 
+img_backbone.layer4.2.conv3.weight - torch.Size([2048, 512, 1, 1]): 
+KaimingInit: a=0, mode=fan_out, nonlinearity=relu, distribution =normal, bias=0 
+ 
+2024-05-09 22:34:35,502 - mmcv - INFO - 
+img_backbone.layer4.2.bn3.weight - torch.Size([2048]): 
+ConstantInit: val=0, bias=0 
+ 
+2024-05-09 22:34:35,502 - mmcv - INFO - 
+img_backbone.layer4.2.bn3.bias - torch.Size([2048]): 
+The value is the same before and after calling `init_weights` of TPVFormer  
+ 
+2024-05-09 22:34:35,502 - mmcv - INFO - 
+img_neck.lateral_convs.0.conv.weight - torch.Size([128, 512, 1, 1]): 
+XavierInit: gain=1, distribution=uniform, bias=0 
+ 
+2024-05-09 22:34:35,503 - mmcv - INFO - 
+img_neck.lateral_convs.0.conv.bias - torch.Size([128]): 
+The value is the same before and after calling `init_weights` of TPVFormer  
+ 
+2024-05-09 22:34:35,503 - mmcv - INFO - 
+img_neck.lateral_convs.1.conv.weight - torch.Size([128, 1024, 1, 1]): 
+XavierInit: gain=1, distribution=uniform, bias=0 
+ 
+2024-05-09 22:34:35,503 - mmcv - INFO - 
+img_neck.lateral_convs.1.conv.bias - torch.Size([128]): 
+The value is the same before and after calling `init_weights` of TPVFormer  
+ 
+2024-05-09 22:34:35,503 - mmcv - INFO - 
+img_neck.lateral_convs.2.conv.weight - torch.Size([128, 2048, 1, 1]): 
+XavierInit: gain=1, distribution=uniform, bias=0 
+ 
+2024-05-09 22:34:35,503 - mmcv - INFO - 
+img_neck.lateral_convs.2.conv.bias - torch.Size([128]): 
+The value is the same before and after calling `init_weights` of TPVFormer  
+ 
+2024-05-09 22:34:35,503 - mmcv - INFO - 
+img_neck.fpn_convs.0.conv.weight - torch.Size([128, 128, 3, 3]): 
+XavierInit: gain=1, distribution=uniform, bias=0 
+ 
+2024-05-09 22:34:35,503 - mmcv - INFO - 
+img_neck.fpn_convs.0.conv.bias - torch.Size([128]): 
+The value is the same before and after calling `init_weights` of TPVFormer  
+ 
+2024-05-09 22:34:35,503 - mmcv - INFO - 
+img_neck.fpn_convs.1.conv.weight - torch.Size([128, 128, 3, 3]): 
+XavierInit: gain=1, distribution=uniform, bias=0 
+ 
+2024-05-09 22:34:35,503 - mmcv - INFO - 
+img_neck.fpn_convs.1.conv.bias - torch.Size([128]): 
+The value is the same before and after calling `init_weights` of TPVFormer  
+ 
+2024-05-09 22:34:35,503 - mmcv - INFO - 
+img_neck.fpn_convs.2.conv.weight - torch.Size([128, 128, 3, 3]): 
+XavierInit: gain=1, distribution=uniform, bias=0 
+ 
+2024-05-09 22:34:35,503 - mmcv - INFO - 
+img_neck.fpn_convs.2.conv.bias - torch.Size([128]): 
+The value is the same before and after calling `init_weights` of TPVFormer  
+ 
+2024-05-09 22:34:35,503 - mmcv - INFO - 
+img_neck.fpn_convs.3.conv.weight - torch.Size([128, 128, 3, 3]): 
+XavierInit: gain=1, distribution=uniform, bias=0 
+ 
+2024-05-09 22:34:35,503 - mmcv - INFO - 
+img_neck.fpn_convs.3.conv.bias - torch.Size([128]): 
+The value is the same before and after calling `init_weights` of TPVFormer  
+ 
+Namespace(ckpt_path='', from_epoch=-1, gpus=0, log_dir='evaluation_results', num_scenes=-1, py_config='config/config.py', resume_from='')
+./data_NEO360/Town02/ClearNoon/vehicle.tesla.invisible/spawn_point_10/step_0/nuscenes/transforms/input_images/midsize_sedan_04-193.png
+./data_NEO360/Town02/ClearNoon/vehicle.tesla.invisible/spawn_point_10/step_0/nuscenes/transforms/input_images/midsize_sedan_04-194.png
+./data_NEO360/Town02/ClearNoon/vehicle.tesla.invisible/spawn_point_10/step_0/nuscenes/transforms/input_images/midsize_sedan_04-195.png
+./data_NEO360/Town02/ClearNoon/vehicle.tesla.invisible/spawn_point_10/step_0/nuscenes/transforms/input_images/midsize_sedan_04-196.png
+./data_NEO360/Town02/ClearNoon/vehicle.tesla.invisible/spawn_point_10/step_0/nuscenes/transforms/input_images/midsize_sedan_04-197.png
+./data_NEO360/Town02/ClearNoon/vehicle.tesla.invisible/spawn_point_10/step_0/nuscenes/transforms/input_images/midsize_sedan_04-198.png
+done building models
+Setting up [LPIPS] perceptual loss: trunk [vgg], v[0.1], spatial [off]
+Loading model from: /lustre/scratch/client/vinai/users/ngannh9/6Img-to-3D-at-VinAI/spp_sixtothree/lib/python3.8/site-packages/lpips/weights/v0.1/vgg.pth
+step 0/100
+  0%|          | 0/3 [00:00<?, ?it/s]  0%|          | 0/3 [00:04<?, ?it/s]cannot reshape tensor of 0 elements into shape [6, 0, 8, 4, 1, -1, 2] because the unspecified dimension size -1 can be any value and is ambiguous
+step 1/100
+
+  0%|          | 0/3 [00:00<?, ?it/s]  0%|          | 0/3 [00:00<?, ?it/s]cannot reshape tensor of 0 elements into shape [6, 0, 8, 4, 1, -1, 2] because the unspecified dimension size -1 can be any value and is ambiguous
+step 2/100
+
+  0%|          | 0/3 [00:00<?, ?it/s]  0%|          | 0/3 [00:00<?, ?it/s]cannot reshape tensor of 0 elements into shape [6, 0, 8, 4, 1, -1, 2] because the unspecified dimension size -1 can be any value and is ambiguous
+step 3/100
+
+  0%|          | 0/3 [00:00<?, ?it/s]  0%|          | 0/3 [00:00<?, ?it/s]cannot reshape tensor of 0 elements into shape [6, 0, 8, 4, 1, -1, 2] because the unspecified dimension size -1 can be any value and is ambiguous
+step 4/100
+
+  0%|          | 0/3 [00:00<?, ?it/s]  0%|          | 0/3 [00:00<?, ?it/s]cannot reshape tensor of 0 elements into shape [6, 0, 8, 4, 1, -1, 2] because the unspecified dimension size -1 can be any value and is ambiguous
+step 5/100
+
+  0%|          | 0/3 [00:00<?, ?it/s]  0%|          | 0/3 [00:00<?, ?it/s]cannot reshape tensor of 0 elements into shape [6, 0, 8, 4, 1, -1, 2] because the unspecified dimension size -1 can be any value and is ambiguous
+step 6/100
+
+  0%|          | 0/3 [00:00<?, ?it/s]  0%|          | 0/3 [00:00<?, ?it/s]cannot reshape tensor of 0 elements into shape [6, 0, 8, 4, 1, -1, 2] because the unspecified dimension size -1 can be any value and is ambiguous
+step 7/100
+
+  0%|          | 0/3 [00:00<?, ?it/s]  0%|          | 0/3 [00:00<?, ?it/s]cannot reshape tensor of 0 elements into shape [6, 0, 8, 4, 1, -1, 2] because the unspecified dimension size -1 can be any value and is ambiguous
+step 8/100
+
+  0%|          | 0/3 [00:00<?, ?it/s]  0%|          | 0/3 [00:00<?, ?it/s]cannot reshape tensor of 0 elements into shape [6, 0, 8, 4, 1, -1, 2] because the unspecified dimension size -1 can be any value and is ambiguous
+step 9/100
+
+  0%|          | 0/3 [00:00<?, ?it/s]  0%|          | 0/3 [00:00<?, ?it/s]cannot reshape tensor of 0 elements into shape [6, 0, 8, 4, 1, -1, 2] because the unspecified dimension size -1 can be any value and is ambiguous
+step 10/100
+
+  0%|          | 0/3 [00:00<?, ?it/s]  0%|          | 0/3 [00:00<?, ?it/s]cannot reshape tensor of 0 elements into shape [6, 0, 8, 4, 1, -1, 2] because the unspecified dimension size -1 can be any value and is ambiguous
+step 11/100
+
+  0%|          | 0/3 [00:00<?, ?it/s]  0%|          | 0/3 [00:00<?, ?it/s]cannot reshape tensor of 0 elements into shape [6, 0, 8, 4, 1, -1, 2] because the unspecified dimension size -1 can be any value and is ambiguous
+step 12/100
+
+  0%|          | 0/3 [00:00<?, ?it/s]  0%|          | 0/3 [00:00<?, ?it/s]cannot reshape tensor of 0 elements into shape [6, 0, 8, 4, 1, -1, 2] because the unspecified dimension size -1 can be any value and is ambiguous
+step 13/100
+
+  0%|          | 0/3 [00:00<?, ?it/s]  0%|          | 0/3 [00:00<?, ?it/s]cannot reshape tensor of 0 elements into shape [6, 0, 8, 4, 1, -1, 2] because the unspecified dimension size -1 can be any value and is ambiguous
+step 14/100
+
+  0%|          | 0/3 [00:00<?, ?it/s]  0%|          | 0/3 [00:00<?, ?it/s]cannot reshape tensor of 0 elements into shape [6, 0, 8, 4, 1, -1, 2] because the unspecified dimension size -1 can be any value and is ambiguous
+step 15/100
+
+  0%|          | 0/3 [00:00<?, ?it/s]  0%|          | 0/3 [00:00<?, ?it/s]cannot reshape tensor of 0 elements into shape [6, 0, 8, 4, 1, -1, 2] because the unspecified dimension size -1 can be any value and is ambiguous
+step 16/100
+
+  0%|          | 0/3 [00:00<?, ?it/s]  0%|          | 0/3 [00:00<?, ?it/s]cannot reshape tensor of 0 elements into shape [6, 0, 8, 4, 1, -1, 2] because the unspecified dimension size -1 can be any value and is ambiguous
+step 17/100
+
+  0%|          | 0/3 [00:00<?, ?it/s]  0%|          | 0/3 [00:00<?, ?it/s]cannot reshape tensor of 0 elements into shape [6, 0, 8, 4, 1, -1, 2] because the unspecified dimension size -1 can be any value and is ambiguous
+step 18/100
+
+  0%|          | 0/3 [00:00<?, ?it/s]  0%|          | 0/3 [00:00<?, ?it/s]cannot reshape tensor of 0 elements into shape [6, 0, 8, 4, 1, -1, 2] because the unspecified dimension size -1 can be any value and is ambiguous
+step 19/100
+
+  0%|          | 0/3 [00:00<?, ?it/s]  0%|          | 0/3 [00:00<?, ?it/s]cannot reshape tensor of 0 elements into shape [6, 0, 8, 4, 1, -1, 2] because the unspecified dimension size -1 can be any value and is ambiguous
+step 20/100
+
+  0%|          | 0/3 [00:00<?, ?it/s]  0%|          | 0/3 [00:00<?, ?it/s]cannot reshape tensor of 0 elements into shape [6, 0, 8, 4, 1, -1, 2] because the unspecified dimension size -1 can be any value and is ambiguous
+step 21/100
+
+  0%|          | 0/3 [00:00<?, ?it/s]  0%|          | 0/3 [00:00<?, ?it/s]cannot reshape tensor of 0 elements into shape [6, 0, 8, 4, 1, -1, 2] because the unspecified dimension size -1 can be any value and is ambiguous
+step 22/100
+
+Terminated

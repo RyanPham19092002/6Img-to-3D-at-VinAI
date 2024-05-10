@@ -202,8 +202,10 @@ def main(local_rank, args):
                 
             pbar = tqdm(enumerate(train_dataset_loader), total=total_scenes)
             for i_iter_val, (imgs, img_metas, batch) in pbar:
+                # print(imgs.shape)
                 if (args.num_scenes > 0) and i_iter_val > total_scenes:
                     continue
+                
                 batch = torch.from_numpy(batch[0])
                 # batch = batch[0]
 
@@ -217,11 +219,16 @@ def main(local_rank, args):
 
                 # train_step
                 mask = batch[:,9].bool()
-
                 if mask.sum() > 0:
                     batch = batch.cuda()
                     ray_origins = batch[:, :3]
                     ray_directions = batch[:, 3:6]
+                    # print("---------0", ray_origins)
+                    # print("---------ray_directions", ray_directions)
+                    print("---------hello")
+
+                    print("---------batch", batch)
+
                     ground_truth_px_values = batch[:, 6:9]
                     if cfg.optimizer.depth_loss_weight > 0:
                         ground_truth_depth = batch[:,10:]
@@ -230,7 +237,6 @@ def main(local_rank, args):
                         ground_truth_px_values[~mask] = 1
                     
                     regenerated_px_values, dist_loss, depth = render_rays(triplane_decoder, ray_origins, ray_directions, cfg, pif=pif, training=True)
-
                     mse_loss = mse_loss_fct(regenerated_px_values, ground_truth_px_values)
 
                     tv_loss = cfg.optimizer.tv_loss_weight * compute_tv_loss(triplane_decoder) if cfg.optimizer.tv_loss_weight > 0 else 0
@@ -407,11 +413,13 @@ def main(local_rank, args):
             print(e)
 
             torch.cuda.empty_cache()
-            ckpt = torch.load(os.path.join(save_dir, f"model_latest.pth"), map_location='cpu')
-            triplane_decoder.load_state_dict(ckpt['ttp'])
-            triplane_encoder.load_state_dict(ckpt['tpv'])
-            optimizer.load_state_dict(ckpt['optimizer'])
-            scheduler.load_state_dict(ckpt['scheduler'])
+            ckpt_path = os.path.join(save_dir, f"model_latest.pth")
+            if os.path.exists(ckpt_path):
+                ckpt = torch.load(ckpt_path, map_location='cpu')
+                triplane_decoder.load_state_dict(ckpt['ttp'])
+                triplane_encoder.load_state_dict(ckpt['tpv'])
+                optimizer.load_state_dict(ckpt['optimizer'])
+                scheduler.load_state_dict(ckpt['scheduler'])
 
 
             

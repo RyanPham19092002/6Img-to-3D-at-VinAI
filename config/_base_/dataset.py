@@ -1,6 +1,6 @@
 
 dataset_params = dict(
-    data_path = "./data_NEO360",
+    data_path = "data_NEO360",
     version = "triplane",
     train_data_loader = dict(
         pickled = True, # If True, first run 'python utils/pickles_generator.py --dataset-config <path to this file> --py-config <path to config.py>' to preprocess the dataset and save as pickles for faster data loading
