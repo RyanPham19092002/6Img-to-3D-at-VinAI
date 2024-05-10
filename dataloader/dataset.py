@@ -220,7 +220,7 @@ class PickledCarlaDataset(CarlaDataset):
             for view_id in view_ids:
                 with open(os.path.join(data["sphere"], f"{filename}{view_id}.npy"), "rb") as f:
                     sphere_dataloader.append(np.load(f))
-            sphere_dataloader = np.concatenate(sphere_dataloader)     
+            sphere_dataloader = np.concatenate(sphere_dataloader)    
         # print("------------", input_rgb.shape, img_meta.shape, sphere_dataloader.shape)
         # img_meta["K"] = torch.from_numpy(img_meta["K"])
         # img_meta["c2w"] = torch.tensor(img_meta["c2w"])

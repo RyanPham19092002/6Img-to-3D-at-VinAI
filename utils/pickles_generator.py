@@ -82,10 +82,12 @@ def process_datapath(datapath):
     if dataset_config.train_data_loader.whole_image:
         
         W, H = train_dataset.intrinsics.width, train_dataset.intrinsics.height
-        # print("train_dataset-------------", train_dataset.dataset.shape)
+        print("train_dataset-------------", train_dataset.dataset.shape)
+        print(" H W: ", H, W)
+        
         train_dataset = train_dataset.dataset.view(100, H*W, -1)
 
-        for i in range(len(train_dataset)):as
+        for i in range(len(train_dataset)):
             with open(os.path.join(datapath, f"train_dataset_{i}.npy"), "wb") as f:
                 np.save(f, train_dataset[i].numpy())
     # except Exception as e:

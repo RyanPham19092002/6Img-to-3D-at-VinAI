@@ -20,8 +20,8 @@ class RaysDataset(Dataset):
         super().__init__()
         if mode != "full":
             self.config_path = os.path.join(config_path, f"transforms/transforms_ego_{mode}.json")
-            print("In raydataset class")
-            print(self.config_path)
+            # print("In raydataset class")
+            # print(self.config_path)
             #if os.path.exists(self.config_path):
             #    print("Đường dẫn self.config_path tồn tại.")
             #else:
@@ -35,7 +35,7 @@ class RaysDataset(Dataset):
         self.factor = factor
 
         if config.decoder.whiteout:
-            print("Có config.decoder.whiteout")
+            # print("Có config.decoder.whiteout")
             self.N_z, self.N_h, self.N_w = config.N_z_, config.N_h_, config.N_w_
             self.scale_z, self.scale_h, self.scale_w = config.scale_z, config.scale_h, config.scale_w
             self.offset_z, self.offset_h, self.offset_w = config.offset_z, config.offset_h, config.offset_w
@@ -53,18 +53,17 @@ class RaysDataset(Dataset):
  
 
     def read_meta(self):
-        print("In read meta")
+        # print("In read meta")
         # append path of this file to config path 
         root_path = os.path.dirname(os.path.dirname(__file__))    
         self.config_path = os.path.join(root_path, self.config_path)
-        print("config_path",self.config_path )
+        # print("config_path",self.config_path )
         # if not os.path.exists(self.config_path):
         #     print("byeee ")
         #     raise ValueError(f"Config file {self.config_path} does not exist. Full path: {os.path.abspath(self.config_path)}")
 
         # self.config_path = os.path.abspath(self.config_path)
         # print("config_path after",self.config_path)
-        print("self.config_path-------", self.config_path)
         try:
             with open(self.config_path, 'r') as f:
                 self.meta = json.load(f)
@@ -93,7 +92,6 @@ class RaysDataset(Dataset):
             c2w = torch.Tensor(pose)
             rays_o, rays_d = get_rays(self.directions.clone(), c2w) # both (h*w, 3)
             image_path = os.path.join(root_path, self.config_dir, "sphere_dataset", frame+".png")
-            print(image_path)
             img = Image.open(image_path)
             img = img.resize((self.intrinsics.width, self.intrinsics.height), Image.LANCZOS)
             img = self.transform(img) # (4, h, w)
@@ -102,7 +100,6 @@ class RaysDataset(Dataset):
                 img = img[:, :3]*img[:, -1:] + (1-img[:, -1:]) # blend A to RGB
 
             if "depth_file_path" in frame and (self.config.decoder.whiteout or self.dataset_config.depth):
-                print("Có depth file path")
                 depth_path = os.path.join(root_path, self.config_dir, f"{frame['depth_file_path']}")
                 depth_map = Image.open(depth_path)
                 depth_map = depth_map.resize((self.intrinsics.width, self.intrinsics.height), Image.LANCZOS)
@@ -124,9 +121,7 @@ class RaysDataset(Dataset):
                     mask = torch.ones(rays_o.size(0)).bool()
                     
             else: 
-                print("Không có depth file path")
                 mask = torch.ones(rays_o.size(0)).bool()
-                print("mask", mask)
                 depth_map = None
 
           
@@ -139,7 +134,6 @@ class RaysDataset(Dataset):
 
             
         self.dataset = torch.cat(self.dataset) # (len(self.meta['frames])*h*w, 10)
-        print("self.dataset", self.dataset)
 
 
 

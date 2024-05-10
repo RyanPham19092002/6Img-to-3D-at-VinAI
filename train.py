@@ -223,20 +223,17 @@ def main(local_rank, args):
                     batch = batch.cuda()
                     ray_origins = batch[:, :3]
                     ray_directions = batch[:, 3:6]
-                    # print("---------0", ray_origins)
                     # print("---------ray_directions", ray_directions)
-                    print("---------hello")
-
-                    print("---------batch", batch)
 
                     ground_truth_px_values = batch[:, 6:9]
                     if cfg.optimizer.depth_loss_weight > 0:
                         ground_truth_depth = batch[:,10:]
-
+                        print("ground_truth_depth", ground_truth_depth, ground_truth_depth.shape)
                     if cfg.decoder.whiteout:
                         ground_truth_px_values[~mask] = 1
                     
                     regenerated_px_values, dist_loss, depth = render_rays(triplane_decoder, ray_origins, ray_directions, cfg, pif=pif, training=True)
+                    # print("depth", depth, depth.shape)
                     mse_loss = mse_loss_fct(regenerated_px_values, ground_truth_px_values)
 
                     tv_loss = cfg.optimizer.tv_loss_weight * compute_tv_loss(triplane_decoder) if cfg.optimizer.tv_loss_weight > 0 else 0
@@ -245,14 +242,19 @@ def main(local_rank, args):
 
                     if cfg.optimizer.lpips_loss_weight > 0:
                         lpips_loss = cfg.optimizer.lpips_loss_weight *  \
-                            torch.mean(lpips_loss_fct(regenerated_px_values.view(-1,48,64,3).permute(0,3,1,2) * 2 - 1, 
-                                                    ground_truth_px_values.view(-1,48,64,3).permute(0,3,1,2) * 2 - 1))
+                            torch.mean(lpips_loss_fct(regenerated_px_values.view(-1,38,51,3).permute(0,3,1,2) * 2 - 1, 
+                                                    ground_truth_px_values.view(-1,38,51,3).permute(0,3,1,2) * 2 - 1))
                     else:
                         lpips_loss = 0
-
+                    # print("cfg.optimizer.depth_loss_weight", cfg.optimizer.depth_loss_weight)
+                    # print("depth", depth)                    
+                    # print("torch.sqrt(torch.clip(ground_truth_depth/60, 0,1))", torch.sqrt(torch.clip(ground_truth_depth/60, 0,1)))
+                    # print("lpips_loss", lpips_loss)
+                    # print("depth_loss", depth_loss)
                     depth_loss = cfg.optimizer.depth_loss_weight * mse_loss_fct(torch.sqrt(depth/60), torch.sqrt(torch.clip(ground_truth_depth/60, 0,1))) if cfg.optimizer.depth_loss_weight > 0 else 0
 
                     loss = mse_loss + tv_loss + dist_loss + lpips_loss + depth_loss
+
 
                     if loss.isnan():
                         print("Loss is NaN")

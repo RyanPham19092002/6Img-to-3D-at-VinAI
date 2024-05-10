@@ -23,7 +23,6 @@ def ray_aabb_intersection(ray_origins, ray_directions, aabb_min, aabb_max):
     return t_enter, t_exit
 
 def render_rays(nerf_model:TriplaneDecoder, ray_origins, ray_directions, config, triplane=None, pif: PIF = None,  training=True, only_coarse=False, **kwargs):
-    print('render rays')
     device = ray_origins.device
     
     uniform_sampler = ray_sampler.UniformSampler(num_samples=config.decoder["nb_bins"], train_stratified=config.decoder["train_stratified"])
@@ -73,7 +72,6 @@ def render_rays(nerf_model:TriplaneDecoder, ray_origins, ray_directions, config,
 
     colors, densities = nerf_model(x.reshape(-1, 3), ray_directions.reshape(-1, 3), pif=pif)
     colors_fine = colors.reshape_as(x)               #rays, #samples_per_ray, 3
-    print("colors_fine: ", colors_fine.shape)
     densities_fine = densities.reshape_as(midpoints) #rays, #samples_per_ray
 
     colors = volume_rendering(samples_fine.deltas,
