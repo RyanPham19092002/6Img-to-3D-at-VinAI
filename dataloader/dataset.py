@@ -101,7 +101,7 @@ class CarlaDataset(data.Dataset):
             # K[0,2] = input_data['cx']               #ImageSizeX / 2
             K[0,2] = input_data['img_size'][0] / 2
             # K[1,2] = input_data['cy']               #ImageSizeY / 2
-            K[0,2] = input_data['img_size'][1] / 2
+            K[1,2] = input_data['img_size'][1] / 2
             frame = input_data["transform"]
             for key in frame.keys():
                 file_path = key + '.png'
