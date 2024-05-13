@@ -31,7 +31,7 @@ dataset_params = dict(
         spawn_point = [10],
         step = ["all"],
         selection = ["input_images", "sphere_dataset"],
-        factor = 0.25,
+        factor = 0.5,
         depth = True,
     ),    
 )
