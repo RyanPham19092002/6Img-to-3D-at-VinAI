@@ -96,7 +96,10 @@ class CarlaDataset(data.Dataset):
            # K[0,0] = input_data['fl_x']             #Focus_length_x = ImageSizeX /(2 * tan(CameraFOV * π / 360))
             K[0,0] = input_data['img_size'][0] / (2*np.tan(input_data['fov'] * np.pi / 360))
            # K[1,1] = input_data['fl_y']             #Focus_length_y = ImageSizey /(2 * tan(CameraFOV * π / 360))
-            K[1,1] = input_data['img_size'][1] / (2*np.tan(input_data['fov'] * np.pi / 360))
+            K[1,1] = input_data['img_size'][0] / (2*np.tan(input_data['fov'] * np.pi / 360))  #fl_x = fl_y = f
+        #K = [[f, 0, Cu],
+        #     [0, f, Cv],
+        #     [0, 0, 1 ]]
             K[2,2] = 1
             # K[0,2] = input_data['cx']               #ImageSizeX / 2
             K[0,2] = input_data['img_size'][0] / 2
