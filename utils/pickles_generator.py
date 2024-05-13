@@ -77,16 +77,21 @@ class Triplane_Dataset(torch.utils.data.Dataset):
         return data
 
 def process_datapath(datapath):
-    try:
-        train_dataset = RaysDataset(datapath, config, dataset_config=dataset_config.train_data_loader, mode="train", factor=dataset_config.train_data_loader.factor)
-        if dataset_config.train_data_loader.whole_image:
-            W, H = train_dataset.intrinsics.width, train_dataset.intrinsics.height
-            train_dataset = train_dataset.dataset.view(80, H*W, -1)
-            for i in range(len(train_dataset)):
-                with open(os.path.join(datapath, f"train_dataset_{i}.npy"), "wb") as f:
-                    np.save(f, train_dataset[i].numpy())
-    except Exception as e:
-        return (False, datapath)
+    # try:
+    train_dataset = RaysDataset(datapath, config, dataset_config=dataset_config.train_data_loader, mode="train", factor=dataset_config.train_data_loader.factor)
+    if dataset_config.train_data_loader.whole_image:
+        
+        W, H = train_dataset.intrinsics.width, train_dataset.intrinsics.height
+        print("train_dataset-------------", train_dataset.dataset.shape)
+        print(" H W: ", H, W)
+        
+        train_dataset = train_dataset.dataset.view(100, H*W, -1)
+
+        for i in range(len(train_dataset)):
+            with open(os.path.join(datapath, f"train_dataset_{i}.npy"), "wb") as f:
+                np.save(f, train_dataset[i].numpy())
+    # except Exception as e:
+    #     return (False, datapath)
     return (True, datapath)
 
 
@@ -113,7 +118,8 @@ if __name__ == '__main__':
 
     
     with Pool(24) as p:
-        results = list(tqdm(p.imap(process_datapath, dataset_all), total=len(dataset_all)))
+        # results = list(tqdm(p.imap(process_datapath, dataset_all), total=len(dataset_all)))
+        results = list((p.imap(process_datapath, dataset_all)))
         for success, datapath in results:
             if not success:
                 failed.append(datapath)

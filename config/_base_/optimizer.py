@@ -6,5 +6,6 @@ optimizer = dict(
     tv_loss_weight = 0.,
     dist_loss_weight = 1.0e-03,
     clip_grad_norm=1.5,
-    depth_loss_weight=1
+    depth_loss_weight=0
+    # depth_loss_weight=1
 )

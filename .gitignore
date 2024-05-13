@@ -143,3 +143,6 @@ results/
 single_training/
 eval/
 frames/
+tiny-cuda-nn/
+six23_env/
+spp_sixtothree/

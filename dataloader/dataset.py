@@ -4,6 +4,7 @@
 # ==============================================================================
 
 import os
+import torch
 import numpy as np
 from torch.utils import data
 from mmcv.image.io import imread
@@ -192,7 +193,20 @@ class PickledCarlaDataset(CarlaDataset):
                 img_shape=img_shape,
             )
             
-'''
+        # if "sphere_dataset" in self.dataset_config.get("selection", ["sphere_dataset"]):
+        #     if self.dataset_config.get("whole_image", False):
+        #         filename = "train_dataset_"
+        #     else:
+        #         filename = "train_dataset_shuffled_"
+        #     sphere_dataloader = []
+        #     if self.dataset_config.get("whole_image", False):
+        #         view_ids = random.sample(range(80), self.dataset_config.get("num_imgs",1))
+        #     else:
+        #         view_ids = np.arange(self.part_num, self.part_num + self.dataset_config.get("num_imgs",1))
+        #     for view_id in view_ids:
+        #         with open(os.path.join(data["sphere"], "folder_npz", f"{filename}{view_id}.npz"), "rb") as f:
+        #             sphere_dataloader.append(np.load(f))
+        #     sphere_dataloader = np.concatenate(sphere_dataloader)
         if "sphere_dataset" in self.dataset_config.get("selection", ["sphere_dataset"]):
             if self.dataset_config.get("whole_image", False):
                 filename = "train_dataset_"
@@ -204,18 +218,11 @@ class PickledCarlaDataset(CarlaDataset):
             else:
                 view_ids = np.arange(self.part_num, self.part_num + self.dataset_config.get("num_imgs",1))
             for view_id in view_ids:
-                with open(os.path.join(data["sphere"], "folder_npz", f"{filename}{view_id}.npz"), "rb") as f:
+                with open(os.path.join(data["sphere"], f"{filename}{view_id}.npy"), "rb") as f:
                     sphere_dataloader.append(np.load(f))
-            sphere_dataloader = np.concatenate(sphere_dataloader)
-'''
-        if "sphere_dataset" in self.dataset_config.get("selection", ["sphere_dataset"]):
-            sphere_dataloader = []
-            folder_path = os.path.join(data["sphere"], "folder_npz")
-            for filename in os.listdir(folder_path):
-                if filename.endswith(".npz"):
-                    with open(os.path.join(folder_path, filename), "rb") as f:
-                        sphere_dataloader.append(np.load(f))
-            sphere_dataloader = np.concatenate(sphere_dataloader)            
-        
+            sphere_dataloader = np.concatenate(sphere_dataloader)    
+        # print("------------", input_rgb.shape, img_meta.shape, sphere_dataloader.shape)
+        # img_meta["K"] = torch.from_numpy(img_meta["K"])
+        # img_meta["c2w"] = torch.tensor(img_meta["c2w"])
         return (input_rgb, img_meta, sphere_dataloader)
     

@@ -1,0 +1,46 @@
+In pickles generator
+data_path :  data_NEO360/Town01/ClearNoon/vehicle.tesla.invisible/spawn_point_10/step_0/sphere
+In pickles generator
+data_path :  data_NEO360/Town04/ClearNoon/vehicle.tesla.invisible/spawn_point_10/step_0/sphere
+In pickles generator
+data_path :  data_NEO360/Town02/ClearNoon/vehicle.tesla.invisible/spawn_point_10/step_0/sphere
+In pickles generator
+data_path :  data_NEO360/Town03/ClearNoon/vehicle.tesla.invisible/spawn_point_10/step_0/sphere
+In raydataset class
+data_NEO360/Town03/ClearNoon/vehicle.tesla.invisible/spawn_point_10/step_0/sphere/transforms/transforms_ego_train.json
+In read meta
+config_path /lustre/scratch/client/vinai/users/ngannh9/6Img-to-3D-at-VinAI/data_NEO360/Town03/ClearNoon/vehicle.tesla.invisible/spawn_point_10/step_0/sphere/transforms/transforms_ego_train.json
+self.config_path------- /lustre/scratch/client/vinai/users/ngannh9/6Img-to-3D-at-VinAI/data_NEO360/Town03/ClearNoon/vehicle.tesla.invisible/spawn_point_10/step_0/sphere/transforms/transforms_ego_train.json
+pbar:    0%|          | 0/100 [00:00<?, ?it/s]
+/lustre/scratch/client/vinai/users/ngannh9/6Img-to-3D-at-VinAI/data_NEO360/Town03/ClearNoon/vehicle.tesla.invisible/spawn_point_10/step_0/sphere/transforms/sphere_dataset/suv_medium_01_body-000.png
+Không có depth file path
+mask tensor([True, True, True,  ..., True, True, True])
+/lustre/scratch/client/vinai/users/ngannh9/6Img-to-3D-at-VinAI/data_NEO360/Town03/ClearNoon/vehicle.tesla.invisible/spawn_point_10/step_0/sphere/transforms/sphere_dataset/suv_medium_01_body-001.png
+Không có depth file path
+mask tensor([True, True, True,  ..., True, True, True])
+/lustre/scratch/client/vinai/users/ngannh9/6Img-to-3D-at-VinAI/data_NEO360/Town03/ClearNoon/vehicle.tesla.invisible/spawn_point_10/step_0/sphere/transforms/sphere_dataset/suv_medium_01_body-002.png
+Không có depth file path
+mask tensor([True, True, True,  ..., True, True, True])
+/lustre/scratch/client/vinai/users/ngannh9/6Img-to-3D-at-VinAI/data_NEO360/Town03/ClearNoon/vehicle.tesla.invisible/spawn_point_10/step_0/sphere/transforms/sphere_dataset/suv_medium_01_body-003.png
+Không có depth file path
+mask tensor([True, True, True,  ..., True, True, True])
+/lustre/scratch/client/vinai/users/ngannh9/6Img-to-3D-at-VinAI/data_NEO360/Town03/ClearNoon/vehicle.tesla.invisible/spawn_point_10/step_0/sphere/transforms/sphere_dataset/suv_medium_01_body-004.png
+Không có depth file path
+mask tensor([True, True, True,  ..., True, True, True])
+/lustre/scratch/client/vinai/users/ngannh9/6Img-to-3D-at-VinAI/data_NEO360/Town03/ClearNoon/vehicle.tesla.invisible/spawn_point_10/step_0/sphere/transforms/sphere_dataset/suv_medium_01_body-005.png
+Không có depth file path
+mask tensor([True, True, True,  ..., True, True, True])
+/lustre/scratch/client/vinai/users/ngannh9/6Img-to-3D-at-VinAI/data_NEO360/Town03/ClearNoon/vehicle.tesla.invisible/spawn_point_10/step_0/sphere/transforms/sphere_dataset/suv_medium_01_body-006.png
+Không có depth file path
+mask tensor([True, True, True,  ..., True, True, True])
+/lustre/scratch/client/vinai/users/ngannh9/6Img-to-3D-at-VinAI/data_NEO360/Town03/ClearNoon/vehicle.tesla.invisible/spawn_point_10/step_0/sphere/transforms/sphere_dataset/suv_medium_01_body-007.png
+Không có depth file path
+mask tensor([True, True, True,  ..., True, True, True])
+/lustre/scratch/client/vinai/users/ngannh9/6Img-to-3D-at-VinAI/data_NEO360/Town03/ClearNoon/vehicle.tesla.invisible/spawn_point_10/step_0/sphere/transforms/sphere_dataset/suv_medium_01_body-008.png
+Không có depth file path
+mask tensor([True, True, True,  ..., True, True, True])
+/lustre/scratch/client/vinai/users/ngannh9/6Img-to-3D-at-VinAI/data_NEO360/Town03/ClearNoon/vehicle.tesla.invisible/spawn_point_10/step_0/sphere/transforms/sphere_dataset/suv_medium_01_body-009.png
+Không có depth file path
+mask tensor([True, True, True,  ..., True, True, True])
+/lustre/scratch/client/vinai/users/ngannh9/6Img-to-3D-at-VinAI/data_NEO360/Town03/ClearNoon/vehicle.tesla.invisible/spawn_point_10/step_0/sphere/transforms/sphere_dataset/suv_medium_01_body-010.png
+Không có depth file pat

@@ -23,7 +23,6 @@ def ray_aabb_intersection(ray_origins, ray_directions, aabb_min, aabb_max):
     return t_enter, t_exit
 
 def render_rays(nerf_model:TriplaneDecoder, ray_origins, ray_directions, config, triplane=None, pif: PIF = None,  training=True, only_coarse=False, **kwargs):
-
     device = ray_origins.device
     
     uniform_sampler = ray_sampler.UniformSampler(num_samples=config.decoder["nb_bins"], train_stratified=config.decoder["train_stratified"])
@@ -41,8 +40,9 @@ def render_rays(nerf_model:TriplaneDecoder, ray_origins, ray_directions, config,
 
     # Coarse sampling
     samples_coarse = uniform_sampler.generate_ray_samples(ray_bundle)
-
+    # print("---------- sample coarse1", samples_coarse.starts.shape, samples_coarse.ends.shape)
     midpoints = (samples_coarse.starts + samples_coarse.ends) / 2                 #rays, #samples, 1
+    
     x = samples_coarse.origins + samples_coarse.directions.squeeze(2) * midpoints #rays, #samples, 3
     viewing_directions = ray_directions.expand(x.size(1), -1, 3).permute(1,0,2)   #rays, #samples, 3
 
@@ -51,7 +51,6 @@ def render_rays(nerf_model:TriplaneDecoder, ray_origins, ray_directions, config,
     densities_coarse = densities.reshape_as(midpoints) #rays, #samples, 1
     
     weights = samples_coarse.get_weights(densities_coarse) #rays, #samples, 1
-
 
     if only_coarse:
         colors = volume_rendering(samples_coarse.deltas,
@@ -62,7 +61,6 @@ def render_rays(nerf_model:TriplaneDecoder, ray_origins, ray_directions, config,
         dist_loss = distortion_loss(weights, samples_coarse)
 
         depth = get_depth(weights, midpoints)
-
         return colors, dist_loss, depth
 
 
@@ -73,8 +71,7 @@ def render_rays(nerf_model:TriplaneDecoder, ray_origins, ray_directions, config,
     x = samples_coarse.origins + samples_coarse.directions.squeeze(2) * midpoints #rays, #samples, 3
 
     colors, densities = nerf_model(x.reshape(-1, 3), ray_directions.reshape(-1, 3), pif=pif)
-
-    colors_fine = colors.reshape_as(x)               #rays, #samples_per_ray, 3 
+    colors_fine = colors.reshape_as(x)               #rays, #samples_per_ray, 3
     densities_fine = densities.reshape_as(midpoints) #rays, #samples_per_ray
 
     colors = volume_rendering(samples_fine.deltas,
