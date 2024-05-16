@@ -92,8 +92,9 @@ class RaysDataset(Dataset):
             if img.size(0) == 4:
                 img = img[:, :3]*img[:, -1:] + (1-img[:, -1:]) # blend A to RGB
 
-            if "depth_file_path" in frame and (self.config.decoder.whiteout or self.dataset_config.depth):
-                depth_path = os.path.join(root_path, self.config_dir, f"{frame['depth_file_path']}")
+            if (self.config.decoder.whiteout or self.dataset_config.depth):
+                depth_path = os.path.join(root_path, self.config_dir, "sphere_dataset_raw_depth", frame+".png")
+                #depth_path = os.path.join(root_path, self.config_dir, f"{frame['depth_file_path']}")
                 depth_map = Image.open(depth_path)
                 depth_map = depth_map.resize((self.intrinsics.width, self.intrinsics.height), Image.LANCZOS)
                 depth_map = self.transform(depth_map).float() / 1000.0
