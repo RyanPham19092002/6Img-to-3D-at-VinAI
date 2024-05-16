@@ -66,7 +66,7 @@ class RaysDataset(Dataset):
             print("An error occurred: ", str(e))
 
         fl_x = self.meta['img_size'][0] / (2*np.tan(self.meta['fov'] * np.pi / 360))
-        fl_y = self.meta['img_size'][1] / (2*np.tan(self.meta['fov'] * np.pi / 360))
+        fl_y = self.meta['img_size'][0] / (2*np.tan(self.meta['fov'] * np.pi / 360))
         self.intrinsics = Intrinsics(self.meta['img_size'][0], self.meta['img_size'][1], fl_x, fl_y, self.meta['img_size'][0]/2, self.meta['img_size'][1]/2)
         if self.factor != 1.0:
             self.intrinsics.scale(self.factor)
@@ -93,6 +93,7 @@ class RaysDataset(Dataset):
                 img = img[:, :3]*img[:, -1:] + (1-img[:, -1:]) # blend A to RGB
 
             if (self.config.decoder.whiteout or self.dataset_config.depth):
+                print("Having depth map")
                 depth_path = os.path.join(root_path, self.config_dir, "sphere_dataset_raw_depth", frame+".png")
                 #depth_path = os.path.join(root_path, self.config_dir, f"{frame['depth_file_path']}")
                 depth_map = Image.open(depth_path)
@@ -122,13 +123,14 @@ class RaysDataset(Dataset):
 
             if self.dataset_config.depth and depth_map is not None:
                 self.dataset += [torch.cat([rays_o, rays_d, img, mask.unsqueeze(1), depth_map],-1)] # (h*w, 1)
+                
             else:
                 self.dataset += [torch.cat([rays_o, rays_d, img, mask.unsqueeze(1)],-1)] # (h*w, 10)
                 
 
             
         self.dataset = torch.cat(self.dataset) # (len(self.meta['frames])*h*w, 10)
-
+        print("self.dataset shape------------------------------", self.dataset.shape)
 
 
     def define_transforms(self):
