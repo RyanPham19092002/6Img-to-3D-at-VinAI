@@ -154,11 +154,19 @@ class TPVFormerEncoder(TransformerLayerSequence):
         img_hwc = np.asarray(img_hwc)
         w = int(img_hwc[0,0,1])
         h = int(img_hwc[0,0,0])
+        # print("h------", h)
+        # print("img_hwc----", img_hwc)
+        # exit(0)
         fl_x = K[0,0,0]
         fl_y = K[0,0,0]
         c_x = K[0,1,1]
         c_y = K[0,1,2]
+        # print("K-------------", K)
+        # print("w,h,fl_x,fl_y,c_x,c_y0----------", w,h,fl_x,fl_y,c_x,c_y)
+        # print("self.intrin_factor----------------", self.intrin_factor)
+        # exit(0)
         c2ws = torch.from_numpy(c2ws).to(device).float()  # (B, N, 4, 4)
+        # print("cwws2 shape-------------", c2ws.shape)
         offset = c2ws.new_tensor(np.array(self.offset))
         scale = c2ws.new_tensor(np.array(self.scale))
         N =  c2ws.new_tensor(np.array([self.tpv_z, self.tpv_h, self.tpv_w]))
@@ -168,7 +176,7 @@ class TPVFormerEncoder(TransformerLayerSequence):
 
         directions = ray_utils.get_ray_directions(intrinsics).cuda()
         uvs = ((ray_utils.create_meshgrid(int(h*self.intrin_factor),int(w*self.intrin_factor), device='cuda') + 1) / 2) #(1,116,200,2) [0->1]
-
+        # print("uvs shape-------------", uvs.shape)
         rays_os, rays_ds = [],[]
         for c2w in c2ws[0]:
             rays_o, rays_d = ray_utils.get_rays(directions, c2w[:3])
@@ -177,8 +185,9 @@ class TPVFormerEncoder(TransformerLayerSequence):
 
         rays_d = torch.stack(rays_ds, dim=0) #(6,23200,3)
         rays_o = torch.stack(rays_os, dim=0) #(6,23200,3)
-
-
+        # print("rays_d shape-------------", rays_d.shape)
+        # print("rays_o shape-------------", rays_o.shape)
+        # exit(0)
         if sampling == "linear":
             step =  torch.linspace(hn, hf, num_pts).to(rays_d.device)[None, ...] 
         elif sampling == "log":
@@ -218,7 +227,9 @@ class TPVFormerEncoder(TransformerLayerSequence):
 
         reference_points = grid[:,:,:,indexes]
         reference_mask = mask[:,:,:,indexes]
-        
+        print("num_pts------------------", num_pts)
+        print("reference_points-----------",reference_points)
+        exit(0)
         return reference_points.unsqueeze(1).flatten(2,3), reference_mask.unsqueeze(1).flatten(2,3).squeeze(-1) #(6,1,hxw,num_pts,2),(6,1,hxw,num_pts)
 
 

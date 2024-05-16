@@ -20,8 +20,8 @@ class RaysDataset(Dataset):
         super().__init__()
         if mode != "full":
             self.config_path = os.path.join(config_path, f"transforms/transforms_ego_{mode}.json")
-            # print("In raydataset class")
-            # print(self.config_path)
+            print("In raydataset class")
+            print(self.config_path)
             #if os.path.exists(self.config_path):
             #    print("Đường dẫn self.config_path tồn tại.")
             #else:
@@ -74,6 +74,7 @@ class RaysDataset(Dataset):
         # ray directions for all pixels, same for all images (same H, W, focal)
         self.directions = \
             get_ray_directions(self.intrinsics) # (h, w, 3)
+        #print("self.directions[[:,:,2]]------------------", self.directions[:,:,:2].shape)
         self.poses = []
         self.dataset = []
         self.depth_maps = []
@@ -93,16 +94,25 @@ class RaysDataset(Dataset):
                 img = img[:, :3]*img[:, -1:] + (1-img[:, -1:]) # blend A to RGB
 
             if (self.config.decoder.whiteout or self.dataset_config.depth):
-                print("Having depth map")
-                depth_path = os.path.join(root_path, self.config_dir, "sphere_dataset_raw_depth", frame+".png")
+                
+                #print("Having depth map")
+                depth_path = os.path.join(root_path, self.config_dir, "sphere_dataset_log_depth", frame+".png")
+                #print("depth_path-----------", depth_path)
                 #depth_path = os.path.join(root_path, self.config_dir, f"{frame['depth_file_path']}")
                 depth_map = Image.open(depth_path)
+                #convert to grayscale
+                depth_map = depth_map.convert("L")
                 depth_map = depth_map.resize((self.intrinsics.width, self.intrinsics.height), Image.LANCZOS)
                 depth_map = self.transform(depth_map).float() / 1000.0
+                #print("depth map shape before-------", depth_map.shape)
                 depth_map = depth_map.view(-1,1)
+                #print("depth map shape after-------", depth_map.shape)
                 depth_offset = torch.linalg.norm( self.directions[:,:,:2],dim=2) 
+                #print("depth_offset shape after-------", depth_offset.shape)
+                
                 depth_map = depth_map / torch.cos(torch.arctan(depth_offset).view(-1,1))
-
+                #print("depth map shape after 2-------", depth_map.shape)
+                #exit(0)
                 if self.config.decoder.whiteout:
                 # compute depth map in world coordinate
                     points = rays_o + rays_d * depth_map

@@ -1,6 +1,6 @@
 
 dataset_params = dict(
-    data_path = "data_NEO360",
+    data_path = "data_VinAI",
     version = "triplane",
     train_data_loader = dict(
         pickled = True, # If True, first run 'python utils/pickles_generator.py --dataset-config <path to this file> --py-config <path to config.py>' to preprocess the dataset and save as pickles for faster data loading
@@ -8,7 +8,8 @@ dataset_params = dict(
         batch_size = 1,
         shuffle = True,
         num_workers = 12,
-        town = ["Town01", "Town03", "Town04"],
+        # town = ["Town01", "Town03", "Town04"],
+        town = ["Town05"],
         weather  = ["ClearNoon"],
         vehicle = ["vehicle.tesla.invisible"],
         spawn_point = ["all"],
@@ -25,7 +26,7 @@ dataset_params = dict(
         batch_size = 1,
         shuffle = False,
         num_workers = 12,
-        town = ["Town02"],
+        town = ["Town05"],
         weather  = ["ClearNoon"],
         vehicle = ["vehicle.tesla.invisible"],
         spawn_point = [10],

@@ -32,7 +32,7 @@ scene_contraction_factor = [0.5, 0.1,0.1]
 
 pif = True
 pif_factor = 0.125
-pif_transforms = "./data_NEO360/Town02/ClearNoon/vehicle.tesla.invisible/spawn_point_10/step_0/nuscenes/"
+pif_transforms = "./data_VinAI/Town05/ClearNoon/vehicle.tesla.invisible/spawn_point_10/step_0/nuscenes/"
 
 tpv_encoder_layers = 5
 num_points_in_pillar = [4, 32, 32]
