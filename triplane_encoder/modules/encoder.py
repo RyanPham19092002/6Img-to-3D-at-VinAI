@@ -185,9 +185,9 @@ class TPVFormerEncoder(TransformerLayerSequence):
 
         rays_d = torch.stack(rays_ds, dim=0) #(6,23200,3)
         rays_o = torch.stack(rays_os, dim=0) #(6,23200,3)
-        # print("rays_d shape-------------", rays_d.shape)
-        # print("rays_o shape-------------", rays_o.shape)
-        # exit(0)
+        #print("rays_d shape-------------", rays_d)
+        #print("rays_o shape-------------", rays_o)
+        
         if sampling == "linear":
             step =  torch.linspace(hn, hf, num_pts).to(rays_d.device)[None, ...] 
         elif sampling == "log":
@@ -203,16 +203,25 @@ class TPVFormerEncoder(TransformerLayerSequence):
                     (scale * N)
             bound_masks = (x_grid.abs() < 1.0).all(-1) # samples
             
-
+        # print("bound_masks-------------------------------", bound_masks)
+        # print("bound_masks shape-------------------------------", bound_masks.shape)
         indexes = ((x_grid /2 + 0.5 ) * N).round() # (6,23200,30,3)
         indexes = torch.clamp(indexes, N*0, N-1).int()
+        # print("indexes-------------------------------", indexes)
+        # print("indexes shape-------------------------------", indexes.shape)
+        # exit(0)
         grid = torch.zeros((self.tpv_z,self.tpv_h,self.tpv_w,6,2), device=points.device)
         mask = torch.zeros((self.tpv_z,self.tpv_h,self.tpv_w,6,1),dtype=bool, device=points.device)
         for i, (index, bound_mask) in enumerate(zip(indexes, bound_masks)):
             index = index[bound_mask] # (valid_ids,3)
+            # print("index shape---------------", index.shape)
             uv = uvs.unsqueeze(3).repeat(1,1,1,num_pts,1).view(-1,num_pts,2)[bound_mask] # (valid,2)
+            # print("uv shape------------------", uv.shape)
             grid[index[:,0], index[:,1], index[:,2],i] = uv
             mask[index[:,0], index[:,1], index[:,2],i] = True
+        #print("grid------------------", grid)
+        # #print("reference_points-----------",reference_points)
+        # exit(0)
         return  grid, mask
     
 
@@ -227,9 +236,7 @@ class TPVFormerEncoder(TransformerLayerSequence):
 
         reference_points = grid[:,:,:,indexes]
         reference_mask = mask[:,:,:,indexes]
-        print("num_pts------------------", num_pts)
-        print("reference_points-----------",reference_points)
-        exit(0)
+
         return reference_points.unsqueeze(1).flatten(2,3), reference_mask.unsqueeze(1).flatten(2,3).squeeze(-1) #(6,1,hxw,num_pts,2),(6,1,hxw,num_pts)
 
 

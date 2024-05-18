@@ -78,9 +78,10 @@ class TriplaneDecoder(nn.Module):
         else:
             x_grid = (x_world - torch.tensor([self.offset_z, self.offset_h, self.offset_w], device=x_world.device)) / \
                   (torch.tensor([self.scale_z * self.N_z, self.scale_h * self.N_h, self.scale_w * self.N_w], device=x_world.device) )
-            
+        # print("x_grid decoder-----------------", x_grid, x_grid.shape) #([1818624, 3])
+
         if pif is None:
-            mask = (x_grid.abs() < 1.0).all(-1) # samples
+            mask = (x_grid.abs() < 1.0).all(-1) # samples 
             x_grid = x_grid[mask]
         else:
             mask = torch.ones(x_world.size(0),device=x_world.device, dtype=bool)
@@ -93,17 +94,25 @@ class TriplaneDecoder(nn.Module):
         F_zh = grid_sample_wrapper(self.plane_zh, x_grid[:, :2]) # [batch_size, F] 
         F_hw = grid_sample_wrapper(self.plane_hw, x_grid[:, 1:]) # [batch_size, F]
         F_zw = grid_sample_wrapper(self.plane_zw, x_grid[:, [2,0]]) # [batch_size, F]
-
+        # print("F_zh-----------------", F_zh, F_zh.shape) #([1818624, 128])
+        # print("F_hw-----------------", F_hw, F_hw.shape) #([1818624, 128])
+        # print("F_zw-----------------", F_zw, F_zw.shape) #([1818624, 128])
+        
         # hadamard product
         features = F_zh * F_hw * F_zw  # [batch_size, F]
+        # print("features before-----------------", features, features.shape) #[1818624, 128])
 
         if pif is not None:
             pif_features = pif(x_world.view(-1,3), aggregate=True, num_features_to_keep=2).permute(1,2,0).reshape(x_world.size(0),-1) #samples, #2*img_features
+            # print("pif_features before-----------------", pif_features, pif_features.shape)
             pif_features = self.bn(pif_features) * (pif_features != 0)
+            # print("pif_features after-----------------", pif_features, pif_features.shape) #([1818624, 256])
             features = torch.cat((features, pif_features), dim=1)
+            # print("features after-----------------", features, features.shape) #torch.Size([1818624, 384])
         
         h =  self.decoder_net(features).float() #valid_samples, (3+1) 
-
+        # print("h-----------------", h, h.shape)
+        # exit(0)
 
         c[mask], sigma[mask] = h[:, :-1], h[:, -1]
 

@@ -40,18 +40,20 @@ def render_rays(nerf_model:TriplaneDecoder, ray_origins, ray_directions, config,
 
     # Coarse sampling
     samples_coarse = uniform_sampler.generate_ray_samples(ray_bundle)
-    # print("---------- sample coarse1", samples_coarse.starts.shape, samples_coarse.ends.shape)
+    #print("---------- sample coarse1", samples_coarse.starts.shape, samples_coarse.ends.shape)
     midpoints = (samples_coarse.starts + samples_coarse.ends) / 2                 #rays, #samples, 1
-    
+    #print("midpoints-----------------------", midpoints.shape)
     x = samples_coarse.origins + samples_coarse.directions.squeeze(2) * midpoints #rays, #samples, 3
     viewing_directions = ray_directions.expand(x.size(1), -1, 3).permute(1,0,2)   #rays, #samples, 3
-
+    #print("viewing_directions-----------------------", viewing_directions.shape)
     colors, densities = nerf_model(x.reshape(-1,3), viewing_directions.reshape(-1,3), pif=pif)
     colors_coarse = colors.reshape_as(x)               #rays, #samples, 3 
     densities_coarse = densities.reshape_as(midpoints) #rays, #samples, 1
-    
+    #print("colors_coarse-----------------------", colors_coarse.shape)
+    #print("densities_coarse-----------------------", densities_coarse.shape)
     weights = samples_coarse.get_weights(densities_coarse) #rays, #samples, 1
-
+    #print("weights-----------------------", weights.shape)
+    #exit(0)
     if only_coarse:
         colors = volume_rendering(samples_coarse.deltas,
                         colors_coarse, 

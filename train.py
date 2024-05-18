@@ -73,7 +73,7 @@ def main(local_rank, args):
         imgs = torch.stack(imgs).float().permute(0,3,1,2)
 
         fl_x = transforms['img_size'][0] / (2*np.tan(transforms['fov'] * np.pi / 360))
-        fl_y = transforms['img_size'][1] / (2*np.tan(transforms['fov'] * np.pi / 360))
+        fl_y = transforms['img_size'][0] / (2*np.tan(transforms['fov'] * np.pi / 360))
         cx = transforms['img_size'][0] / 2
         cy = transforms['img_size'][1] / 2
         image_width = transforms['img_size'][0] 
@@ -120,7 +120,7 @@ def main(local_rank, args):
         except Exception as e:
             print(e)
 
-    # torch.cuda.empty_cache()
+    torch.cuda.empty_cache()
     if args.resume_from:
         ckpt = torch.load(args.resume_from, map_location='cpu')
         try:
@@ -228,22 +228,24 @@ def main(local_rank, args):
                     ground_truth_px_values = batch[:, 6:9]
                     if cfg.optimizer.depth_loss_weight > 0:
                         ground_truth_depth = batch[:,10:]
-                        #print("ground_truth_depth", ground_truth_depth, ground_truth_depth.shape)
+
                     if cfg.decoder.whiteout:
                         ground_truth_px_values[~mask] = 1
-                    
+                    #print("ground_truth_depth", ground_truth_depth, ground_truth_depth.shape) #(28416,1)
                     regenerated_px_values, dist_loss, depth = render_rays(triplane_decoder, ray_origins, ray_directions, cfg, pif=pif, training=True)
-                    #print("depth", depth, depth.shape)
+                    #print("regenerated_px_values", regenerated_px_values, regenerated_px_values.shape) 
+                    #exit(0)
                     mse_loss = mse_loss_fct(regenerated_px_values, ground_truth_px_values)
-
+                    #print("mse_loss", mse_loss)
                     tv_loss = cfg.optimizer.tv_loss_weight * compute_tv_loss(triplane_decoder) if cfg.optimizer.tv_loss_weight > 0 else 0
-
+                    #print("tv_loss", tv_loss)
                     dist_loss = cfg.optimizer.dist_loss_weight * dist_loss if cfg.optimizer.dist_loss_weight > 0 else 0
-
+                    #print("dist_loss", dist_loss)
+                   
                     if cfg.optimizer.lpips_loss_weight > 0:
                         lpips_loss = cfg.optimizer.lpips_loss_weight *  \
-                            torch.mean(lpips_loss_fct(regenerated_px_values.view(-1,74,128,3).permute(0,3,1,2) * 2 - 1, 
-                                                    ground_truth_px_values.view(-1,74,128,3).permute(0,3,1,2) * 2 - 1))
+                            torch.mean(lpips_loss_fct(regenerated_px_values.view(-1,64,102,3).permute(0,3,1,2) * 2 - 1, 
+                                                    ground_truth_px_values.view(-1,64,102,3).permute(0,3,1,2) * 2 - 1))
                     else:
                         lpips_loss = 0
                     # print("cfg.optimizer.depth_loss_weight", cfg.optimizer.depth_loss_weight)
@@ -254,7 +256,8 @@ def main(local_rank, args):
                     depth_loss = cfg.optimizer.depth_loss_weight * mse_loss_fct(torch.sqrt(depth/60), torch.sqrt(torch.clip(ground_truth_depth/60, 0,1))) if cfg.optimizer.depth_loss_weight > 0 else 0
 
                     loss = mse_loss + tv_loss + dist_loss + lpips_loss + depth_loss
-
+                    #print("loss-------------------", loss)
+                    
 
                     if loss.isnan():
                         print("Loss is NaN")
