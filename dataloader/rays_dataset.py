@@ -59,6 +59,7 @@ class RaysDataset(Dataset):
         self.config_path = os.path.join(root_path, self.config_path)
         try:
             with open(self.config_path, 'r') as f:
+                print("self.config_path------", self.config_path)
                 self.meta = json.load(f)
         except FileNotFoundError:
             print("File not found")

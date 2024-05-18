@@ -120,7 +120,7 @@ def main(local_rank, args):
         except Exception as e:
             print(e)
 
-    torch.cuda.empty_cache()
+    #torch.cuda.empty_cache()
     if args.resume_from:
         ckpt = torch.load(args.resume_from, map_location='cpu')
         try:
@@ -244,8 +244,8 @@ def main(local_rank, args):
                    
                     if cfg.optimizer.lpips_loss_weight > 0:
                         lpips_loss = cfg.optimizer.lpips_loss_weight *  \
-                            torch.mean(lpips_loss_fct(regenerated_px_values.view(-1,64,102,3).permute(0,3,1,2) * 2 - 1, 
-                                                    ground_truth_px_values.view(-1,64,102,3).permute(0,3,1,2) * 2 - 1))
+                            torch.mean(lpips_loss_fct(regenerated_px_values.view(-1,38,51,3).permute(0,3,1,2) * 2 - 1, 
+                                                    ground_truth_px_values.view(-1,38,51,3).permute(0,3,1,2) * 2 - 1))
                     else:
                         lpips_loss = 0
                     # print("cfg.optimizer.depth_loss_weight", cfg.optimizer.depth_loss_weight)

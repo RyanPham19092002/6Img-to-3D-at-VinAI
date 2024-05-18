@@ -76,7 +76,7 @@ def main(local_rank, args):
         imgs = torch.stack(imgs).float().permute(0,3,1,2)
 
         fl_x = transforms['img_size'][0] / (2*np.tan(transforms['fov'] * np.pi / 360))
-        fl_y = transforms['img_size'][1] / (2*np.tan(transforms['fov'] * np.pi / 360))
+        fl_y = transforms['img_size'][0] / (2*np.tan(transforms['fov'] * np.pi / 360))
         cx = transforms['img_size'][0] / 2
         cy = transforms['img_size'][1] / 2
         image_width = transforms['img_size'][0] 
