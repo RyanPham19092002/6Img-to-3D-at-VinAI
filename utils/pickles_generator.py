@@ -31,13 +31,15 @@ class Triplane_Dataset(torch.utils.data.Dataset):
     def __init__(self, dataset_config):
         self.data_path = dataset_config.data_path
         self.dataset_config = dataset_config.train_data_loader
+        print("self.data_path----------", self.data_path)
         self.data = []
 
 
         if dataset_config.get("town", "all") == "all":
-            towns = [folder for folder in os.listdir(self.data_path) if os.path.isdir(os.path.join(self.data_path, folder))]
+            towns = [folder for folder in os.listdir(self.data_path) if folder in self.dataset_config.get("town", [])]
         else:
             towns = dataset_config["town"]
+        print("towns----------", towns)
         for town in towns:
             if dataset_config.get("weather", "all")  == "all" :
                 weathers = [folder for folder in os.listdir(os.path.join(self.data_path, town)) if os.path.isdir(os.path.join(self.data_path, town, folder))]

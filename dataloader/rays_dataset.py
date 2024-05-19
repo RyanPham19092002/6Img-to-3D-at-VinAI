@@ -102,7 +102,7 @@ class RaysDataset(Dataset):
                 #depth_path = os.path.join(root_path, self.config_dir, f"{frame['depth_file_path']}")
                 depth_map = Image.open(depth_path)
                 #convert to grayscale
-                depth_map = depth_map.convert("L")
+                #depth_map = depth_map.convert("L")
                 depth_map = depth_map.resize((self.intrinsics.width, self.intrinsics.height), Image.LANCZOS)
                 depth_map = self.transform(depth_map).float() / 1000.0
                 #print("depth map shape before-------", depth_map.shape)
