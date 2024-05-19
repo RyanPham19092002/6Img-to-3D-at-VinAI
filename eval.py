@@ -59,7 +59,7 @@ def main(local_rank, args):
 
     triplane_encoder = model_builder.build(cfg.model)
     triplane_decoder = TriplaneDecoder(cfg)
-
+    imgs = []
     if cfg.pif:
         path = cfg.pif_transforms
         with open(os.path.join(path,"transforms/transforms_ego.json"), "r") as f:
@@ -72,7 +72,9 @@ def main(local_rank, args):
             img_path = os.path.join(path,"transforms", "input_images",f"{key}.png")
             img_path.replace("\\", "/")
             print(img_path)
-        imgs = [torch.from_numpy(imageio.imread(img_path))[...,:3]]
+            img_tensor = torch.from_numpy(imageio.imread(img_path))[...,:3]
+            imgs.append(img_tensor)
+        # imgs = [torch.from_numpy(imageio.imread(img_path))[...,:3]]
         imgs = torch.stack(imgs).float().permute(0,3,1,2)
 
         fl_x = transforms['img_size'][0] / (2*np.tan(transforms['fov'] * np.pi / 360))
