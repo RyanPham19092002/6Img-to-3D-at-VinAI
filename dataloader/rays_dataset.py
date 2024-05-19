@@ -104,7 +104,7 @@ class RaysDataset(Dataset):
                 #convert to grayscale
                 #depth_map = depth_map.convert("L")
                 depth_map = depth_map.resize((self.intrinsics.width, self.intrinsics.height), Image.LANCZOS)
-                depth_map = self.transform(depth_map).float() / 1000.0
+                depth_map = self.transform(depth_map).float() #/ 1000.0
                 #print("depth map shape before-------", depth_map.shape)
                 depth_map = depth_map.view(-1,1)
                 #print("depth map shape after-------", depth_map.shape)

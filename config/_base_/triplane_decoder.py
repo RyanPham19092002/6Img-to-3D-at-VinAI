@@ -1,7 +1,7 @@
 # Triplane config
 decoder = dict(
-    whiteout = False, 
-    white_background = False,
+    whiteout = True, 
+    white_background = True,
     density_activation = "trunc_exp",
     hidden_dim = 128,
     hidden_layers = 5,

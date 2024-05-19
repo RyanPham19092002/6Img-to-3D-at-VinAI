@@ -44,7 +44,7 @@ def main(local_rank, args):
         logdir = f'runs/{time.strftime("%b%d_%H-%M-%S", time.localtime())}_{args.log_dir}'
         writer = SummaryWriter(log_dir=logdir)
 
-    
+    print("logdir train-----------------", logdir)
     save_dir = os.path.join(writer.logdir, 'models')
 
     torch.backends.cudnn.benchmark = True

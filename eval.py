@@ -36,7 +36,7 @@ import pandas as pd
 def main(local_rank, args):
     # global settings
     logdir = f'eval/{time.strftime("%b%d_%H-%M-%S", time.localtime())}_{args.log_dir}'
-
+    print("logdir eval-----------------", logdir)
     if not os.path.exists(logdir):
         os.makedirs(logdir)
 
