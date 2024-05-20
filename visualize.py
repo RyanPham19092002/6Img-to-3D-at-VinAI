@@ -29,9 +29,6 @@ if __name__ == "__main__":
     config = Config.fromfile(config)
     dataset_config = Config.fromfile(dataset_config).dataset_params
 
-    
-    mode = "train"
-    factor = 1
     dataset = RaysDataset(datapath, config, dataset_config = dataset_config.train_data_loader, mode = "train", factor = dataset_config.train_data_loader.factor)
     rays_o, rays_d = dataset.get_rays_for_visualization()
     visualize_rays(rays_o, rays_d)
