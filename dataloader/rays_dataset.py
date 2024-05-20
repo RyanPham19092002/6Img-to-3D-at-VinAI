@@ -143,7 +143,12 @@ class RaysDataset(Dataset):
         self.dataset = torch.cat(self.dataset) # (len(self.meta['frames])*h*w, 10)
         print("self.dataset shape------------------------------", self.dataset.shape)
 
-
+    def get_rays_for_visualization(self):
+        # Extract ray origins and directions
+        rays_o = self.dataset[:, :3].numpy()
+        rays_d = self.dataset[:, 3:6].numpy()
+        return rays_o, rays_d
+                
     def define_transforms(self):
         self.transform = T.ToTensor()
 
