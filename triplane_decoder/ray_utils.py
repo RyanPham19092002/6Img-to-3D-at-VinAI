@@ -32,6 +32,7 @@ from kornia import create_meshgrid
 
 def get_ray_directions(intrinsics):
     """
+    get ray directions precompute
     Get ray directions for all pixels in camera coordinate.
     Reference: https://www.scratchapixel.com/lessons/3d-basic-rendering/
                ray-tracing-generating-camera-rays/standard-coordinate-systems
