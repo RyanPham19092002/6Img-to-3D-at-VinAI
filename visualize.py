@@ -21,11 +21,17 @@ def visualize_rays(rays_o, rays_d, ray_length=1.0):
     o3d.visualization.draw_geometries(line_sets)
 
 if __name__ == "__main__":
-    config_path = "path/to/config"
-    config = None  # Load or define your config
-    dataset_config = None  # Load or define your dataset config
-    mode = "val"
+    datapath = "root/VinAI/.../"
+    config = "config/config.py"  # Load or define your config
+    dataset_config = "config/_base_/dataset.py"  # Load or define your dataset config
+
+    
+    config = Config.fromfile(config)
+    dataset_config = Config.fromfile(dataset_config).dataset_params
+
+    
+    mode = "train"
     factor = 1
-    dataset = RaysDataset(config_path, config, dataset_config, mode, factor)
+    dataset = RaysDataset(datapath, config, dataset_config = dataset_config.train_data_loader, mode = "train", factor = dataset_config.train_data_loader.factor)
     rays_o, rays_d = dataset.get_rays_for_visualization()
     visualize_rays(rays_o, rays_d)
