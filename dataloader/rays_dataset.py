@@ -91,9 +91,12 @@ class RaysDataset(Dataset):
             img = img.resize((self.intrinsics.width, self.intrinsics.height), Image.LANCZOS)
             img = self.transform(img) # (4, h, w)
             img = img.view(img.size(0), -1).permute(1, 0) # (h*w, 4) RGBA
+            #print("img---------------------", img.shape)
             if img.size(0) == 4:
                 img = img[:, :3]*img[:, -1:] + (1-img[:, -1:]) # blend A to RGB
+                #print("img blend A---------------------", img.shape)
 
+            #print("img shape--------------------------------------------------------------", img.shape)
             if (self.config.decoder.whiteout or self.dataset_config.depth):
                 
                 #print("Having depth map")
@@ -102,9 +105,9 @@ class RaysDataset(Dataset):
                 #depth_path = os.path.join(root_path, self.config_dir, f"{frame['depth_file_path']}")
                 depth_map = Image.open(depth_path)
                 #convert to grayscale
-                #depth_map = depth_map.convert("L")
+                depth_map = depth_map.convert("L")
                 depth_map = depth_map.resize((self.intrinsics.width, self.intrinsics.height), Image.LANCZOS)
-                depth_map = self.transform(depth_map).float() #/ 1000.0
+                depth_map = self.transform(depth_map).float() * 25.0
                 #print("depth map shape before-------", depth_map.shape)
                 depth_map = depth_map.view(-1,1)
                 #print("depth map shape after-------", depth_map.shape)
@@ -133,7 +136,7 @@ class RaysDataset(Dataset):
           
 
             if self.dataset_config.depth and depth_map is not None:
-                self.dataset += [torch.cat([rays_o, rays_d, img, mask.unsqueeze(1), depth_map],-1)] # (h*w, 1)
+                self.dataset += [torch.cat([rays_o, rays_d, img, mask.unsqueeze(1), depth_map],-1)] # (h*w, 11)
                 
             else:
                 self.dataset += [torch.cat([rays_o, rays_d, img, mask.unsqueeze(1)],-1)] # (h*w, 10)
@@ -141,13 +144,14 @@ class RaysDataset(Dataset):
 
             
         self.dataset = torch.cat(self.dataset) # (len(self.meta['frames])*h*w, 10)
-        print("self.dataset shape------------------------------", self.dataset.shape)
+        #print("self.dataset shape------------------------------", self.dataset[:, 6:9].shape)
 
     def get_rays_for_visualization(self):
         # Extract ray origins and directions
         rays_o = self.dataset[:, :3].numpy()
         rays_d = self.dataset[:, 3:6].numpy()
-        return rays_o, rays_d
+        img = self.dataset[:, 6:9].numpy()
+        return rays_o, rays_d, img
                 
     def define_transforms(self):
         self.transform = T.ToTensor()

@@ -1,1 +1,1 @@
-python eval.py --py-config /root/VinAI/6Img-to-3D-at-VinAI/config/config.py --resume-from /root/VinAI/6Img-to-3D-at-VinAI/runs/May19_15-52-54_evaluation_results/models/model_best_psnr.pth --log-dir evaluation_results --depth --img-gt
+python eval.py --py-config /root/VinAI/6Img-to-3D-at-VinAI/config/config.py --resume-from /root/VinAI/6Img-to-3D-at-VinAI/runs/May23_12-25-24_multiply_25_new_data/models/model_best_psnr.pth --log-dir multiply_25_new_data_p2 --depth --img-gt 

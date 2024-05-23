@@ -3,6 +3,7 @@ import triplane_decoder.ray_samplers as ray_sampler
 from triplane_decoder.losses import distortion_loss
 from triplane_decoder.pif import PIF
 from triplane_decoder.decoder import TriplaneDecoder
+from visualize import visualize_3d_points_and_directions
 
 def compute_accumulated_transmittance(alphas):
     accumulated_transmittance = torch.cumprod(alphas, 1) #rays, #samples, 1
@@ -71,7 +72,12 @@ def render_rays(nerf_model:TriplaneDecoder, ray_origins, ray_directions, config,
 
     midpoints = (samples_fine.starts + samples_fine.ends) / 2 #rays, #samples, 1
     x = samples_coarse.origins + samples_coarse.directions.squeeze(2) * midpoints #rays, #samples, 3
-
+    #print("x shape------------------------------------------", x.reshape(-1, 3).shape)
+    # #visualize
+    # print("ray_directions shape------------------------------------------", ray_directions.reshape(-1, 3).shape)
+    # visualize_3d_points_and_directions(x.reshape(-1, 3), ray_directions.reshape(-1, 3))
+    
+    #
     colors, densities = nerf_model(x.reshape(-1, 3), ray_directions.reshape(-1, 3), pif=pif)
     colors_fine = colors.reshape_as(x)               #rays, #samples_per_ray, 3
     densities_fine = densities.reshape_as(midpoints) #rays, #samples_per_ray

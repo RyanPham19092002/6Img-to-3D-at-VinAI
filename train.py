@@ -21,6 +21,8 @@ import lpips
 import time
 
 from builder import data_builder, model_builder
+from visualize import visualize_random_rays
+from visualize import visualize_triplane
 
 from triplane_decoder.lr_scheduling import get_cosine_schedule_with_warmup
 from triplane_decoder.rendering import render_rays
@@ -68,7 +70,7 @@ def main(local_rank, args):
         for key in frame.keys():
             img_path = os.path.join(path,"transforms", "input_images",f"{key}.png")
             img_path.replace("\\", "/")
-            print(img_path)
+            #print(img_path)
             img_tensor = torch.from_numpy(imageio.imread(img_path))[...,:3]
             imgs.append(img_tensor)
         # imgs = [torch.from_numpy(imageio.imread(img_path))[...,:3]]
@@ -196,7 +198,7 @@ def main(local_rank, args):
             if cfg.optimizer.depth_loss_weight > 0:
                 loss_dict['depth_loss'] = 0
 
-            print(f"step {epoch}/100")
+            print(f"step {epoch}/{num_steps}")
             if args.num_scenes > 0:
                 total_scenes = min(args.num_scenes, len(train_dataset_loader))
             else:
@@ -204,18 +206,24 @@ def main(local_rank, args):
                 
             pbar = tqdm(enumerate(train_dataset_loader), total=total_scenes)
             for i_iter_val, (imgs, img_metas, batch) in pbar:
-                # print(imgs.shape)
+
                 if (args.num_scenes > 0) and i_iter_val > total_scenes:
                     continue
                 
                 batch = torch.from_numpy(batch[0])
+                # print("batch shape--------------------------------",batch.shape)
+                # exit(0)
                 # batch = batch[0]
 
                 imgs = imgs.cuda() 
 
                 triplane, features = triplane_encoder(img=imgs, img_metas=img_metas)
+                
 
                 triplane_decoder.update_planes(triplane)
+                #print("triplane_decoder-------------------", triplane_decoder)
+                #visualize_triplane(triplane)
+                #exit(0)
                 if pif is not None:
                     pif.update_imgs(features[0])
 
@@ -228,22 +236,110 @@ def main(local_rank, args):
                     # print("---------ray_directions", ray_directions)
 
                     ground_truth_px_values = batch[:, 6:9]
+                    # print("ground_truth_px_values", ground_truth_px_values.shape)
                     if cfg.optimizer.depth_loss_weight > 0:
                         ground_truth_depth = batch[:,10:]
 
                     if cfg.decoder.whiteout:
                         ground_truth_px_values[~mask] = 1
-                    #print("ground_truth_depth", ground_truth_depth, ground_truth_depth.shape) #(28416,1)
+                    # print("ground_truth_depth", ground_truth_depth.shape) #(28416,1)
                     regenerated_px_values, dist_loss, depth = render_rays(triplane_decoder, ray_origins, ray_directions, cfg, pif=pif, training=True)
-                    #print("regenerated_px_values", regenerated_px_values, regenerated_px_values.shape) 
-                    #exit(0)
+                    #print("triplane_decoder-----------------------", triplane_decoder.shape) 
+                    #print("ray_origins-----------------------", ray_origins.shape) 
+                    #print("ray_directions-----------------------", ray_directions.shape) 
+                    visualize_random_rays(ray_origins.detach().cpu().numpy(), ray_directions.detach().cpu().numpy(), num_rays=5814, ray_length=1.0)
+
                     mse_loss = mse_loss_fct(regenerated_px_values, ground_truth_px_values)
-                    #print("mse_loss", mse_loss)
+                    print("mse_loss---------------", mse_loss)
                     tv_loss = cfg.optimizer.tv_loss_weight * compute_tv_loss(triplane_decoder) if cfg.optimizer.tv_loss_weight > 0 else 0
-                    #print("tv_loss", tv_loss)
+                    print("tv_loss-----------------", tv_loss)
                     dist_loss = cfg.optimizer.dist_loss_weight * dist_loss if cfg.optimizer.dist_loss_weight > 0 else 0
-                    #print("dist_loss", dist_loss)
-                   
+                    print("dist_loss--------------", dist_loss)
+                    print("vẽ")
+                    #plt.figure()
+
+                    # Vẽ ground_truth_depth
+                    # plt.plot(ground_truth_depth.detach().cpu().numpy(), marker='o', linestyle='-')
+
+                    # # Đặt nhãn cho trục x và y
+                    # plt.xlabel('Index')
+                    # plt.ylabel('Depth')
+                    # plt.savefig('visualization_depth_train.png')
+                    gt_colors = ground_truth_px_values.view(-1, 3).detach().cpu().numpy()
+                    regen_colors = regenerated_px_values.view(-1, 3).detach().cpu().numpy()
+
+                    fig1 = plt.figure()
+                    ax1 = fig1.add_subplot(111, projection='3d')
+                    
+                    segment_size = len(gt_colors) // 3
+
+                    # Ensure we do not miss any rows due to integer division
+                    indices = [0, segment_size, 2 * segment_size, len(gt_colors)]
+
+                    # Colors for each segment
+                    segment_colors = ['r', 'g', 'b']
+                    # Visualize ground truth colors in segments
+                    for i in range(3):
+                        start_idx = indices[i]
+                        end_idx = indices[i + 1]
+                        ax1.scatter(gt_colors[start_idx:end_idx, 0], 
+                                gt_colors[start_idx:end_idx, 1], 
+                                gt_colors[start_idx:end_idx, 2], 
+                                c=segment_colors[i], marker='o', label=f'Ground Truth Part {i + 1}')
+
+                    ax1.set_xlabel('Red')
+                    ax1.set_ylabel('Green')
+                    ax1.set_zlabel('Blue')
+                    ax1.legend()
+
+                    # Lưu hình 1
+                    plt.savefig('visualization_view1_gt.png')
+
+                    # Hình 2: Chỉ vẽ regen_colors
+                    fig2 = plt.figure()
+                    ax2 = fig2.add_subplot(111, projection='3d')
+
+                    ax2.scatter(regen_colors[:, 0], regen_colors[:, 1], regen_colors[:, 2], c='orange', marker='^', label='Regenerated')
+
+                    ax2.set_xlabel('Red')
+                    ax2.set_ylabel('Green')
+                    ax2.set_zlabel('Blue')
+                    ax2.legend()
+
+                    # Lưu hình 2
+                    plt.savefig('visualization_view2_regen.png')
+
+                    # Hình 3: Vẽ cả hai phần gt_colors và regen_colors trên cùng một hình
+                    fig3 = plt.figure()
+                    ax3 = fig3.add_subplot(111, projection='3d')
+
+                    # Visualize ground truth colors in segments
+                    for i in range(3):
+                        start_idx = indices[i]
+                        end_idx = indices[i + 1]
+                        ax3.scatter(gt_colors[start_idx:end_idx, 0], 
+                                gt_colors[start_idx:end_idx, 1], 
+                                gt_colors[start_idx:end_idx, 2], 
+                                c=segment_colors[i], marker='o', label=f'Ground Truth Part {i + 1}')
+
+                    ax3.scatter(regen_colors[:, 0], regen_colors[:, 1], regen_colors[:, 2], c='orange', marker='^', label='Regenerated')
+
+                    ax3.set_xlabel('Red')
+                    ax3.set_ylabel('Green')
+                    ax3.set_zlabel('Blue')
+                    ax3.legend()
+
+                    # Lưu hình 3
+                    plt.savefig('visualization_view3_both.png')
+
+                    # # Set a second viewpoint
+                    # ax.view_init(elev=20., azim=-45)  # Change elevation and azimuth to opposite viewpoint
+
+                    # # Save the second viewpoint
+                    # plt.savefig('visualization_view2_gt.png')
+
+                    #print("kết thúc")
+                    #exit(0)
                     if cfg.optimizer.lpips_loss_weight > 0:
                         lpips_loss = cfg.optimizer.lpips_loss_weight *  \
                             torch.mean(lpips_loss_fct(regenerated_px_values.view(-1,38,51,3).permute(0,3,1,2) * 2 - 1, 
@@ -253,10 +349,10 @@ def main(local_rank, args):
                     # print("cfg.optimizer.depth_loss_weight", cfg.optimizer.depth_loss_weight)
                     # print("depth", depth)                    
                     # print("torch.sqrt(torch.clip(ground_truth_depth/60, 0,1))", torch.sqrt(torch.clip(ground_truth_depth/60, 0,1)))
-                    # print("lpips_loss", lpips_loss)
-                    # print("depth_loss", depth_loss)
-                    depth_loss = cfg.optimizer.depth_loss_weight * mse_loss_fct(torch.sqrt(depth/60), torch.sqrt(torch.clip(ground_truth_depth/60, 0,1))) if cfg.optimizer.depth_loss_weight > 0 else 0
 
+                    depth_loss = cfg.optimizer.depth_loss_weight * mse_loss_fct(torch.sqrt(depth/60), torch.sqrt(torch.clip(ground_truth_depth/60, 0,1))) if cfg.optimizer.depth_loss_weight > 0 else 0
+                    print("lpips_loss-----------------------", lpips_loss)
+                    print("depth_loss-----------------------", depth_loss)
                     loss = mse_loss + tv_loss + dist_loss + lpips_loss + depth_loss
                     #print("loss-------------------", loss)
                     

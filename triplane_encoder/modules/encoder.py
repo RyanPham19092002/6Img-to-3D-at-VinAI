@@ -19,6 +19,7 @@ from mmcv.utils import ext_loader
 from triplane_decoder.scene_contraction import contract_world
 from triplane_decoder.intrinsics import Intrinsics
 import triplane_decoder.ray_utils as ray_utils
+from visualize import visualize_points
 
 ext_module = ext_loader.load_ext(
     '_ext', ['ms_deform_attn_backward', 'ms_deform_attn_forward'])
@@ -194,7 +195,8 @@ class TPVFormerEncoder(TransformerLayerSequence):
             step =  torch.logspace(np.log10(hn), np.log10(hf), num_pts).to(rays_d.device)[None, ...] 
     
         points = rays_o[:,:,None,:] + rays_d[:,:,None,:] * step[None,:,:,None]
-
+        #visualize_points(points)    #visualize
+        
         if self.scene_contraction:
             x_grid = contract_world(points * c2ws.new_tensor(self.scene_contraction_factor)) #samples, 3
             bound_masks = (x_grid.abs() < 1.0).all(-1) # samples

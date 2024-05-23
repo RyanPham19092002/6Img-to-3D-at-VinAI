@@ -217,14 +217,19 @@ class PickledCarlaDataset(CarlaDataset):
                 filename = "train_dataset_shuffled_"
             sphere_dataloader = []
             if self.dataset_config.get("whole_image", False):
-                view_ids = random.sample(range(80), self.dataset_config.get("num_imgs",1))
+                view_ids = random.sample(range(100), self.dataset_config.get("num_imgs",1))
             else:
                 view_ids = np.arange(self.part_num, self.part_num + self.dataset_config.get("num_imgs",1))
             for view_id in view_ids:
                 with open(os.path.join(data["sphere"], f"{filename}{view_id}.npy"), "rb") as f:
                     sphere_dataloader.append(np.load(f))
+            # for idx, array in enumerate(sphere_dataloader):
+            #     print(f"Kích thước của mảng thứ {idx+1}: {array.shape}")
+            # #print(" sphere_dataloader.shape in for loop------------", sphere_dataloader.shape)
             sphere_dataloader = np.concatenate(sphere_dataloader)    
-        # print("------------", input_rgb.shape, img_meta.shape, sphere_dataloader.shape)
+        # print(" sphere_dataloader.shape------------", sphere_dataloader.shape)
+        # print(" exit dataloader/dataset------------")
+        # exit(0)
         # img_meta["K"] = torch.from_numpy(img_meta["K"])
         # img_meta["c2w"] = torch.tensor(img_meta["c2w"])
         return (input_rgb, img_meta, sphere_dataloader)

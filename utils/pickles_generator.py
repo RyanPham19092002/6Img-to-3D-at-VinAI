@@ -81,6 +81,7 @@ class Triplane_Dataset(torch.utils.data.Dataset):
 def process_datapath(datapath):
     # try:
     train_dataset = RaysDataset(datapath, config, dataset_config=dataset_config.train_data_loader, mode="train", factor=dataset_config.train_data_loader.factor)
+    
     if dataset_config.train_data_loader.whole_image:
         
         W, H = train_dataset.intrinsics.width, train_dataset.intrinsics.height
@@ -88,7 +89,8 @@ def process_datapath(datapath):
         print(" H W: ", H, W)
         
         train_dataset = train_dataset.dataset.view(100, H*W, -1)
-
+        print("train_dataset after---------------", train_dataset.shape)
+        #exit(0)
         for i in range(len(train_dataset)):
             with open(os.path.join(datapath, f"train_dataset_{i}.npy"), "wb") as f:
                 np.save(f, train_dataset[i].numpy())

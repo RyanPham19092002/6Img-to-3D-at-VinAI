@@ -4,7 +4,7 @@ import numpy as np
 scale_x = (640/1280)
 scale_y = (480/800)
 
-file_json = "/root/VinAI/6Img-to-3D-at-VinAI/data_VinAI/Town05/ClearNoon/vehicle.tesla.invisible/spawn_point_10/step_0/nuscenes/transforms/transforms_ego.json"
+file_json = "/root/VinAI/6Img-to-3D-at-VinAI/data_VinAI/Town05/ClearNoon/vehicle.tesla.invisible/spawn_point_10/step_0/sphere/transforms/transforms_ego_train.json"
 with open(file_json, 'r') as f:
     input_data = json.load(f)
 
