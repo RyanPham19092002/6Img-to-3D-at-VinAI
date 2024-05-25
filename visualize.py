@@ -1,5 +1,5 @@
 import sys
-sys.path.append('/root/VinAI/6Img-to-3D-at-VinAI')
+sys.path.append('./VinAI/6Img-to-3D-at-VinAI')
 from dataloader.rays_dataset import RaysDataset
 from mmengine.config import Config
 from matplotlib import pyplot as plt

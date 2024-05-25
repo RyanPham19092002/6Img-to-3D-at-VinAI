@@ -2,7 +2,7 @@ import bpy
 import sys
 
 # Đường dẫn đến file .ply cần mở
-filepath = '/root/VinAI/6Img-to-3D-at-VinAI/3d_points_visualization.ply'  # Thay thế đường dẫn này bằng đường dẫn thực tế của file .ply
+filepath = './VinAI/6Img-to-3D-at-VinAI/3d_points_visualization.ply'  # Thay thế đường dẫn này bằng đường dẫn thực tế của file .ply
 
 # Xóa mọi đối tượng hiện tại trong scene
 bpy.ops.object.select_all(action='SELECT')
