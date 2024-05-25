@@ -181,6 +181,7 @@ def main(local_rank, args):
         start = 0
 
     for epoch in range(start, num_steps // len(train_dataset_loader)):
+
         train_dataset_loader.part_num = (epoch * num_imgs) % (80 // num_imgs)
         try:
             triplane_decoder.train()
