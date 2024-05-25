@@ -11,7 +11,7 @@ for town in ["Town02", "Town05"]:
         # elif town == "Town05":
         #     mode = "train"
         print("town - index---------------------", town, index)
-        file_json = f"/root/VinAI/6Img-to-3D-at-VinAI/data_VinAI/{town}/ClearNoon/vehicle.tesla.invisible/spawn_point_10/step_{index}/nuscenes/transforms/transforms_ego.json"
+        file_json = f"./VinAI/6Img-to-3D-at-VinAI/data_VinAI/{town}/ClearNoon/vehicle.tesla.invisible/spawn_point_10/step_{index}/nuscenes/transforms/transforms_ego.json"
         with open(file_json, 'r') as f:
             input_data = json.load(f)
 
