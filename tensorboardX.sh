@@ -1,0 +1,1 @@
+tensorboard --logdir=/root/VinAI/6Img-to-3D-at-VinAI/runs

@@ -343,8 +343,8 @@ def main(local_rank, args):
                     #exit(0)
                     if cfg.optimizer.lpips_loss_weight > 0:
                         lpips_loss = cfg.optimizer.lpips_loss_weight *  \
-                            torch.mean(lpips_loss_fct(regenerated_px_values.view(-1,38,51,3).permute(0,3,1,2) * 2 - 1, 
-                                                    ground_truth_px_values.view(-1,38,51,3).permute(0,3,1,2) * 2 - 1))
+                            torch.mean(lpips_loss_fct(regenerated_px_values.view(-1,74,128,3).permute(0,3,1,2) * 2 - 1,   #(38,51) if (640,480) / (74,128) if (1600,928)
+                                                    ground_truth_px_values.view(-1,74,128,3).permute(0,3,1,2) * 2 - 1))
                     else:
                         lpips_loss = 0
                     # print("cfg.optimizer.depth_loss_weight", cfg.optimizer.depth_loss_weight)
