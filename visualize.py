@@ -193,6 +193,7 @@ def visualize_triplane(triplane):
     fig.suptitle('Triplane Visualization')
     plt.savefig('triplane.png')
 #wrong---------------------------------------------------------------------------------------------------------
+'''
 if __name__ == "__main__":
     datapath = "/root/VinAI/6Img-to-3D-at-VinAI/data_VinAI/Town05/ClearNoon/vehicle.tesla.invisible/spawn_point_10/step_0/sphere/"
     config = "config/config.py"  # Load or define your config
@@ -213,3 +214,4 @@ if __name__ == "__main__":
     ax.set_zlabel('Z')
     plt.savefig('visualization_img.png')
     #visualize_random_rays(rays_o, rays_d, num_rays=100)  # Visualize 100 random rays
+'''
