@@ -62,6 +62,7 @@ pip install mmdet==2.20.0 mmengine==0.8.4 mmsegmentation==0.20.0  mmcls==0.25.0 
 Install the other dependencies
 ```bash
 pip install tensorboardX crc32c pandas pyyaml==6.0.1  imageio==2.33.1 imageio-ffmpeg==0.4.9 lpips==0.1.4 pytorch-msssim==1.0.0 kornia==0.7.0 yapf==0.40.1 jupyter notebook seaborn==0.13.2
+apt-get install ffmpeg libsm6 libxext6  -y
 ```
 
 ## Train
