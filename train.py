@@ -349,9 +349,9 @@ def main(local_rank, args):
                         lpips_loss = 0
                     # print("cfg.optimizer.depth_loss_weight", cfg.optimizer.depth_loss_weight)
                     # print("depth", depth)                    
-                    # print("torch.sqrt(torch.clip(ground_truth_depth/60, 0,1))", torch.sqrt(torch.clip(ground_truth_depth/60, 0,1)))
+                    # print("torch.sqrt(torch.clip(ground_truth_depth/255, 0,1))", torch.sqrt(torch.clip(ground_truth_depth/255, 0,1)))            
 
-                    depth_loss = cfg.optimizer.depth_loss_weight * mse_loss_fct(torch.sqrt(depth/60), torch.sqrt(torch.clip(ground_truth_depth/60, 0,1))) if cfg.optimizer.depth_loss_weight > 0 else 0
+                    depth_loss = cfg.optimizer.depth_loss_weight * mse_loss_fct(torch.sqrt(depth/255), torch.sqrt(torch.clip(ground_truth_depth/255, 0,1))) if cfg.optimizer.depth_loss_weight > 0 else 0        # / 60
                     print("lpips_loss-----------------------", lpips_loss)
                     print("depth_loss-----------------------", depth_loss)
                     loss = mse_loss + tv_loss + dist_loss + lpips_loss + depth_loss
