@@ -91,7 +91,7 @@ class RaysDataset(Dataset):
             img = img.resize((self.intrinsics.width, self.intrinsics.height), Image.LANCZOS)
             img = self.transform(img) # (4, h, w)
             img = img.view(img.size(0), -1).permute(1, 0) # (h*w, 4) RGBA
-            #print("img---------------------", img.shape)
+            #exit(0)
             if img.size(0) == 4:
                 img = img[:, :3]*img[:, -1:] + (1-img[:, -1:]) # blend A to RGB
                 #print("img blend A---------------------", img.shape)
@@ -107,7 +107,16 @@ class RaysDataset(Dataset):
                 #convert to grayscale
                 depth_map = depth_map.convert("L")
                 depth_map = depth_map.resize((self.intrinsics.width, self.intrinsics.height), Image.LANCZOS)
-                depth_map = self.transform(depth_map).float() #* 25.0
+                # depth_map_array = np.array(depth_map)
+                # max_depth = np.max(depth_map_array)
+                # min_depth = np.min(depth_map_array)
+
+                # print("max depth before", max_depth)
+                # print("min depth before", min_depth)
+                depth_map = self.transform(depth_map).float() #* 255.0
+                # print("max depth", depth_map.max())
+                # print("min depth", depth_map.min())
+                # # exit(0)
                 #print("depth map shape before-------", depth_map.shape)
                 depth_map = depth_map.view(-1,1)
                 #print("depth map shape after-------", depth_map.shape)

@@ -83,7 +83,7 @@ class CarlaDataset(data.Dataset):
         }
 
         img_meta = None
-        input_rgb=np.empty((6,3,640,480))
+        input_rgb=np.empty((6,3,1600,928))
         sphere_dataloader = None
 
         if "input_images" in self.dataset_config.get("selection", ["input_images"]):

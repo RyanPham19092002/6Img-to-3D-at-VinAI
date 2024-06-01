@@ -193,8 +193,9 @@ class TPVFormerEncoder(TransformerLayerSequence):
             step =  torch.linspace(hn, hf, num_pts).to(rays_d.device)[None, ...] 
         elif sampling == "log":
             step =  torch.logspace(np.log10(hn), np.log10(hf), num_pts).to(rays_d.device)[None, ...] 
-    
+        
         points = rays_o[:,:,None,:] + rays_d[:,:,None,:] * step[None,:,:,None]
+        
         #visualize_points(points)    #visualize
         
         if self.scene_contraction:

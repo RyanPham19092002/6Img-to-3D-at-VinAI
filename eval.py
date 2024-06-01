@@ -208,11 +208,13 @@ def main(local_rank, args):
                     img = torch.clip(img, 0, 1)
 
                     if args.depth:
-                        depth = torch.sqrt(torch.cat(depth_data).reshape(H,W) / 255)
+                        depth = torch.sqrt(torch.cat(depth_data).reshape(H,W))
+                        #print("depth max", depth.max())
+                        #exit(0)
                         depth = cv2.applyColorMap((255 * depth.cpu()).numpy().astype(np.uint8), cv2.COLORMAP_JET)
 
                         if depth_gt is not None:
-                            depth_gt = np.clip(np.sqrt(depth_gt/255), 0, 1)
+                            depth_gt = np.clip(np.sqrt(depth_gt), 0, 1)
                             depth_gt = cv2.applyColorMap((255 * depth_gt).astype(np.uint8), cv2.COLORMAP_JET)
 
 

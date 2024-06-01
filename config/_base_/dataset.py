@@ -18,7 +18,7 @@ dataset_params = dict(
         factor = 0.08,
         whole_image = True,
         num_imgs = 3,
-        depth=True
+        depth=False
     ), 
     val_data_loader = dict(
         pickled = False, # True is unsupported
@@ -30,10 +30,10 @@ dataset_params = dict(
         weather  = ["ClearNoon"],
         vehicle = ["vehicle.tesla.invisible"],
         spawn_point = [10],
-        step = ["all"],
+        step = [43, 47, 51],
         selection = ["input_images", "sphere_dataset"],
         factor = 0.25,
-        depth = True,
+        depth = False,
     ),    
 )
 

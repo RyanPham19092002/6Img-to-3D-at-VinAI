@@ -3,15 +3,17 @@ sys.path.append('./VinAI/6Img-to-3D-at-VinAI')
 from dataloader.rays_dataset import RaysDataset
 from mmengine.config import Config
 from matplotlib import pyplot as plt
-import open3d as o3d
+#import open3d as o3d
 import numpy as np
-import plotly.graph_objects as go
+#import plotly.graph_objects as go
 import torch
 
-o3d.visualization.webrtc_server.enable_webrtc()
+#o3d.visualization.webrtc_server.enable_webrtc()
 
-def visualize_random_rays(rays_o, rays_d, num_rays=100, ray_length=1.0):
+def visualize_random_rays(rays_o, rays_d,name, num_rays=100, ray_length=1.0):
     # Select n random rays
+    print("len rays_o", len(rays_o))
+    print("len rays_o", len(rays_d))
     indices = np.random.choice(len(rays_o), num_rays, replace=False)
     selected_rays_o = rays_o[indices]
     selected_rays_d = rays_d[indices]
@@ -33,7 +35,7 @@ def visualize_random_rays(rays_o, rays_d, num_rays=100, ray_length=1.0):
     ax.set_xlabel('X')
     ax.set_ylabel('Y')
     ax.set_zlabel('Z')
-    plt.savefig('visualize_ray_start_to_end.png')
+    plt.savefig(name)
 
 
 #wrong---------------------------------------------------------------------------------------------------------

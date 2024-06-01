@@ -1,18 +1,18 @@
 import json
 import numpy as np
-
+scale = [800,600]
 for town in ["Town02", "Town05"]:
-    for index in range(41,52):
+    for index in range(40,52):
 
-        scale_x = (1600/640)
-        scale_y = (928/480)
-        # if town == "Town02":
-        #     mode = "test"
-        # elif town == "Town05":
-        #     mode = "train"
+        scale_x = (scale[0]/1200)
+        scale_y = (scale[1]/800)
+        if town == "Town02":
+            mode = "test"
+        elif town == "Town05":
+            mode = "train"
         print("town - index---------------------", town, index)
 
-        file_json = f"./data_VinAI/{town}/ClearNoon/vehicle.tesla.invisible/spawn_point_10/step_{index}/nuscenes/transforms/transforms_ego.json"
+        file_json = f"./data_VinAI/{town}/ClearNoon/vehicle.tesla.invisible/spawn_point_10/step_{index}/sphere/transforms/transforms_ego_{mode}.json"
 
         with open(file_json, 'r') as f:
             input_data = json.load(f)
@@ -25,7 +25,7 @@ for town in ["Town02", "Town05"]:
 
             frame[key] = frame[key].tolist()
         
-        input_data["img_size"] = [1600,928]
+        input_data["img_size"] = scale
 
         with open(file_json, 'w') as f:
             json.dump(input_data, f)

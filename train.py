@@ -179,10 +179,10 @@ def main(local_rank, args):
         start = args.from_epoch
     else:
         start = 0
-
+    num_ep = num_steps // len(train_dataset_loader)
     for epoch in range(start, num_steps // len(train_dataset_loader)):
 
-        train_dataset_loader.part_num = (epoch * num_imgs) % (80 // num_imgs)
+        train_dataset_loader.part_num = (epoch * num_imgs) % (100 // num_imgs)      #origin 80
         try:
             triplane_decoder.train()
             triplane_encoder.train()
@@ -199,7 +199,7 @@ def main(local_rank, args):
             if cfg.optimizer.depth_loss_weight > 0:
                 loss_dict['depth_loss'] = 0
 
-            print(f"step {epoch}/{num_steps}")
+            print(f"step {epoch}/{num_ep}")
             if args.num_scenes > 0:
                 total_scenes = min(args.num_scenes, len(train_dataset_loader))
             else:
@@ -222,7 +222,6 @@ def main(local_rank, args):
                 
 
                 triplane_decoder.update_planes(triplane)
-                #print("triplane_decoder-------------------", triplane_decoder)
                 #visualize_triplane(triplane)
                 #exit(0)
                 if pif is not None:
@@ -239,16 +238,20 @@ def main(local_rank, args):
                     ground_truth_px_values = batch[:, 6:9]
                     # print("ground_truth_px_values", ground_truth_px_values.shape)
                     if cfg.optimizer.depth_loss_weight > 0:
-                        ground_truth_depth = batch[:,10:]
+                        ground_truth_depth = batch[:,10]
+                        print("gt max", torch.sqrt(ground_truth_depth.max()))   
 
                     if cfg.decoder.whiteout:
                         ground_truth_px_values[~mask] = 1
                     # print("ground_truth_depth", ground_truth_depth.shape) #(28416,1)
                     regenerated_px_values, dist_loss, depth = render_rays(triplane_decoder, ray_origins, ray_directions, cfg, pif=pif, training=True)
+                    # print("ground_truth_px_values max", ground_truth_px_values.max())
+                    # print("regenerated_px_values max", regenerated_px_values.max())
+                    #exit(0)
                     #print("triplane_decoder-----------------------", triplane_decoder.shape) 
                     #print("ray_origins-----------------------", ray_origins.shape) 
                     #print("ray_directions-----------------------", ray_directions.shape) 
-                    visualize_random_rays(ray_origins.detach().cpu().numpy(), ray_directions.detach().cpu().numpy(), num_rays=5814, ray_length=1.0)
+                    
 
                     mse_loss = mse_loss_fct(regenerated_px_values, ground_truth_px_values)
                     print("mse_loss---------------", mse_loss)
@@ -342,20 +345,22 @@ def main(local_rank, args):
                     #print("kết thúc")
                     #exit(0)
                     if cfg.optimizer.lpips_loss_weight > 0:
-                        lpips_loss = cfg.optimizer.lpips_loss_weight *  \
-                            torch.mean(lpips_loss_fct(regenerated_px_values.view(-1,74,128,3).permute(0,3,1,2) * 2 - 1,   #(38,51) if (640,480) / (74,128) if (1600,928)
-                                                    ground_truth_px_values.view(-1,74,128,3).permute(0,3,1,2) * 2 - 1))
+                        lpips_loss = cfg.optimizer.lpips_loss_weight  *  \
+                            torch.mean(lpips_loss_fct(regenerated_px_values.view(-1,48,64,3).permute(0,3,1,2) * 2 - 1,   #(38,51) if (640,480) / (74,128) if (1600,928)
+                                                    ground_truth_px_values.view(-1,48,64,3).permute(0,3,1,2) * 2 - 1))
                     else:
                         lpips_loss = 0
                     # print("cfg.optimizer.depth_loss_weight", cfg.optimizer.depth_loss_weight)
-                    # print("depth", depth)                    
+                    #print("depth max", torch.sqrt(depth.max()/60))         
+                        
+                    # exit(0)           
                     # print("torch.sqrt(torch.clip(ground_truth_depth/255, 0,1))", torch.sqrt(torch.clip(ground_truth_depth/255, 0,1)))            
 
-                    depth_loss = cfg.optimizer.depth_loss_weight * mse_loss_fct(torch.sqrt(depth/255), torch.sqrt(torch.clip(ground_truth_depth/255, 0,1))) if cfg.optimizer.depth_loss_weight > 0 else 0        # / 60
+                    depth_loss = cfg.optimizer.depth_loss_weight * mse_loss_fct(torch.sqrt(depth/60), torch.sqrt(torch.clip(ground_truth_depth/60, 0,1))) if cfg.optimizer.depth_loss_weight > 0 else 0        # / 60
                     print("lpips_loss-----------------------", lpips_loss)
                     print("depth_loss-----------------------", depth_loss)
                     loss = mse_loss + tv_loss + dist_loss + lpips_loss + depth_loss
-                    #print("loss-------------------", loss)
+                    print("total loss-------------------", loss)
                     
 
                     if loss.isnan():
